@@ -1,0 +1,474 @@
+﻿<!DOCTYPE HTML>
+<html>
+<head>
+	<meta charset="UTF-8">		
+	<link rel="icon" type="image/png" sizes="32x32" href="ico/icon2.png">  
+	<link rel="stylesheet" href="styles/styl-0.css">		
+		<title>Блог v.3.1 Слугин</title>
+	<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+	<meta http-equiv="Pragma" content="no-cache" />
+	<meta http-equiv="Expires" content="0" />		
+</head>
+<style> 
+body  	   {margin-left:120px; }
+#test_frame  {height:2310px;}
+.back_fon  {position:absolute;top:401px;left:0px;z-index:-1; width:1440px; height:672px;} 
+  .tag_bar{display:flex; margin:32px 0px 0px 0px;max-width:1184px; flex-flow:row wrap;	row-gap:10px;}  
+  	.tag_bar>a>div{display:flex;	align-items:center;
+  		       height:32px; 	margin-right:8px;
+  		       padding-left:8px;
+  		       border-radius:24px;	border: 1px solid #C1C5CD;  }     	 			
+  	.tag_bar>a>div>span,.glyph_font {font-family: Montserrat-SemiBold,"Comic Sans MS",Sans-serif;   
+  					font-weight: 600;line-height:20px;	color:#333; }
+  	    .mrg_lft4 {margin-left:4px; }    
+  	#tagb_item1 {width:68px; }
+  	#tagb_item2 {width:238px;}  	
+  	#tagb_item3 {width:67px; border: 2px solid #16C8BB;}
+  	#tagb_item4 {width:152px;}
+  	#tagb_item5 {width:77px; }
+  	#tagb_item6 {width:112px;}
+  	#tagb_item7 {width:173px;}
+  	#tagb_item8 {width:82px; }				#tagb_item8:hover {cursor: url(cur/SWORD.CUR), pointer;}			
+  	#tagb_item9 {width:149px;margin-right:0px;}
+  	.tag_bar>a>div:hover {border:1px solid magenta;background-color: lightcyan;}
+  	#tagb_item3:hover    {border:2px solid magenta;}	 
+  		
+.section_1 /*----------------------------------------------------------------------------------------------------------------*/
+  	    {display:flex; flex-flow:row wrap; justify-content:flex-start; 
+  	     column-gap:24px;	row-gap:16px;
+  	     margin-top:23px;	}
+  .ar_big{position:relative;width:588px;  height:500px;border:1px solid #DEDEDE;border-radius:24px;} 
+  .ar_big>img{border-top-left-radius:24px;border-top-right-radius:24px;}  
+  .glyph1,.glyph2,
+  	  .glyph3{position:absolute;	display:flex; justify-content:flex-start; align-items:center;
+  	          border-radius:24px;	padding-left:8px;	font-weight:600;	left:8px;
+  	          border: 1px solid #C1C5CD; background: rgba(255, 255, 255, 0.70);	height:32px;}
+  .glyph1,
+  .glyph3{top:8px;   width:261px; }	.glyph3{width:67px; }	
+  .glyph2{top:48px;  width:67px;  }
+  			.ar_big_header,.ar_big_summar{color:#333;}
+  			
+  	.ar_big_header,.ar_small_header{font-family: Montserrat-Bold,"Comic Sans MS",Sans-serif;
+  					font-size:18px;font-weight:700;  line-height:26px;}		
+  .ar_big_header{ 	 		margin:16px 0px 0px 16px;}
+  .ar_big_author{color:#494949;		margin: 4px 0px 0px 16px;	font-size:12px;line-height:18px; letter-spacing:0.25px;}
+  .ar_big_summar{ 			margin: 8px 0px 0px 16px;	line-height: 20px;}
+  .date{position:absolute;bottom:16px;left:16px;	color:#868686;	font-size:12px;line-height:18px; letter-spacing: 0.25px;}
+  
+.section_2 /*----------------------------------------------------------------------------------------------------------------*/
+  	    {display:flex; 	flex-flow:row wrap; 	justify-content:flex-start; 
+  	     column-gap:24px; 	row-gap:24px;		margin-top:23px;		 }
+  .ar_small{position:relative;height:476px;  
+  	    border-radius:16px;border:1px solid #DEDEDE;}  	    
+  .ar_small_glyph{position: absolute;		padding:7px 0px 0px 29px;	font-weight:600;
+  		       left:8px;		
+  		       height:32px; 				   z-index:1;  	color:#333; 
+  		       border-radius:24px;border:1px solid #C1C5CD; 	       	background-color: rgba(255, 255, 255, 0.70);}
+  .ar_small_glyph:hover {cursor:pointer;}
+  		       
+  .glyph_1  	      {top:8px; 	width:261px;}		.glyph_3  	      {top:8px;width:67px;}
+  .glyph_2  	      {top:48px;	width:197px;}  		       
+  
+  .ar_small_glyph::after{content:'';
+  		     position: absolute;	top:   6px;	   	  			 		 	  
+   						left:  5px;
+  		     background-image: url('img/svg/Unicorn1.svg');	width:  18px; 	
+  		     background-size: 18px 18px;			height: 18px;} 
+  .small_img_block{height:259px; width:384px;border-top-left-radius:16px;border-top-right-radius:16px;}
+  
+.ar_small_header,.ar_small_author,.ar_small_summar{width:352px;color:#333;}  
+  .ar_small_header{ 	 		margin:16px 0px 0px 16px;}
+  .ar_small_author{color:#494949;	margin: 4px 0px 0px 16px;	font-size:12px;line-height:18px; letter-spacing:0.25px;}
+  .ar_small_summar{ 			margin: 8px 0px 0px 16px;	line-height: 20px;}  
+  
+  .btn_center0{max-width:1440px;margin:56px 0px 0px -120px; }
+  .btn_center1,.btn_more_bottom{width:182px;margin:0px auto;}
+  	.btn_more_bottom{color:#FFF;	background-color:#35B3A9;   padding:12px auto;}  		       
+    
+
+  /*--------------------------------------- iPad Pro 12.9"-1 --------------------------------*/
+@media (max-width: 1024px) and (min-width: 414px) {  
+  .screen_1440{display:none;} 		.screen_1024{display:block;} 		.screen_414{display:none;}
+  body     {margin-left:32px;}
+  .back_fon{display:none;}
+  header   {max-width:960px;}
+  nav      {margin-left:32px;}		.nav_spc	 {width:16px;} 
+  .btn_sel_spec_wrap {margin:-6px 0px 0px auto;}  
+  .page_header{margin-left:1px; }
+  .tag_bar{row-gap:8px;max-width:950px;}
+  .ar_big {width:468px;border-radius:16px;} 
+  .ar_big>img{border-top-left-radius:16px;border-top-right-radius:16px; }    
+  .section_2{margin-top:24px;		max-width:965px; }
+  .ar_small{height:458px;}
+  .small_img_block{height:206px; width:304px;}  
+  .ar_small_header,.ar_small_author,.ar_small_summar{width:288px;} 
+  .btn_center0{max-width:1024px;margin:35px 0px 0px -20px;}
+  footer      {max-width:1024px;margin:60px 0px 0px -32px;}
+  .group1{width:247px;}
+  .ftr_clmn0  {width:38px;} 
+  .email_blk_margin{width:21px;flex-shrink:1;}
+  .ftr_clmn000 {width:26px;}
+  .footr_line{left:32px;  width:960px;}
+  .end_line{left:32px;}}
+  /*--------------------------------------- iPhone 11 Pro MAX - 2 (414 x 3043) --------------------------------*/
+@media (max-width: 890px){ 
+#frame_on{display:block;} 	#frame_on:checked ~ #test_frame  {display:block;}
+				#frame_on:checked ~ #test_message{display:block;}
+               			
+.screen_1440{display:none;} 		.screen_1024{display:none;} 		.screen_414{display:block;}
+body     {margin-left:20px;}
+header{width:366px; height:37px; margin-top:19px;justify-content:space-between;}
+nav,.btn_sel_spec_wrap   {display:none;}
+.top_logo_siz    {margin:0px 0px 0px 4px; width:48px;height:34px;}
+.burger_wrap{display:inline-block;}
+.line_head {width:414px;height:2px;margin:16px 0px 0px -24px;}
+.page_spec{margin-left:0px;}
+.page_header{margin-top:32px;}
+.tag_bar    {margin:24px 0px 0px -10px;flex-flow:row nowrap;	     	
+	     overflow-x: hidden;width:394px; }
+.tag_bar div:hover{cursor: ew-resize;}   	     
+
+.section_1,.section_2,.ar_big{width:374px;}
+.section_1,.section_2{margin-top:16px;row-gap:16px;}
+.ar_big{height:462px; z-index:-1;}	.glyph3{top:7px;}
+.ar_small{height:462px;}
+.small_img_block{height:206px; width:374px;} 
+.dnt_shw414{display:none;}
+.btn_center0{max-width:414px;margin:26px 0px 0px -20px;}
+footer{margin:59px 0px 0px -20px;width:414px;height:746px;flex-flow: column nowrap;}
+	footer a{color:#FFF;font-size:16px;font-weight:700;}
+	.email_blk,.group1{margin-left:19px;  }
+		.ftr_clmn1,
+		.ftr_clmn2{margin:0px;}	
+    		.group1{width:375px; margin-top:35px; }
+    	.email_blk{width:375px; margin-top:23px;}	
+  		.email_blk_header{width:362px;}
+  		input    {width:366px;}
+   		button[type="submit"]{ width:55px; padding:14px 11px 12px 20px;	top:0px; left:311px;}
+   	.icon_blk{margin:-17px 0px 0px 19px; }
+   	.icons{margin-top:20px;}	
+  	.footr_line{position:absolute;top:587px;left:19px;  width:374px; height:2px;}	
+  	.end_line{flex-flow:column nowrap;gap:16px; top:609px;left:19px;opacity:.7;}}
+</style> 
+	
+<body>
+<div> <input id="frame_on" type="checkbox" checked>	
+		<div id="test_frame"> </div>
+		<div id="test_message">iPhone 11 Pro MAX - 2 (414 x 3043) MODE FRAME</div>  
+<img src="img/svg/blog_page_fon.svg" class="back_fon screen_1440">      	
+<header>
+	<a href="pages/main_start.htm" title="На главную страницу"> <img src="img/svg/logo-top.svg" class="top_logo_siz"></a>
+	<div class="screen_414"> 
+	<!-- BURGER BUTTON  -->
+	<script>	function unchk() {let inputs = document.getElementById('chkbx');
+        		  	  inputs.checked = false;}				</script>
+	<div class="burger_wrap"> 
+		<input class="burger_input" id="chkbx" type="checkbox">		
+	  	<div class="bb1">  </div>	<div class="bx1"></div>
+	   	<div class="x_cir"></div>	<div class="bx2"></div>		  
+	   	<div class="selector" onclick="unchk()">
+	        	<a href="pages/about.htm" title="О нас">		  <div> 	O&nbsp;О нас		</div></a>
+			<a href="pages/tarif.htm" title="Тарифы">		  <div> 	Т&nbsp;Тарифы		</div></a>
+			<a href="pages/4bisness.htm" title="Для бизнеса">	  <div> 	Д&nbsp;Для&nbsp;бизнеса </div></a>
+			<a href="pages/4specs.htm" title="Психологам">		  <div> 	П&nbsp;Психологам	</div></a>
+			<a href="content/materials.htm" title="Материалы">
+							  			  <div> 	М&nbsp;Материалы	</div></a>
+			<a href="pages/faq1.htm" title="Часто задаваемые вопросы"><div> 	F&nbsp;FAQ		</div></a>
+			<a href="pages/doc-sel.htm" title="Подобрать психолога">  <div id="sel_spec_mnu">Подобрать&nbsp;психолога	</div></a>
+	   	</div>
+	</div>
+	<!-- BURGER BUTTON end -->
+      </div>
+	<nav>
+	    <a href="pages/about.htm" title="О нас">				О нас		</a><div class="nav_spc"></div>
+	    <a href="pages/tarif.htm" title="Тарифы">				Тарифы		</a><div class="nav_spc"></div>
+	    <a href="pages/4bisness.htm" title="Для бизнеса">			Для бизнеса	</a><div class="nav_spc"></div>
+	    <a href="pages/4specs.htm" title="Психологам">			Психологам	</a><div class="nav_spc"></div>
+	    
+	 <div class="slct_blk">
+	    <span  class="fake_slct">Материалы</span>	     
+	    <select title="Материалы" onClick="value='#'"	    
+	    			     onchange="document.location=this.options[this.selectedIndex].value">
+	    	<option id="list_head" value="#" selected>Материалы</option>			  
+	    	<option value="content/content-A1.htm"
+  						       title="Кальмароподобные бородачи">Кальмароподобные бородачи	 </option>
+    		<option value="content/content-A2.htm" title="Дредноут">Дредноут			 </option>
+   		<option value="content/content-A3.htm" title="ФУФА">ФУФА				 </option>  
+   		<option value="pages/faq1.htm" title="Часто задаваемые вопросы">Часто задаваемые вопросы </option> 		
+	    </select>	    
+	    <img src="img/svg/drop_down_arrow.svg" class="down_arrow">
+	 </div>	  										    <div class="nav_spc"></div>	
+	    <a href="pages/faq1.htm" title="Часто задаваемые вопросы">		FAQ		</a>    
+	</nav>
+	<div class="btn_sel_spec_wrap"> 
+		<a href="pages/doc-sel.htm" title="Подобрать психолога">
+				<Button class="btn_sel_spec_head">Подобрать психолога</Button>
+		</a>
+	</div>
+</header>
+<img src="img/svg/Line.svg" class="line_head">
+<div class="page_spec">
+	<a href="pages/main_start.htm" title="На главную страницу">Главная</a>
+	<img src="img/svg/Arrow.svg"  class="r_arrow_margins" width="16" height="16">
+	<a href="#footer_blk" title="В конец страницы">Блог</a>
+</div>
+<div class="page_header">
+Блог
+</div>
+<div class="tag_bar">
+	<a href="content/content_all.htm">
+		<div id="tagb_item1"> 
+		   <img src="img/svg/smile1.svg" alt="Smiling icon" width="18" height="18">
+		   <span class="mrg_lft4">Все</span>
+		</div>
+	</a>
+	<a href="content/self_eval.htm">
+		<div id="tagb_item2"> 
+		   <span>Самооценка и самопринятие</span>
+		</div>
+	</a>
+	<a href="content/self.htm">
+		<div id="tagb_item3"> 
+		   <img src="img/svg/Unicorn1.svg" alt="Unicorn icon" width="18" height="18">
+		   <span class="mrg_lft4">Self</span>		
+		</div>
+	</a>
+	<a href="content/Feelings.htm">
+		<div id="tagb_item4"> 
+		<span>Чувства и эмоции </span>  
+		</div>
+	</a>
+	<a href="content/alarms.htm">
+		<div id="tagb_item5"> 
+		<span>Тревога</span>
+		</div>
+	</a>
+	<a href="content/exercises.htm">
+		<div id="tagb_item6"> 
+		<span>Упражнения</span>
+		</div>
+	</a>
+	<a href="content/food.htm">
+		<div id="tagb_item7"> 
+		<span>Психология питания</span>
+		</div>
+	</a>
+	<a href="content/violence.htm">
+		<div id="tagb_item8"> 
+		<span>Насилие</span>
+		</div>
+	</a>
+	<a href="content/health.htm">
+		<div id="tagb_item9"> 
+		<span>Личное здоровье</span>
+		</div>
+	</a>
+
+</div>
+<script>
+(function(){
+let speed = 4; 
+
+let scroll = document.querySelector('.tag_bar');
+
+let left = 0; 
+let drag = false;
+let coorX = 0;
+
+scroll.addEventListener('mousedown', function(e) {
+  drag = true;
+  coorX = e.pageX - this.offsetLeft;
+});
+document.addEventListener('mouseup', function() {
+  drag = false;
+  left = scroll.scrollLeft;
+});
+scroll.addEventListener('mousemove', function(e) {
+  if (drag) {
+    this.scrollLeft = left + ( this.offsetLeft + coorX - e.pageX)*speed;
+  }
+});
+
+})();
+</script>
+<main>     
+  <div class="section_1"> 
+    <a href="content/emo_burn.htm">	
+	<article class="ar_big">
+		<img src="img/png/eggs.png" alt="Smiling eggs" class="screen_1440">
+		<img src="img/png/eggs_468.png" alt="Smiling eggs" class="screen_1024">	
+		<img src="img/png/eggs_374.png" alt="Smiling eggs" class="screen_414">	
+			
+		<div class="glyph1">
+			<img src="img/svg/Unicorn1.svg" alt="Unicorn icon" width="18" height="18">
+			<span class="mrg_lft4 glyph_font">Самооценка и самопринятие</span>
+		</div>
+	        <div class="glyph2">
+			<img src="img/svg/Unicorn1.svg" alt="Unicorn icon" width="18" height="18">
+			<span class="mrg_lft4 glyph_font">Self</span>
+		</div>
+		<div class="ar_big_header"> 
+		Эмоциональное выгорание – стадии и симптомы, методы восстановления и профилактики
+		</div>
+		<div class="ar_big_author"> 
+		Автор: Лиза Файнтух
+		</div>
+		<div class="ar_big_summar"> 
+		Изначально термин «эмоциональное профессиональной сфере и относился...
+		</div>
+		<div class="date"> 
+		21.08.2021
+		</div>
+	</article>
+    </a>
+    <a href="content/alm_dip_1.htm">
+	<article class="ar_big">
+		<img src="img/png/legs.png" 
+		alt="Running legs" class="screen_1440">
+		<img src="img/png/legs_468.png" alt="Running legs" class="screen_1024">	
+		<img src="img/png/legs_374.png" alt="Running legs" class="screen_414">	
+		<div class="glyph3">
+			<img src="img/svg/Unicorn1.svg" alt="Unicorn icon" width="18" height="18">
+			<span class="mrg_lft4 glyph_font">Self</span>
+		</div>
+		<div class="ar_big_header"> 
+		Как не утонуть в тревоге и управлять своими страхами
+		</div>
+		<div class="ar_big_author"> 
+		Автор: Екатерина Бельтюкова
+		</div>
+		<div class="ar_big_summar"> 
+		Один из самых важных навыков, которые может дать работа с психотерапевтом - умение в разных ситуациях по-разному обходиться ...
+		</div>
+		<div class="date"> 
+		11.08.2021
+		</div>
+	</article>
+    </a>
+   </div>
+  <div class="section_2"> 
+<!--1--><a href="content/emo_burn_1.htm">
+	<article class="ar_small">  	<div class="ar_small_glyph glyph_1">Самооценка и самопринятие		</div>
+					<div class="ar_small_glyph glyph_2">Психология питания			</div> 				
+	<img src="img/png/emo_burn_sm.png" class="small_img_block" alt="woman in bed">			
+		<div class="ar_small_header">Эмоциональное выгорание – стадии и симптомы, методы восстановления и профилактики</div>
+		<div class="ar_small_author">Автор: Лиза Файнтух</div>
+		<div class="ar_small_summar">Изначально термин «эмоциональное профессиональной сфере и относился...</div>
+		<div class="date">21.08.2021</div>
+	</article></a>
+	
+<!--2--><a href="content/alm_dip.htm">	
+	<article class="ar_small">		<div class="ar_small_glyph glyph_3">Self		</div>	 
+	<img src="img/png/alm_dip.png" class="small_img_block" alt="woman swimming">			
+		<div class="ar_small_header">Как не утонуть в тревоге и управлять своими&nbsp; страхами</div>
+		<div class="ar_small_author">Автор: Екатерина Бельтюкова</div>
+		<div class="ar_small_summar">Один из самых важных навыков, которые может дать работа с психотерапевтом - умение в разных ситуациях по-разному обходиться ...</div>
+		<div class="date">11.08.2021</div>		
+	</article></a>
+
+<!--3--><a href="content/8steps.htm">	
+	<article class="ar_small dnt_shw414">		<div class="ar_small_glyph glyph_3">Self		</div>	 
+	<img src="img/png/emo_ctrl.png" class="small_img_block" alt="brick_wall_and_a_cardboard_angry_face">
+		<div class="ar_small_header">Как управлять своими эмоциями:
+		8 шагов</div>
+		<div class="ar_small_author">Автор: Екатерина Бельтюкова</div>
+		<div class="ar_small_summar">Клиенты часто спрашивают, как КОНТРОЛИРОВАТЬ свои негативные эмоции. Пришло время об этом написать!</div>
+		<div class="date">07.08.2021</div>		
+	</article></a>
+	
+<!--4--><a href="content/emo_burn_2.htm">	
+	<article class="ar_small dnt_shw414">		<div class="ar_small_glyph glyph_3">Self		</div>	 
+	<img src="img/png/emo_burn_1.png" class="small_img_block" alt="woman playing notebook">	
+		<div class="ar_small_header">Эмоциональное выгорание – стадии и симптомы, методы восстановления и профилактики</div>
+		<div class="ar_small_author">Автор: Лиза Файнтух под редакцией  Екатерины Бельтюковой</div>
+		<div class="ar_small_summar">Изначально термин «эмоциональное я...</div>
+		<div class="date">21.08.2021</div>	
+	</article></a>
+
+<!--5--><a href="content/alm_dip_2.htm">
+	<article class="ar_small dnt_shw414">		<div class="ar_small_glyph glyph_3">Self		</div>	 
+	<img src="img/png/alm_dip_1.png" class="small_img_block" alt="woman chating skype">		
+		<div class="ar_small_header">Как не утонуть в тревоге и управлять своими&nbsp;  страхами</div>
+		<div class="ar_small_author">Автор: Екатерина Бельтюкова</div>
+		<div class="ar_small_summar">Один из самых важных навыков, которые может дать работа с психотерапевтом - умение в разных ситуациях по-разному обходиться ...</div>
+		<div class="date">11.08.2021</div>	
+	</article></a>
+	
+<!--6--><a href="content/8steps_2.htm">
+	<article class="ar_small dnt_shw414">		<div class="ar_small_glyph glyph_3">Self		</div>	 
+	<img src="img/png/A_hotel_aerial.png" class="small_img_block" alt="people_walking_at_hall">	
+		<div class="ar_small_header">Как управлять своими эмоциями:
+		8 шагов</div>
+		<div class="ar_small_author">Автор: Екатерина Бельтюкова</div>
+		<div class="ar_small_summar">Клиенты часто спрашивают, как КОНТРОЛИРОВАТЬ свои негативные эмоции. Пришло время об этом написать!</div>
+		<div class="date">07.08.2021</div>	
+	</article></a>
+   </div>	
+		<div class="btn_center0"> 
+			<div class="btn_center1"> 
+				<a href="pages/more.htm" title="Заполнить анкету">
+				<button class="btn_more_bottom">Ещё</button>
+				</a>
+			</div>
+		</div>
+	
+</main>
+<footer id="footer_blk">  
+  <div class="ftr_clmn0 dnt_shw414"></div>  
+  <div class="group1"> 
+	<div class="ftr_clmn1"> 
+		<a href="pages/about.htm" title="О нас">	 О нас			</a>
+	    	<a href="pages/tarif.htm" title="Тарифы">	 Тарифы			</a>
+	    	<a href="pages/4bisness.htm" title="Для бизнеса">Для бизнеса		</a>
+	    	<a href="pages/4specs.htm" title="Психологам">	 Психологам		</a>
+	    	<a href="pages/faq1.htm" title="Часто задаваемые вопросы">FAQ		</a> 
+	</div>
+	<div class="ftr_clmn2"> 
+		<a href="#" title="В начало страницы">	 	Блог			</a>
+	    	<a href="pages/webinars.htm" title="Вебинары">	Вебинары		</a>
+	    	<a href="pages/podast.htm" title="Подскаст">	Подскаст			</a>
+	    	<a href="pages/sert.htm" title="Сертификат">	Сертификат		</a>
+	    	<a href="pages/contacts.htm" title="Контакты">	Контакты		</a> 
+	</div>
+  </div>	
+<div class="email_blk_margin dnt_shw414"></div>	
+	<div class="email_blk">
+		<div class="email_blk_header">Одно письмо в неделю со свежими новостями и акциями	</div>
+		<div class="email_input">
+			<form class="e_mail">	
+  				<input placeholder="Ваш e-mail" type="email">  			     	
+  				<button type="submit" title="Подписаться">
+					<img src="img/svg/send_24x24.svg" alt="Group follow image paper plane" width="24" height="24" >
+				</button>			     
+  			</form>  			
+  		</div>
+  		<div class="email_discl">Подписываясь, я соглашаюсь на обработку персональных данных в 
+  		соответствии с ФЗ РФ № 152-ФЗ &laquo;О персональных данных&raquo;, а также с Политикой конфиденциальности</div>		
+	</div>
+<div class="email_blk_margin dnt_shw414"></div>
+	<div class="icon_blk">	<a href="https://www.sk.ru" title="Сколково"><img src="img/svg/participant.svg"></a>
+				<div class="icons"> 
+					<!--VK--><a href="https://www.vk.com" title="ВКонтакте">	<div class="ptchk" id="vk">
+						<img src="img/svg/Vk_icon_20x12.svg" alt="Vk_logotype" 	 width="20" height="12">	</div></a>
+						
+					<!--TG--><a href="https://www.telegram.com" title="Телеграм">	<div class="ptchk" id="tg">
+						<img src="img/svg/teleg_logo_16x14.svg" alt="Telegrahm_logotype" width="16" height="14"></div></a>
+						
+					<!--TW--><a href="https://www.twitter.com" title="Твиттер">	<div class="ptchk" id="tw">
+						<img src="img/svg/twit_logo_18x18.svg" alt="Twitter_logotype"	 width="18" height="18"></div></a>
+						
+					<!--DZ--><a href="https://www.yandex.ru" title="Яндекс Дзен">	<div class="ptchk">
+						<img src="img/svg/dzen_logo_32x32.svg" alt="Dzen_logotype" 	 width="32" height="32"></div></a>
+				</div>
+				
+	</div>
+<div class="ftr_clmn000 dnt_shw414"></div>
+<img src="img/svg/Line-footer.svg" class="footr_line" >
+<div class="end_line"> 
+	<a href="pages/main_start.htm" title="На главную страницу">	<div>&#169;Youtalk, 2018 – 2022	</div></a>		
+	<a href="pages/just_docs.htm" title="Юридические документы">	<div>Юридические документы	</div></a>		
+	<a href="pages/pay_ways.htm" title="Способы оплаты">		<div>Способы оплаты		</div></a>
+</div>
+</footer>
+</body>
+</html>
