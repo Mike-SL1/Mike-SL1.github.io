@@ -1,0 +1,30 @@
+﻿<!DOCTYPE HTML>
+<html>
+<head>
+<title>Video sample</title>
+<script type="text/javascript" src="../vplayer/flowplayer.js"></script>
+</head>
+<style>
+.video1,.start_vid_pic{width:708px;height: 368px;}
+.video1{margin:20px auto;border:1px solid red; }
+</style>
+<body>
+Hello World!
+<div class="video1">
+	<a href="jump.MP4" style="display: block; width: 708px; height: 368px;" id="player">
+	<img src="video_start.jpg" class="start_vid_pic"></a>
+		<script type="text/javascript">
+  		flowplayer("player",  "../vplayer/flowplayer.swf", {clip: {autoPlay: false, 
+									   controls: true,
+									   autoBuffering: true,
+									   }});
+		</script>
+</div>
+<hr>
+<video class="video1" src="jump.MP4" controls	poster="POSTER.gif"
+				autoplay="true"
+				playsinline="false"	></video>
+<hr>
+<iframe width="512" height="288" src="https://www.youtube.com/embed/GfOSgUdLljE" frameborder="0" allowfullscreen></iframe>
+</body>
+</html>

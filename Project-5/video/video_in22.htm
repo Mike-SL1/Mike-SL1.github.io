@@ -1,0 +1,27 @@
+﻿<!DOCTYPE HTML>
+<html>
+<head>
+<title>Video opacity</title>
+
+</head>
+<style>
+.v_player_wrap{position:relative;margin:120px auto; }
+	.v_player_wrap{border:1px solid lightblue;}
+	.v_player_wrap,.v_player{width:calc(1920px / 3);height:calc(1080px / 3); border-radius:15px; }				 
+	.v_player{position:absolute;opacity:0.6;  box-shadow:0px 0px 20px 0px green;}
+.play_ico_wrap{margin:140px auto;}
+	.play_ico_wrap,.play_ico{width:75px; height:75px;opacity:1; } 
+	.play_ico{position:absolute;}
+
+			.v_player,.play_ico_wrap{transition:opacity;transition-duration:500ms;}
+.v_player:focus~.play_ico_wrap{opacity:0;}
+.v_player:focus{opacity:1;box-shadow:0px 0px 20px 0px cyan;}
+</style>
+<body> <div class="v_player_wrap"> 		
+  		<video class="v_player" src="jump.MP4" controls></video>		
+		<div class="play_ico_wrap"> 
+					    <img src="Play_btn.svg" class="play_ico">
+		</div>
+	</div>
+</body>
+</html>
