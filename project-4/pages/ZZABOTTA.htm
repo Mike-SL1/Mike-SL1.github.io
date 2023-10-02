@@ -1,0 +1,46 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<link rel="icon" type="image/png" sizes="32x32" href="../ico/icon2.png">
+		<title> Project-4. ZZABOTTA</title>
+	</head>
+   <style> 
+#task,#asterisk{Display:block;	width:80vw;      
+      padding:.7em; 		margin:3px 10px 5px;      
+      font-family:sans-serif; 	font-size:1em; color:black; 	line-height: 1.2;
+      background-color:honeydew;border-radius:5px; 		text-align: left;	
+      box-shadow:2px 2px 1px 1px lightgray;       }
+/*---------------------------------------------------------*/
+      kbd{font-size:1.5em;}
+      #font{font-size:1.5em; font-family:Arial;}
+      .center{display:flex;justify-content:center;width:50vw;margin:30px auto; position:relative;}
+      img{width:100%;border-radius:36px;box-shadow:5px 9px 10px 1px orange;}
+   
+      .center::after,img {transition:opacity;transition-duration:1000ms;}      		  
+      
+      img:hover{opacity:0;}   
+         
+      .center:hover::after {opacity:1;}
+      
+      .center::after {content: ''; position: absolute;  background: 
+      					linear-gradient(45deg,	rgba(0, 0, 0, 0) 0%,
+      								#9400D3 15%,
+      								rgba(0, 0, 255, 1) 20%,
+      								#00BFFF 45%,
+      								rgba(0, 255, 0, 1) 60%,
+      								#FFFF00 75%,
+      								#FF8C00 80%, rgba(255, 0, 0, 1) 100%);
+   			top: 0px;	right: 0px;  opacity:0; z-index:-1;
+   			bottom: 0px;	left: 0px;border-radius:36px;}      	
+      			
+   </style>
+<body>
+<p id="task"> 
+Project-4. Page "WDaritЭ Заботы". Return to <a href="../site_desktop_blog.htm">BLOG PAGE </a>   	  </p> 
+<hr>
+<div class="center"> 
+<img src="../img/png/zabota.png">
+</div>
+</body>
+</html>
