@@ -1,0 +1,680 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<link rel="icon" type="image/png" sizes="32x32" href="../ico/document.ico">  
+		<link rel="stylesheet" href="../styles/styl-0.css">		
+		<title>Статья - v.3.3 Слугин</title>
+	</head>
+	
+<style> 
+@font-face {font-family: "OpenSans";	src: url("../fonts/OpenSans-Regular.ttf") format("truetype");}
+body  	   {margin-left:120px; }
+#test_frame  {height:8545px;}
+	/*m_Bold*/
+    .contents,.sign,.exe_header,.aside_c3_txt,.aside_c2_btn,.aside_c2_lst_head,.aside_c2_header,.aside_c2_spec,
+    .aside_c4_btn,.aside_c4_price,.c4h_center,.aside_c1_btn,.aside_c1_header,.c4h_end {font-family: Montserrat-Bold,"Comic Sans MS",Sans-serif; 
+    										       font-size: 16px; font-weight: 700;}			
+.page_header{height:168px; margin-top:24px;} 
+.author{display:flex;align-items:center;
+	margin-top:16px;color: #494949;line-height: 20px; }	.dot_margins{margin:0px 8px 0px 8px; }
+main{display:flex;flex-flow:row nowrap;margin-top:30px;max-width:1200px;}
+   .column_1,aside{display:flex;flex-flow:column nowrap;}
+   .column_1{width:690px;}
+   				.i_shed{box-shadow:0px 0px 5px 0px lightgray;border-radius:3px;}		
+   
+    aside{margin:0px 0px 0px auto; width:282px;height:100%;}
+    aside>div,.aside_c3{border-radius:16px;}    
+    .aside_c1,.aside_c3{text-align:center;}		.aside_c2,.aside_c3{position:relative;}	
+    .aside_c1{height:512px;background-color:#E6F0FD;}
+    	.aside_c1_pic	{margin:24px auto 24px;width:257px; height:206px;}
+    		.aside_c1_header,.aside_c1_txtblk{color:#333;}
+    	.aside_c1_header{font-size:18px;line-height:24px;}
+    	.aside_c1_txtblk{width:234px;margin:11px auto 24px;line-height:20px;}
+    				.aside_c1_btn,.problem_btn,
+    				.aside_c2_btn,
+    				.aside_c4_btn {width:234px;	height:48px;	border-radius:4px;	background-color:#35B3A9;
+    					       color:white;	font-size: 16px;			font-weight:700;}
+    				.aside_c2,.aside_c4{border: 1px solid #DEDEDE;}
+    .aside_c2{margin-top:24px;height:481px;z-index:1;}
+    	#aside_c2_img{width:120px;margin:24px auto 16px;}
+    	#aside_c2_img_rnd{ border-radius:50%;}
+    	.aside_c2_header,.aside_c2_spec {margin:0px auto 0px;}
+    	.aside_c2_header {width:75px;
+    			  font-size:20px;line-height:28px;}
+    	.aside_c2_spec	 {width:85px;font-size:16px;line-height:24px;}
+    	#aside_c2_age    {display:flex;Align-items:center;justify-content:center;margin:4px auto 16px;
+    			  color:#A2A7B1;font-weight:500;line-height:20px;  }
+    	#dot_4x4{margin:0px 8px 0px 8px;}
+    	.aside_c2_line_wrap{width:250px;margin:-12px auto 16px;}
+    	.aside_c2_line{width:250px; }
+    			.aside_c2_lst{width:250px;margin:0px auto 0px;}
+    	
+    	.aside_c2_lst_head{line-height:24px;}
+    		.aside_c2_lst_item{display:flex;Align-items:center;color:#333;margin-top:8px;line-height:18px;}
+    		.aside_c2_lst_item_dot{margin-right:4px; }
+    	.aside_c2_btn{width:250px;margin-top:16px;z-index:1;}
+    	.aftr1,.aftr2
+    	         {position:absolute;		background-color: rgba(243, 244, 248, 0.70);	border-radius:6px;
+    	          display:flex;Align-items:center;	left:16px;	top:16px;}
+    	.aftr_ico{width:16px;height:24px;margin:0px 4px 0px 6px; } .aftr_txt{margin-right:6px;	font-size:12px;		font-weight: 500;
+												line-height: 18px;	letter-spacing: 0.25px; }	.aftr2{top:48px;}    	      
+    
+    .aside_c3{margin-top:28px;	height:292px;  	background-color:rgb(41,99,163);    		   
+	      padding-top:60px;	z-index:-2;	background-image:url('../img/png/A_card_bk_1.png'),url('../img/png/A_card_bk_2.png'),
+		 	       					 url('../img/png/A_card_bk_3.png'),url('../img/png/A_card_bk_4.png');		
+	      					background-position: -10px 180px,175px 216px,
+		     	         		     		     104px 152px,center top;
+		     	         background-size:146px 112px ,120px 79px ,167px 159px,280px 192px;		     
+	      			 background-repeat:no-repeat,no-repeat,no-repeat,repeat;}
+	.aside_c3_txt{width:180px;margin:0px auto; color:white;text-align:center;font-size:32px;  font-weight:600;}
+	/*  --- G R A D I E N T ---*/
+	.aside_c3::after{content: ''; 		top: -70px;    		bottom: 240px;	
+   	 					 position: absolute;	right: 0px;  	left: 0;			
+   				background: radial-gradient(75% 40%, #FFFC, rgba(0, 0, 0, 0));z-index:-1;opacity:0;}	
+	      					
+    	      					
+	      					
+        .aside_c4{margin-top:42px;height:304px;padding:32px;
+        	  background-image:url('../img/png/A_card3_bk_1.png'),url('../img/png/A_card3_bk_2.png');				
+				background-position:192px 230px, 143px 196px;
+				background-size:137px 121px, 148px 132px;
+				background-repeat:no-repeat,no-repeat;}		
+        	#aside_c4_header{display:flex;margin:0px 0px 16px 0px; color:#2963A3; }
+        		.c4h_center,.c4h_end{font-weight: 700;}
+        	    .c4h_center{align-self:center;font-size:24px;line-height: 32px;}
+    		    .c4h_end   {align-self:end;   font-size:18px;line-height: 26px;margin-left:4px; }
+    		#aside_c4_txt{width:196px;  color:#011632;   font-family: OpenSans,"Comic Sans MS"; line-height: 20px;}
+    		.aside_c4_price{margin:16px 0px 16px 0px; font-size: 24px;line-height: 32px;}
+    		.aside_c4_btn{width:108px;}    		
+	.hero_margins{margin:24px 0px 24px 0px;width:690px;height:331px; }
+	
+    .contents{line-height:24px; /* 150% */}
+    	  
+	.items   {margin-left:1px;}
+	.items a {color: #333;text-decoration:underline;text-underline-position:under;
+		  font-family: Montserrat-Medium,"Comic Sans MS",Sans-serif;  font-size: 16px; font-weight: 500;line-height:24px; margin-left:8px;}
+	.items ul{list-style:none;margin-left:57px; }		.items ul li{margin-top:4px;}
+								.items ul ul{margin-top:4px;margin-left:16px; }	
+	.cnt_item1,.cnt_item2,.cnt_item3,.cnt_item4
+		      {display:flex;align-items:center;margin-top:16px;width:588px;}	
+	.cnt_item2,.cnt_item3{margin-top:8px;}
+	.cnt_item4{margin-top:14px;}
+    h3		  {margin:24px 0px 0px 0px;font-size:24px;font-family: Montserrat-Bold,"Comic Sans MS",Sans-serif;  line-height:32px;}
+        	/*m_Medi*/	
+        .mrg_top_16px{display:block;margin:0px;}
+        .txt,.exe_text,.blk6 div,.blk8 div,.mrg_top_16px,
+        .ul_green div{color:#333;line-height:24px;font-family: Montserrat-Medium,"Comic Sans MS",Sans-serif;  
+        			 font-size: 16px; font-weight: 500;}        
+        .txt{margin-top:24px;}
+    	.blk1{height:144px;margin-top:16px;}
+    	.blk4{height:168px;margin-top:24px;padding-top:24px; text-align:center;
+    		  background-image:url("../img/svg/A_pink_spot_center.svg");
+    		  background-position:left 225px top 0px;
+    		  background-repeat:no-repeat;}    
+    	.quote1,.quote2{font-family: Montserrat-Italic,"Comic Sans MS",Sans-serif;   
+    			font-size: 16px;font-style: italic;line-height:24px;}	  	
+    	.quote1  {height:162px;margin-top:40px;
+    		  padding:24px; border-radius:16px;background-color:#F3F7FE; 
+    		  	background-image:url("../img/svg/A_quote-2_55x36.svg");
+    		  	background-position:left 24px top 24px;
+    		  	background-repeat:no-repeat;}
+	.sign	 {margin-top:8px;}
+	
+	.ul_green   {list-style:none; margin-bottom:24px;}				.w-604 div{width:604px;}
+	.ul_green div{margin-left:8px;}
+	.ul_green li{display:flex;margin-top:16px;}     	
+	.pic{width:690px; height:331px;}							     
+	.pic_description{color: #868686;margin-top:16px;letter-spacing:0.25px;}
+	.quote2{width:485px;margin:0 auto;}
+	.pic2{width:282px; height:380px;}
+	.pic3{width:281px; height:174px;}
+	.blk6,.blk8{display:flex;margin-top:24px;}	.blk6 div,.blk8 div{margin-left:24px; }
+	      .blk8 {margin-top:0px;}
+		.exe {height:224px; border-radius:16px;margin-top:24px; padding-left:24px;}
+			.exe_header{margin:24px 0px 8px 0px;}
+						
+			.exe_text  {width:642px;}
+			.exe_one_color{background-color:#FEFAEC;}
+			.exe_two_color{background-color:#FFF3EB;}
+			.exe_tre_color{background-color:#03B2A51A;margin-bottom:24px;}			
+	.pic_blk10{display:flex; gap:24px; margin-top:24px;}
+		.pic_blk10_picsize{width:333px; height:235px;}
+				
+	.pic_blk12{width:179px;margin:24px auto 0px;}
+	
+	.tag_set{display:flex;align-items:center;margin-bottom:4px;}
+	.tag_set a{color:#2963A3;}
+	.tag_set_dot{margin:0px 8px 0px 8px;} 
+	.line_2{margin-top:44px;}
+	
+	.problem_blk{display:flex;margin-top:72px;max-width:1123px;}
+	    .btn_blk {width:348px;color:#333;}
+		#problem_hdr{ font-size:48px;font-weight:700;line-height:56px;  }
+		#problem_dsc{width:327px; font-size:18px;line-height:26px;margin:24px 0px 32px 0px; }
+		.problem_btn{width:238px;height:60px;background-color:#16C8BB;color:white;  }
+	    .problem_pic{margin:0px 0px 0px 339px;width:385px; height:341px;	background-image:url('../img/png/razgovor.png');
+						       			background-repeat:no-repeat;	}
+	    #problem_pic_frame{margin-left:-30px;margin-top:-11px;}	
+footer{margin-top:107px;}
+.bottom_fon,.blot1,.blot2{position:absolute;top:-82px;left:0px;}	.blot1{top:2480px;left:1222px;}
+.bottom_fon{max-width:100%; height:92px; z-index:-1;}			.blot2{top:5269px;left:1367px;}
+			
+    /*--------------------------------------- iPad Pro 12.9"-1 --------------------------------*/
+@media (max-width: 1024px) and (min-width: 801px) {  
+  .screen_1440{display:none;} 		.screen_1024{display:block;} 		.screen_414{display:none;}
+  body     {margin-left:32px;}
+  .back_fon{display:none;}
+  header   {max-width:992px;}
+  nav      {margin-left:32px;}		.nav_spc	 {width:16px;} 
+  .btn_sel_spec_wrap {margin:-6px 20px 0px auto;}  
+  main{margin-top:54px; max-width:960px;} 		.page_header{margin:0px; width:690px;}
+ 	.column_1{width:714px;} 
+ 	.hero_margins{width:714px;height:331px; }
+ 		.contents{margin-bottom:8px;}
+ 		.cnt_item1,.cnt_item4
+		      {align-items:flex-start;margin-top:8px;}
+ 		.ul_green,.w-604 div{width:682px;}	
+ 		.quote1  {margin-top:24px;}	
+ 		.pic{width:714px; height:331px;}
+ 		.pic_blk10_picsize{width:345px;}			
+ 						aside{width:222px;}
+ 							.aside_c1{height:495px;}
+  								.aside_c1_pic	{width:181px; height:145px;margin-bottom:27px;}
+  								.aside_c1_header{width:182px;margin:0px auto;}
+  								.aside_c1_txtblk,.aside_c1_btn{width:182px;}
+  							.aside_c2,.aside_c3,.aside_c4{margin-top:24px;}	
+  							.aside_c2{height:530px;}
+  								.aside_c2_line_wrap{width:174px;margin:-12px auto 16px;}
+  								.aside_c2_line,.aside_c2_btn{width:174px;}
+  								.aside_c2_lst{width:174px;}
+  								.aside_c2_lst_item{align-items:flex-start;}
+  								.aside_c2_lst div:last-of-type{margin-top:16px;}
+							.aside_c3{background-position: -50px 180px,135px 216px,
+		     	         		     					64px 152px,center top;
+		     	         				  background-size:146px 112px,120px 79px,163px 160px,280px 192px;}
+							.aside_c3::after{opacity:1;}
+   							
+   							.aside_c4{height:308px;padding:24px;background-position:144px 238px,107px 205px;
+												 background-size:108px 113px, 125px 125px;}	
+   								#aside_c4_txt{width:174px;}  
+  footer      {max-width:1024px;margin:47px 0px 0px -32px;}
+  .group1{width:247px;}
+  .ftr_clmn0  {width:38px;} 
+  .email_blk_margin{width:21px;flex-shrink:1;}
+  .ftr_clmn000 {width:26px;}
+  .footr_line{left:32px;  width:960px;}
+  .end_line{left:32px;}}
+  /*--------------------------------------- iPhone 11 Pro MAX - 2 (414 x 3043) --------------------------------*/
+@media (max-width:800px){
+#frame_on{display:block;}   #frame_on:checked ~ #test_frame  {display:block;}
+			    #frame_on:checked ~ #test_message{display:block;}
+			                			
+.screen_1440{display:none;} 		.screen_1024{display:none;} 		.screen_414{display:block;}
+.dnt_shw414 {display:none;}
+
+main{flex-flow:column nowrap;}
+.column_1,aside,.page_header,.ul_green,.w-604 div{width:374px;} 
+.hero_margins,.cnt_item1,.cnt_item4,.pic,.quote2,.pic2,.pic3,.pic_blk10_picsize,.group1,.footr_line{width:374px;} 
+body     {margin-left:20px;}
+header{width:366px; height:37px; margin-top:19px;justify-content:space-between; }
+nav,.btn_sel_spec_wrap   {display:none;}
+.top_logo_siz    {margin:0px 0px 0px 4px; width:48px;height:34px; }
+.burger_wrap{display:inline-block ;}	
+
+.line_head {width:414px;height:2px;margin-top:20px;margin-left:-24px; }
+.page_spec{margin:12px 0px 0px 0px;width:361px; }
+
+.page_header{margin-top:2px;height:128px;font-size:32px;line-height:40px; }
+.author{margin-top:8px;}	.contents{margin-bottom:8px;}
+.hero_margins{margin-top:16px;height:207px;} 
+.items   {margin-left:0px;}	.cnt_item1,.cnt_item4
+		      		{align-items:flex-start;margin-top:8px;}
+		      		.blk1{height:256px;}
+		      		.mrg_top_16px{margin-top:16px;}
+.quote1  {height:218px;	margin-top:24px;	padding:16px;
+    		  	background-size:30px 36px;
+    		  	background-position:left 16px top 16px;}
+.pic{height:207px;}
+		 .blk4{background-position:left 66px top 0px;}
+.pic2,.pic3{margin-bottom:16px;}
+.pic2{height:380px;object-fit: cover;}	.blk6,.blk8,.pic_blk10 {flex-flow:column nowrap;}
+		      			.blk6 div,.blk8 div{margin-left:0px; }
+.exe {height:328px; padding-left:16px;}
+	.exe_header{margin:16px 0px 8px 0px;}
+		.exe_text  {width:342px;}.w-604 div{width:342px;}
+.pic3{height:207px;}			.pic_blk10_picsize{object-fit: cover;}
+ 					.pic_blk10 .txt{margin-top:16px;}
+ 					
+.exe_tre_color{margin-bottom:0px;}	aside{margin:56px 0px 0px 0px;}
+
+.aside_c1_txtblk{width:310px;height:80px;}	.aside_c1_btn{width:310px;}
+
+.aside_c3{margin-top:24px;	 background-image:url('../img/png/A_card_bk_1.png'),url('../img/png/A_card_bk_2.png'),
+		 	       	 		  url('../img/png/A_card_bk_3.png'),url('../img/png/A_card_bk_4.png');		
+	      			 background-position: 13px 174px,224px 215px,
+		     	         		       143px 142px,center top;
+		     	         background-size:166px 128px, 136px 90px, 190px 181px, 280px 192px;}
+	.aside_c3_txt{width:280px;}
+	.aside_c3::after{top: -60px; background: radial-gradient(70% 40%, #FFFC, rgba(0, 0, 0, 0));opacity:1;}
+	
+.aside_c4{margin-top:24px;	height:248px;	background-position:226px 176px, 160px 134px;
+	  padding:24px;				background-size:137px 121px, 172px 153px;}	  
+	  #aside_c4_txt{width:326px;}
+
+footer{margin:127px 0px 0px -20px;width:414px;height:746px;flex-flow: column nowrap;}
+	footer a{color:#FFF;font-size:16px;font-weight:700;}
+	.email_blk,.group1{margin-left:19px;  }
+	
+		.ftr_clmn1,
+		.ftr_clmn2{margin:0px;}	
+    		.group1{margin-top:35px; }
+    	.email_blk{width:375px; margin-top:23px;}	
+  		.email_blk_header{width:362px;}
+  		input    {width:366px;}
+   		button[type="submit"]{ width:55px; padding:14px 11px 12px 20px;	top:0px; left:311px;}
+   	.icon_blk{margin:-17px 0px 0px 19px; }
+   	.icons{margin-top:20px;}	
+  	.footr_line{position:absolute;top:587px;left:19px;height:2px;}	
+  	.end_line{flex-flow:column nowrap;gap:16px; top:609px;left:19px;opacity:.7;}}	
+</style>
+<!------------------------------------------------><body><!------------------------------------------------>  
+<div> <input id="frame_on" type="checkbox" checked>	
+		<div id="test_frame"> </div>
+		<div id="test_message">iPhone 11 Pro MAX - 4 (414 x 9281) MODE FRAME</div>    	
+</div> 		<img src="../img/svg/A_pink_blot.svg" class="blot1 screen_1440" alt="Розовое пятно#1" width="218" height="606">
+		<img src="../img/svg/A_pink_blot2.svg" class="blot2 screen_1440" alt="Розовое пятно#2" width="73" height="240"> 
+<header>
+	<a href="../pages/main_start.htm" title="На главную страницу"> <img src="../img/svg/logo-top.svg" class="top_logo_siz"
+									alt="Main LOGOtype"></a>
+	<div class="screen_414"> 
+	<!-- BURGER BUTTON  -->
+	<script>	function unchk() {let inputs = document.getElementById('chkbx');
+        		  	  inputs.checked = false;}				</script>
+	<div class="burger_wrap"> 
+		<input class="burger_input" id="chkbx" type="checkbox">		
+	  	<div class="bb1">  </div>	<div class="bx1"></div>
+	   	<div class="x_cir"></div>	<div class="bx2"></div>		  
+	   	<div class="selector" onclick="unchk()">
+	        	<a href="../pages/about.htm" title="О нас">		  <div> 	O&nbsp;О нас		</div></a>
+			<a href="../pages/tarif.htm" title="Тарифы">		  <div> 	Т&nbsp;Тарифы		</div></a>
+			<a href="../pages/4bisness.htm" title="Для бизнеса">	  <div> 	Д&nbsp;Для&nbsp;бизнеса </div></a>
+			<a href="../pages/4specs.htm" title="Психологам">		  <div> 	П&nbsp;Психологам	</div></a>
+			<a href="../content/materials.htm" title="Материалы">
+							  			  <div> 	М&nbsp;Материалы	</div></a>
+			<a href="../pages/faq1.htm" title="Часто задаваемые вопросы"><div> 	F&nbsp;FAQ		</div></a>
+			<a href="../pages/doc-sel.htm" title="Подобрать психолога">  <div id="sel_spec_mnu">Подобрать&nbsp;психолога	</div></a>
+	   	</div>
+	</div>
+	<!-- BURGER BUTTON end -->
+      </div>
+	<nav>
+	    <a href="../pages/about.htm" title="О нас">			О нас		</a><div class="nav_spc"></div>
+	    <a href="../pages/tarif.htm" title="Тарифы">		Тарифы		</a><div class="nav_spc"></div>
+	    <a href="../pages/4bisness.htm" title="Для бизнеса">	Для бизнеса	</a><div class="nav_spc"></div>
+	    <a href="../pages/4specs.htm" title="Психологам">		Психологам	</a><div class="nav_spc"></div>
+	    
+	 <div class="slct_blk">
+	    <span  class="fake_slct">Материалы</span>	     
+	    <select title="Материалы" onClick="value='#'"	    
+	    			     onchange="document.location=this.options[this.selectedIndex].value">
+	    	<option id="list_head" value="#" selected>Материалы</option>			  
+	    	<option value="content-A1.htm"
+  						       title="Кальмароподобные бородачи">Кальмароподобные бородачи	 </option>
+    		<option value="content-A2.htm" title="Дредноут">Дредноут			 </option>
+   		<option value="content-A3.htm" title="ФУФА">ФУФА				 </option>  
+   		<option value="../pages/faq1.htm" title="Часто задаваемые вопросы">Часто задаваемые вопросы </option> 		
+	    </select>	    
+	    <img src="../img/svg/drop_down_arrow.svg" class="down_arrow">
+	 </div>	  										    <div class="nav_spc"></div>	
+	    <a href="../pages/faq1.htm" title="Часто задаваемые вопросы">		FAQ		</a>    
+	</nav>
+	<div class="btn_sel_spec_wrap"> 
+		<a href="../pages/doc-sel.htm" title="Подобрать психолога">
+				<Button class="btn_sel_spec_head">Подобрать психолога</Button>
+		</a>
+	</div>
+	
+</header>
+<img src="../img/svg/Line.svg" class="line_head">
+<div class="page_spec">
+	<a href="../pages/main_start.htm" title="На главную страницу">Главная</a>
+	<img src="../img/svg/Arrow.svg"  class="r_arrow_margins" width="16" height="16">
+	<a href="../site_desktop_blog.htm" title="На страницу блога">Блог</a>
+	<img src="../img/svg/Arrow.svg"  class="r_arrow_margins" width="16" height="16">
+	<a href="#footer_blk" title="В конец страницы">Как не утонуть в тревоге и управлять своими страхами</a>
+	
+</div>
+<main>
+   <div class="column_1">
+	<div class="page_header">Как не утонуть в тревоге и управлять своими страхами</div>
+	<div class="author">	
+				Автор: Лиза Файнтух
+				<img src="../img/svg/A_dot_mark.svg" class="dot_margins" width="4" height="20">
+				21.08.2021
+	</div>  
+	<img src="../img/png/A_desk_woman1.png" class="hero_margins i_shed" alt="woman swimming back">
+	<div class="contents">Содержание</div>
+     <div class="items"> 	
+	<div class="cnt_item1"> 
+		<img src="../img/png/A_green_marker.png" width="24" height="24">
+		<a href="#" title="Как понять, что отношения с мамой были дисфункциональными и привели к травме?">
+		Как понять, что отношения с мамой были дисфункциональными и привели к травме?</a>
+	</div>
+	<div class="cnt_item2 screen_1440"> 
+		<img src="../img/png/A_green_marker.png" width="24" height="24">
+		<a href="#" title="Мама привет!">Мама привет!</a>
+	</div>	
+		<ul class="screen_1440">			
+			<li><a href="#" title="Под под заголовок под заголовком">Под под заголовок под заголовком</a></li>
+			<ul>
+				<li><a href="#" title="Под под под заголовок под заголовком">Под под под заголовок под заголовком</a></li>
+			     <ul>
+				<li><a href="#" title="Под под под под заголовок под заголовком">Под под под под заголовок под заголовком</a></li>
+			     </ul>
+			</ul>
+		</ul>
+	<div class="cnt_item3 screen_1440"> 
+		<img src="../img/png/A_green_marker.png" width="24" height="24">
+		<a href="#" title="Ну вот опять заголовок который как «привет мама»">Ну вот опять заголовок который как «привет мама»</a>
+	</div>
+	<div class="cnt_item4"> 
+		<img src="../img/png/A_green_marker.png" width="24" height="24">
+		<a href="#" title="Как понять, что вы страдаете от материнской травмы?">Как понять, что вы страдаете от материнской травмы?</a>
+	</div>
+     </div>
+  <h3>Заголовок h3</h3>
+     <div class="txt blk1"> Один из самых важных навыков, которые может дать работа с психотерапевтом - умение в разных ситуациях по-разному 				    обходиться со своими эмоциями.  Снять этот процесс с автопилота и перевести его в поле сознания.	
+		<div class="dnt_shw414">  <br></div>
+		<div class="mrg_top_16px"> 	  
+			  Давайте, к примеру, разберем тревогу. Можно разложить перед собой целую коллекцию доступных реакций и 
+			  выбрать нужную:     </div> 
+     </div>
+     <div class="quote1">Мы знаем, что нуждаться в помощи и поддержке в трудные периоды жизни абсолютно нормально для любого человека, 
+     и стремимся сделать психотерапию безопасной, удобной и доступной каждому
+     <div class="sign">Ана Крымская</div>
+     </div>
+  <h3>Что еще можно делать с тревогой?</h3>
+  <ul class="ul_green">
+  	<li><img src="../img/png/A_green_marker.png" width="24" height="24">
+  		<div> Управлять ей через что-то внешнее: включать музыку, которая 
+  		создает другое настроение, сесть за работу с цифрами, которая быстренько 
+  		активизирует другие участки мозга, читать блоги, которые вас успокаивают 
+  		и отвлекают.</div>
+  	</li>
+  	<li><img src="../img/png/A_green_marker.png" width="24" height="24">
+  		<div> А еще порой можно разрешить себе тревогу заесть чем-то вкусным. Это, 
+  		конечно, не самая здоровая стратегия, но в ряде ситуаций можно считать ее 
+  		вполне рабочей. Особенно, когда внутренний ресурс на нуле, а 
+  		поддерживающее окружение не в доступе.</div>
+  	</li>
+  </ul>
+  <img src="../img/png/A_hotel_aerial.png"  class="pic i_shed" alt="People walking in hotel hall(Aerial shot)">
+  <div  class="pic_description">Онтогенез речи отражает групповой эриксоновский гипноз.</div>
+  <div class="txt">Чем шире доступный вам репертуар реакций и чем более осознанно вы можете 
+  			выбирать из него то, что лучше всего подойдет в каждой конкретной ситуации, 
+  			тем больше будет ваша устойчивость к стрессу, депрессии, неопределенности, 
+  			да и к жизни в целом.</div>
+  <div class="txt blk4"><div class="quote2">Мы знаем, что нуждаться в помощи и поддержке в 
+  			трудные периоды жизни абсолютно нормально для 
+  			любого человека, и стремимся сделать психотерапию 
+  			безопасной, удобной и доступной каждому</div></div>
+  <div class="txt">     Одна из ключевых задач психотерапии как раз и заключается в том, чтобы этот 
+  			репертуар расширять и обучать человека пользоваться доступными ему 
+  			реакциями в той последовательности, пропорции и объеме, которые 
+  			подходят именно ему. Без оглядки на то, "как правильно" или "как у других".</div>
+  <div class="blk6"><img src="../img/png/A_w_googles.png"  class="pic2 i_shed" alt="Woman wearing gogles">
+  			<div> 
+  			Чем шире доступный вам репертуар реакций и чем более осознанно вы можете 
+  			выбирать из него то, что лучше всего 
+  			подойдет в каждой конкретной ситуации, 
+  			тем больше будет ваша устойчивость к 
+  			стрессу, депрессии, неопределенности, да и 
+  			к жизни в целом.
+  			А еще порой можно разрешить себе тревогу 
+  			заесть чем-то вкусным. 
+  			</div>
+  </div>
+  <div class="txt">Чем шире доступный вам репертуар реакций и чем более осознанно вы можете 
+  			выбирать из него то, что лучше всего подойдет в каждой конкретной ситуации, 
+  			тем больше будет ваша устойчивость к стрессу, депрессии, неопределенности, 
+  			да и к жизни в целом.
+  </div>
+  <div class="exe exe_one_color" id="ex_1">
+  	<div class="exe_header">Упражнение #1</div>
+  	<div class="exe_text">Нужно последовательно напрягать и расслаблять каждую мышцу в теле на 
+  	несколько секунд. Напрягать стоит довольно сильно, чтобы потом 
+  	отчетливее ощущать расслабляющий эффект. Начать можно с пальцев ног 
+  	и постепенно подниматься вверх. Смысл в том, чтобы через напряжение 
+  	дать стрессу выход, а затем вновь привести себя в спокойное состояние 
+  	через расслабление</div>
+  </div>
+  <h3>Что еще можно делать с тревогой?</h3>
+  <ul class="ul_green w-604">  
+  	<li><img src="../img/png/A_green_marker.png" width="24" height="24">
+  		<div> Управлять ей через что-то внешнее: включать музыку, которая 
+  		создает другое настроение, сесть за работу с цифрами, которая быстренько 
+  		активизирует другие участки мозга, читать блоги, которые вас успокаивают 
+  		и отвлекают.</div>
+  	</li>
+  	<li><img src="../img/png/A_green_marker.png" width="24" height="24">
+  		<div> А еще порой можно разрешить себе тревогу заесть чем-то вкусным. Это, 
+  		конечно, не самая здоровая стратегия, но в ряде ситуаций можно считать ее 
+  		вполне рабочей. Особенно, когда внутренний ресурс на нуле, а 
+  		поддерживающее окружение не в доступе.</div>
+  	</li>
+  </ul>  
+ <div class="blk8">  
+ 			<img src="../img/png/A_handshake.png" class="pic3 i_shed" alt="Handshake">
+ 			<div> Чем шире доступный вам репертуар реакций и чем более осознанно вы можете 
+ 			выбирать из него то, что лучше всего подойдет в	каждой конкретной ситуации, 
+ 			тем больше будет ваша устойчивость к стрессу.</div>
+  </div>
+  <div class="txt"> Чем шире доступный вам репертуар реакций и чем более осознанно вы можете выбирать из него то, 
+  	что лучше всего подойдет в каждой конкретной ситуации, тем больше будет ваша устойчивость к стрессу, 
+  	депрессии, неопределенности, да и к жизни в целом.
+  </div>
+  <div class="exe exe_two_color">
+  	<div class="exe_header">Упражнение #2</div>
+  	<div class="exe_text">Нужно последовательно напрягать и расслаблять каждую мышцу в теле на 
+  	несколько секунд. Напрягать стоит довольно сильно, чтобы потом 
+  	отчетливее ощущать расслабляющий эффект. Начать можно с пальцев ног 
+  	и постепенно подниматься вверх. Смысл в том, чтобы через напряжение 
+  	дать стрессу выход, а затем вновь привести себя в спокойное состояние 
+  	через расслабление</div>
+  </div>
+  <div class="pic_blk10">
+  			<div><img src="../img/png/A_chair.png" class="pic_blk10_picsize i_shed" alt="Chair">
+  				<div class="txt">Чем шире доступный вам репертуар реакций и чем более осознанно вы можете выбирать из него то, 
+  				что лучше всего подойдет в каждой конкретной ситуации, тем больше будет ваша устойчивость к стрессу, 
+  				депрессии, неопределенности, да и к жизни в целом. 
+  				</div>  			
+  			</div>
+  			<div><img src="../img/png/A_pierce_night.png" class="pic_blk10_picsize i_shed" alt="Woman standing at pierce while sunset">
+  				<div class="txt">Чем шире доступный вам репертуар реакций и чем более осознанно вы можете выбирать из него то, 
+  				что лучше всего подойдет в каждой конкретной ситуации, тем больше будет ваша устойчивость к стрессу, 
+  				депрессии, неопределенности, да и к жизни в целом. 
+  				</div>  			
+  			</div>  
+  </div>
+ <img src="../img/svg/A_highvolt_mark.svg" class="pic_blk12" width="179" height="32"> 
+ 	<div class="txt">Одна из ключевых задач психотерапии как раз и заключается в том, чтобы этот репертуар расширять 
+ 			и обучать человека пользоваться доступными ему реакциями в той последовательности, пропорции и 
+ 			объеме, которые подходят именно ему. Без оглядки на то, "как правильно" или "как у других".
+ 	</div>
+ 	<div class="exe exe_tre_color">
+  		<div class="exe_header">Упражнение #1</div>
+  		<div class="exe_text">Нужно последовательно напрягать и расслаблять каждую мышцу в теле на 
+  					несколько секунд. Напрягать стоит довольно сильно, чтобы потом 
+  					отчетливее ощущать расслабляющий эффект. Начать можно с пальцев ног 
+  					и постепенно подниматься вверх. Смысл в том, чтобы через напряжение 
+  					дать стрессу выход, а затем вновь привести себя в спокойное состояние 
+  					через расслабление
+  		</div>
+  	</div>
+  <div class="tag_set screen_1440">	<a href="self.htm" title="Self">Self</a>	
+  			<img src="../img/svg/A_dot_mark.svg" class="tag_set_dot"  width="4" height="20">
+  			<a href="#" title="Самооценка и самопринятие"> Самооценка и самопринятие</a>	
+  			<img src="../img/svg/A_dot_mark.svg" class="tag_set_dot"  width="4" height="20">
+  			<a href="#" title="Самооценка и самопринятие"> Самооценка и самопринятие</a>	
+  			<img src="../img/svg/A_dot_mark.svg" class="tag_set_dot"  width="4" height="20">
+  			<a href="#ex_1" title="Упражнения">Упражнения</a>	
+  </div>
+  <div class="tag_set screen_1440">	<a href="#" title="Чувства и эмоции">Чувства и эмоции</a>	
+  			<img src="../img/svg/A_dot_mark.svg" class="tag_set_dot"  width="4" height="20">
+  			<a href="#" title="Самооценка и самопринятие"> Самооценка и самопринятие</a>	
+  			<img src="../img/svg/A_dot_mark.svg" class="tag_set_dot"  width="4" height="20">
+  			<a href="#ex_1" title="Тревога">Тревога</a>	
+  </div>
+  <div class="line_2 screen_1440"><img src="../img/png/A_above_footer_line_1200.png" width="1200" height="1"></div>  
+  </div>  
+<aside>	<div class="aside_c1">
+			     <img src="../img/png/A_load_win.png" class="aside_c1_pic" alt="Loading free windows">
+			     
+			     <div class="aside_c1_header">
+					Загружаем<br>свободные окошки
+			     </div>
+			     <div class="aside_c1_txtblk">
+					Все впорядке, сейчас мы перенаправим Вас в сервис записи Quick, 
+					через который удобно выбрать дату, время встречи и оплатить её
+			     </div>
+			     <a href="../pages/details-1.htm" title="Подробнее">
+			     		<button class="aside_c1_btn">Подробнее</button>
+			     </a>
+
+	</div>
+	<div class="aside_c2">
+		<div class="aftr1">	<img src="../img/svg/A_pencil_notepad.svg" class="aftr_ico">
+					<div class="aftr_txt">Переписка</div>
+		</div>	
+		<div class="aftr2">	<img src="../img/svg/A_cam.svg" class="aftr_ico">
+					<div class="aftr_txt">Видео</div>
+		</div>	
+	
+				<div id="aside_c2_img"> 
+				      <img src="../img/png/A_liliya.png" id="aside_c2_img_rnd" alt="Specialist photo">
+				</div>
+				<div class="aside_c2_header">Лилия</div>
+				<div class="aside_c2_spec">Психолог</div>
+				<div id="aside_c2_age">
+					<div>Опыт6 лет</div><img src="../img/svg/dot_4x4.svg" id="dot_4x4"><div>43 года</div>
+				</div>
+			<div class="aside_c2_line_wrap">	
+				<img src="../img/svg/A_card_Line.svg" class="aside_c2_line">
+			</div>
+			<div class="aside_c2_lst">	
+				<div class="aside_c2_lst_head">С чем работает психолог</div>
+				<div class="aside_c2_lst_item">
+					<img src="../img/png/A_green_marker.png" class="aside_c2_lst_item_dot" width="20" height="20">
+					Тревога, тревожности
+				</div>
+				<div class="aside_c2_lst_item">
+					<img src="../img/png/A_green_marker.png" class="aside_c2_lst_item_dot" width="20" height="20">
+					Подавленность
+				</div>
+				<div class="aside_c2_lst_item">
+					<img src="../img/png/A_green_marker.png" class="aside_c2_lst_item_dot" width="20" height="20">
+					Тревога и панические атаки
+				</div>	
+				<a href="../pages/details-2.htm" title="Подробнее">
+			     		<button class="aside_c2_btn">Подробнее</button>			
+			</div>
+			
+	</div>
+	
+	<a href="../pages/ZZABOTTA.htm" title="Дарите заботу" id="debug_1">
+			<div class="aside_c3"><div class="aside_c3_txt">Дарите заботу</div></div>
+	</a>
+	<div class="aside_c4">
+				<div id="aside_c4_header">
+					<div class="c4h_center">8</div><div class="c4h_end">Видео сессий</div>
+				</div>
+				<div id="aside_c4_txt">
+					Проработать небольшие проблемы и продвинуться в решении сложных запросов
+				</div>
+				<div class="aside_c4_price">
+					18 500 ₽ 
+				</div>
+				<a href="../pages/buy18500.htm" title="Подробнее">
+			     		<button class="aside_c4_btn">Купить</button></a>
+	
+	</div>
+</aside>  
+  			
+</main>	
+<div class="problem_blk screen_1440">
+		<div class="btn_blk">
+  			<div id="problem_hdr">Откликается проблема?
+  			</div>
+  			<div id="problem_dsc">Поможем подобрать специалиста по работе с подобным запросом
+  			</div>
+  			<a href="../pages/doc-sel.htm" title="Подобрать психолога">
+						<Button class="problem_btn">Подобрать психолога</Button></a>
+  		</div>	
+  		<div class="problem_pic"> 	
+			<img src="../img/gif/razg_mask5.gif" id="problem_pic_frame" alt="Разговор" 
+			width="449" height="359">		
+	        </div>  
+</div> 
+						
+<footer id="footer_blk">      	
+  		<img src="../img/svg/A_botton_fon1440x672.svg" class="bottom_fon screen_1440">    	
+  <div class="ftr_clmn0 dnt_shw414"></div>  
+  <div class="group1"> 
+	<div class="ftr_clmn1"> 
+		<a href="../pages/about.htm" title="О нас">	 О нас			</a>
+	    	<a href="../pages/tarif.htm" title="Тарифы">	 Тарифы			</a>
+	    	<a href="../pages/4bisness.htm" title="Для бизнеса">Для бизнеса		</a>
+	    	<a href="../pages/4specs.htm" title="Психологам">	 Психологам		</a>
+	    	<a href="../pages/faq1.htm" title="Часто задаваемые вопросы">FAQ		</a> 
+	</div>
+	<div class="ftr_clmn2"> 
+		<a href="../site_desktop_blog.htm" title="Блог">	 	Блог			</a>
+	    	<a href="../pages/webinars.htm" title="Вебинары">	Вебинары		</a>
+	    	<a href="../pages/podast.htm" title="Подскаст">	Подскаст			</a>
+	    	<a href="../pages/sert.htm" title="Сертификат">	Сертификат		</a>
+	    	<a href="../pages/contacts.htm" title="Контакты">	Контакты		</a> 
+	</div>
+  </div>	
+<div class="email_blk_margin dnt_shw414"></div>	
+	<div class="email_blk">
+		<div class="email_blk_header">Одно письмо в неделю со свежими новостями и акциями	</div>
+		<div class="email_input">
+			<form class="e_mail">	
+  				<input placeholder="Ваш e-mail" type="email">  			     	
+  				<button type="submit" title="Подписаться">
+					<img src="../img/svg/send_24x24.svg" alt="Group follow image paper plane" width="24" height="24" >
+				</button>			     
+  			</form>  			
+  		</div>
+  		<div class="email_discl">Подписываясь, я соглашаюсь на обработку персональных данных в 
+  		соответствии с ФЗ РФ № 152-ФЗ &laquo;О персональных данных&raquo;, а также с Политикой конфиденциальности</div>		
+	</div>
+<div class="email_blk_margin dnt_shw414"></div>
+	<div class="icon_blk">	<a href="https://www.sk.ru" title="Сколково"><img src="../img/svg/participant.svg" 
+									     alt="Значок участника проекта Сколково"></a>
+				<div class="icons"> 
+					<!--VK--><a href="https://www.vk.com" title="ВКонтакте">	<div class="ptchk" id="vk">
+						<img src="../img/svg/Vk_icon_20x12.svg" alt="Vk_logotype" 	 width="20" height="12">	</div></a>
+						
+					<!--TG--><a href="https://www.telegram.com" title="Телеграм">	<div class="ptchk" id="tg">
+						<img src="../img/svg/teleg_logo_16x14.svg" alt="Telegrahm_logotype" width="16" height="14"></div></a>
+						
+					<!--TW--><a href="https://www.twitter.com" title="Твиттер">	<div class="ptchk" id="tw">
+						<img src="../img/svg/twit_logo_18x18.svg" alt="Twitter_logotype"	 width="18" height="18"></div></a>
+						
+					<!--DZ--><a href="https://www.yandex.ru" title="Яндекс Дзен">	<div class="ptchk">
+						<img src="../img/svg/dzen_logo_32x32.svg" alt="Dzen_logotype" 	 width="32" height="32"></div></a>
+				</div>
+				
+	</div>
+<div class="ftr_clmn000 dnt_shw414"></div>
+<img src="../img/svg/Line-footer.svg" class="footr_line">
+<div class="end_line"> 
+	<a href="../pages/main_start.htm" title="На главную страницу">	<div>&#169;Youtalk, 2018 – 2022	</div></a>		
+	<a href="../pages/just_docs.htm" title="Юридические документы">	<div>Юридические документы	</div></a>		
+	<a href="../pages/pay_ways.htm" title="Способы оплаты">		<div>Способы оплаты		</div></a>
+</div>
+</footer>
+</body>
+</html>
