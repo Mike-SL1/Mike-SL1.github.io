@@ -24,7 +24,7 @@ a,button:hover {cursor: pointer;}     	button{height:51px; width:100%;background
 	      .N15B36{text-transform:none;}
 
 main,header,.cntr,.shell_340{margin:0px auto 0px;}	.shell_340{width:340px;}
-							      main{border:1px solid orange; }
+							
 nav,.head_txt,.app_data_wrap,.app_data_clmn,.footer_icons_wrap{display:flex;}			
 
 nav,.footer_icons_wrap{justify-content:space-between;}
