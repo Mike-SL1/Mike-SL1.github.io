@@ -1,0 +1,61 @@
+/*Nunito Sans Regular*/	@font-face {font-family: "Nunito";src: url("../fonts/NunitoSans_Reg.ttf") format("truetype");} 
+/*Yeseva One Regular*/	@font-face {font-family: "Yeseva";src: url("../fonts/Yeseva1-Reg.ttf") format("truetype");} 
+  			     .F_yes{font-family: Yeseva,"Comic Sans MS",Sans-serif;font-size: 18px;}
+/*Nunito Sans Italic*/	@font-face {font-family: "Nunito_i";src: url("../fonts/NunitoSans_Itl.ttf") format("truetype");} 
+			     .F_itl{font-family: Nunito_i,"Comic Sans MS",Sans-serif;font-size: 11px;font-style: italic;}
+					    .N40{font-size: 40px;}.N27{font-size: 27px;}
+.N20{font-size: 20px;}.N17{font-size: 17px;}.N18{font-size: 18px;}.N14{font-size: 14px;} 
+
+.colr18{color: #181818;}	.colrFFF{color: #FFF;}		.colr36{color: #363636;}	.colrE3{color:#E3B873;}
+												.backE3{background: #E3B873;}
+*	   {padding:0px;margin:0px;box-sizing: border-box; font-family: Nunito,"Comic Sans MS",Sans-serif;
+	    font-size: 13px; 	font-style: normal; 	font-weight: 400;	color:#FFF;} 
+a	   {text-decoration:none;}
+a,button:hover {cursor: pointer;}    button:active{background:deeppink;}   
+button,nav a,.txt_BP{text-transform:uppercase;}	button{background:#E3B873;border:none;flex-shrink:2;}
+							nav button,.head_pic_btns button,.form1_btn{border-radius:2px;}
+button,.txt_blk5,.bb_hdr,.clients,.ques_wrap_header,.adr{text-align:center;}
+main,header,footer,.fantas,.map_wrap{max-width: 1438px;}
+
+main,			header,			footer,			.on_ctrl,		.cam_blk,		
+.St_player,		.separ,			.txt_blk5,		.chk_bx1_wrap,		.typ_rep,		
+.typ_smpl,		.stages_wrap,		.cli_card_wrap,		.adr,			.icons_wrap,		
+.map_wrap1		{margin: 0px auto 0px;}
+
+nav,			.on_ctrl_wrap,		.sld_data_wrap1,	.round_digit_wrap,	.foto_wrap,
+.wrap2,			.cam_blk,		.sld_data_wrap2,	.digit,			.dim_wrap,
+.sld_lnks,		.chk_bx1_wrap,		.comp_prj_wrap,		.stg_digts_wrap,	.ques_wrap_box,
+.sld_data_wrap,		.typ_rep,		.sld_data_wrap1>div,	.black_box,		.links_wrap,
+.sld_slct,		.head_pic_btns,		.sld_data_wrap2>div,	.fantas_lst,		.form3_lbl2,
+.form1,			.form_lbl1,		.form_lbl2,		.typ_smpl,
+.from,			.stages_wrap,		.pig,			.cli_card_wrap,.cli_card	{display:flex;}
+
+nav,			.on_ctrl_wrap,	.ques_wrap_box,	
+.wrap2,			.sld_slct,
+.sld_lnks,		.black_box::after,
+.sld_data_wrap,		.cam_blk	{background-color:#131313;}
+
+footer nav,		.gasket 	{background-color:#181818;}
+
+.sld_slct,.typ_rep,.from,.digit,.foto_wrap		{justify-content:center;}
+.head_pic_btns,.form_lbl1,.typ_rep,.links_wrap	{justify-content:space-between;}
+
+.sld_data_wrap1,	.sld_data_wrap1>div,	.typ_rep,		.black_box,	.ques_wrap_box,
+.sld_data_wrap2,	.sld_data_wrap2>div,	.stg_digts_wrap,	.fantas_lst,
+.comp_prj_wrap,		.on_ctrl_wrap,		.form_lbl2		{flex-flow:column nowrap; }	  			       
+
+.sld_slct,.cam_blk,.chk_bx1_wrap,.typ_rep,.from,.pig,.round_digit_wrap,.digit,
+.foto_wrap,.dim_wrap{align-items:center;}
+
+.head_pic::after,.St_player::after,.black_box::after,.fantas::after,.map_wrap::after{content:'';}
+
+.head_pic::after,	.head_pic_txt,		.chbx_brd,			.dim_wrap,	.gorod,		.map_blk,
+.St_player::after,	.play_btn,		.smpl_list ul li::before,	.cli_name,	.map_wrap::after,
+.black_box::after,	.form_lbl2,		.fantas::after,			.fantas_pic,	.ques_wrap_box,	.links_wrap,
+.form_lbl1,		.fake_chkbx,		.fantas_blk_wrap,		.play_btn_blk,	.ques_wrap_box_C4,
+.location,		.loc_mrk,		.dim_bdr		{position:absolute;top:0px;left:0px;}
+
+
+
+
+	

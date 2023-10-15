@@ -1,0 +1,42 @@
+/*Nunito Sans Regular*/	@font-face {font-family: "Nunito";src: url("../fonts/NunitoSans_Reg.ttf") format("truetype");}
+ *{padding:0px;	margin:0px;	box-sizing: border-box; 	font-family: Nunito,"Comic Sans MS",Sans-serif;
+   font-size: 11px; 	font-style: normal; 	font-weight: 400;	color:#FFF;}
+  
+a	  {text-decoration:none;}	main,header{width:375px;  background-color:#181818;}
+a,button:hover {cursor: pointer;}     	button{height:51px; width:100%;background:#E3B873;border:none;}
+  button:active{background:deeppink;}
+
+/*Yeseva One Regular*/	@font-face {font-family: "Yeseva";src: url("../fonts/Yeseva1-Reg.ttf") format("truetype");} 
+  			     .Yeseva_14,.N15B36,.N15,.N23,.N23E3,.N22E3,.N22,.N22B18,.N20,.N18E3 {font-size: 22px;
+				    font-family: Yeseva,"Comic Sans MS",Sans-serif;color:#E3B873;text-transform:uppercase;}
+			     .N23E3,.N23{font-size: 23px;} .N20{font-size: 20px;} .N18E3{font-size: 18px;}.N15B36,.N15{font-size: 15px;}			     
+			     .N15,.N23,.N22,.N20,.form1_fld::placeholder{color:#FFF;}	
+			     .N15B36{color: #363636;}		.N22B18{color: #181818;}
+
+/*Nunito Sans Italic*/	@font-face {font-family: "Nunito_i";src: url("../fonts/NunitoSans_Itl.ttf") format("truetype");} 
+			     .F_itl{font-family: Nunito_i,"Comic Sans MS",Sans-serif;font-style: italic;}
+			
+.Nun13_05,.Nun13_C{font-size: 13px;}				
+.Yeseva_14,.Nun_14,.form1_fld::placeholder{font-size: 14px;} 
+.Nun13_C,.F_itl,nav a{text-transform:uppercase;}			.Nun13_05{color:rgba(255, 255, 255, 0.50);}
+.N15,.N22E3,.N22,.N22B18,.N20,.N18E3,.Nun13_C,.F_itl,
+.txt_cntr				  {text-align: center;}		.colrE3{color:#E3B873;}
+	      .N15B36{text-transform:none;}
+
+main,header,.cntr,.shell_340{margin:0px auto 0px;}	.shell_340{width:340px;}
+							      main{border:1px solid orange; }
+nav,.head_txt,.app_data_wrap,.app_data_clmn,.footer_icons_wrap{display:flex;}			
+
+nav,.footer_icons_wrap{justify-content:space-between;}
+
+.head_txt,.app_data_clmn{flex-flow:column nowrap; }											
+
+.head_pic_wrap::after,.video_wrap::after{content:'';}
+
+.head_pic_wrap::after,.head_txt,.sample_blk,.video_wrap::after,.play_ico,.form1_btn,.card_list,
+.card_list_btn,.card_list ul li::before,.fantasy_pic_wrap{position:absolute;top:0px;left:0px;}
+
+
+
+
+	
