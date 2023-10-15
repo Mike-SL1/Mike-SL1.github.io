@@ -1,0 +1,577 @@
+﻿<!DOCTYPE HTML>
+<html>
+<head>
+	<meta charset="UTF-8">		
+	<link rel="icon" type="image/png" sizes="32x32" href="img/gif/disign3232.gif">  
+	<link rel="stylesheet" href="styles/styl-1.css">		
+		<title>IDA-Landing_v2- Слугин</title></head>
+<style> nav	{height:83px;align-items:flex-end;}		.rq_cal_a  {margin:0px 0px 22px -2px;}
+                .spc47{width:47px;height:8px;flex-shrink:3;}	.rq_cal_btn{width:161px; height:37px;}
+		nav a{font-size:11px;margin-bottom:36px;}		nav a:nth-child(2),
+									nav a:nth-child(16){flex-shrink:0;}
+			nav a:nth-child(2),nav a:nth-child(4),nav a:nth-child(16){color:#E3B873;}
+		nav a:nth-child(2) {width:180px;margin-left:45px;}
+		nav a:nth-child(4) {width:40px; margin-left:48px;}		
+		nav a:nth-child(16){text-decoration:underline;text-align:right;width:126px; margin-left:20px;margin-bottom:30px;}
+	  
+img {font-size:16px;color:#391;}		  
+.head_pic{position:relative;height:707px; 
+          background-color: rgba(0, 0, 0, 0.70);
+	  background-image:url('img/png/head_img.png');
+	  background-size: cover;background-position:center;}	  
+	.head_pic::after{background-color: rgba(0, 0, 0, 0.70);right:0px;bottom:0px;}
+	  
+	  .head_pic_txt,.comp_prj_wrap{margin-left:134px;}			       	  
+	  .head_pic_txt{ top:194px;	 
+	  		 width:676px;	       z-index:1;}
+	  	.head_pic_txt1{height:105px;padding-right:6ch;					line-height: 132.825%;}
+	  	.head_pic_txt2{height:89px;width:524px; margin-top:19px;font-size:22px;		line-height: 163.68%; }
+	  	.head_pic_btns{width:434px;margin-top:41px;}
+			.head_pic_btns button{height:51px;width:207px;} .trp_clr{background-color:transparent;border:1px solid white;}	
+				
+.comp_prj_wrap{margin-top:176px;width:442px; height:482px; }			
+	.comp_prj_h{height:66px;width:253px;line-height:138.6%; letter-spacing: -1.89px; }
+	.descr{margin-top:34px;line-height: 190.96%;} 
+	
+    .sld_data_wrap{margin-top:42px;width:406px;}
+      .sld_data_wrap1{width:161px;}	
+      .sld_data_wrap2{width:213px;margin-left:29px;}		
+	.sld_data_wrap .F_yes{line-height: 138.6%; margin-bottom:9px;}
+	.sld_data_wrap div:nth-of-type(2){line-height: 163.68%;}					
+				  .value1{height:42px;margin-bottom:34px; }				  
+	.sld_slct{margin:79px 0px 0px 0px;gap:17px;
+		  width:205px;height:13px;
+		  background-image:url('img/svg/Radio_btn.svg');}	  		
+    .sld_lnks_wrap {width:679px;height:551px;margin:107px 0px 0px 50px;   }	
+    	.sld_lnks  {gap:60px;} 
+    	.sld_lnks div{height:6px;}
+    	.sld_lnks a,.sld_lnks div{color: rgba(255, 255, 255, 0.30);}
+    	.sld_lnks a:focus{color:#E3B873;border-bottom:1px solid #E3B873;}    	
+    .sld_pic{width:100%; height:482px; margin-top:45px;}	
+    .on_ctrl_wrap{height:416px;}	
+    	.on_ctrl{margin-top: 90px;width:auto; height:26px;}
+    	.cam_blk{margin-top: 13px;width:116px;}
+    		.cam_lin,.separ{width:32px;height:1.5px; border:1px solid #E3B873; }
+    		.cam_ico{width:33px;height:28px;margin:0px 9.5px 0px 9.5px; }
+    	.St_player{position:relative;margin-top:-226px;}
+    		
+    		.video_ctrl,.St_player{width:817px;height:434px;}
+    		.St_player::after{background-color: rgba(0, 0, 0, 0.80);right:0px;bottom:0px;}
+    		   .play_btn_blk,.play_btn{z-index:1;}
+    			.play_btn_blk{right:210px;bottom:60px;top:60px;left: 210px;}
+    			   .play_btn{width:85px;height:85px;top:114px;left: 155px;}
+  .separ{width:55px;margin-top:62px; }  
+  .txt_blk5{width:739px;height:130px;margin-top:34px;line-height: 204.6%;}
+  	
+  .form1{position:relative;width:769px;margin:91.5px auto 50px; }
+  	.form_lbl1{top:5px;width:328px;} 
+  		   .form_lbl1 div{color: rgba(54, 54, 54, 0.50);}
+  		   .frm_fld{font-size:14px;border:1px solid transparent;background:transparent;outline: none;}
+        	.form1_fld1,.form1_fld2{margin-right:58px;width:231px;border-bottom:2px solid #3636364D;
+        		    		padding-top:15px;}
+        	.form1_fld2{margin-right:49px;}
+  	.form1_btn{width:200px;height:51px;}
+.chk_bx1_wrap{position:relative;width:316px;margin-top:33px;}  	
+	.chk_bx1{opacity:0;}    .chk_bx1,.fake_chkbx,.chbx_brd{width:18px;height:18px;}
+					 .fake_chkbx,.chbx_brd{top:2px;	z-index:-1;
+					 		       border-radius:2px;}			       
+						     .chbx_brd{border:1px solid #3636364D;}
+					 .fake_chkbx{display:none;	background-image:url('img/svg/chkbx_checked.svg');}
+	.chk_bx1:checked + div{display:block;}
+				
+	.chk_bx1_wrap span{margin-left:9px;padding:0px 2px 0px 2px;font-size: 14px;line-height: 163.68%;}
+  .typ_rep{width:258px;height:67px;  margin-top:148px;}  	
+		.typ_rep img{width:114px;height:28px;margin-left:5px;}
+  .typ_smpl{width:1236px;height:608px;  gap:30px;margin-top:31px;}
+  
+  	.smpl_wrap_img,.wh100{width:392px;height:421px;} .wh100{background-size:cover;
+  								background-position:center;}
+  		.smpl_img1{background-image:url('img/png/type_1.png');}
+  		.smpl_img2{background-image:url('img/png/type_2.png');}
+  		.smpl_img3{background-image:url('img/png/type_3.png');}
+  	.smpl_list{width:330px;height:286px;margin:-127px auto 0px;padding-top:25px;background:#FFF;
+  										    box-shadow: 10px 10px 20px 0px rgba(0, 0, 0, 0.03); }  	
+  		.list_blk{padding-left:34px;height:235px;}
+  			.smpl_list_header{height:21px;margin-bottom:13px;}
+  			.smpl_list ul li{position:relative;padding-left:10px;list-style:none;color: #959595;line-height: 204.6%;}
+  			.smpl_list ul li::before{content:'\2022'; }
+  		.from{margin-top:0px;width:228px;height:54px;box-shadow: 5px 5px 10px 0px rgba(227, 184, 115, 0.30);}
+  .stages_wrap{margin-top:124px;width:1340px;height:726px;}
+   	.stages_pic{width:703px;height:645px;  background-image:url('img/png/fasad.png');}
+   	  .stg_digts_wrap{margin:109px 0px 0px 254px; width:444px;gap:86px;}
+   	  	
+				  .digit{width:55px;height:55px; border-radius: 30px;border: 8px solid #FFF;
+				  	 box-shadow: 0px 5px 15px 0px rgba(227, 184, 115, 0.15);line-height: 138.6%; /* 24.948px */}
+				  .stg_txt{width:346px;margin-left:17px;}
+				  
+   	.black_box_wrap{margin:106px 0px 0px 131px;}
+        	.black_box{position:relative;width:506px;height:509px; box-shadow: 0px 30px 30px 0px rgba(0, 0, 0, 0.05);}
+        	.black_box::after{bottom:0px;right:0px;z-index:-2;}
+        		.bb_hdr{width:297px;height:47px;margin:28px auto 60px;line-height: 143.22%;}
+        		.form2{margin-left:49px;}
+        		  
+        		  .form_lbl2{top:114px;left:49px;gap:75px;}
+        		  	.form_lbl2 div,.form3_lbl1 div,.form3_lbl2{color:rgba(255, 255, 255, 0.50);line-height:163.68%;}
+        		  
+        		  .frm2_fld,.frm2_lin{width:408px;margin-top:0px;}
+        		  
+        		  .frm2_fld::placeholder,.frm3::placeholder{color:#FFF;}
+        		  	.frm2_lin{margin:3px 0px 72px 0px; height:1px;background: rgba(255, 255, 255, 0.15);}
+        		  	.form2 .frm2_lin:nth-of-type(3){margin-bottom:0px;}
+        		  .chk_bx2_wrap{margin:19px 0px 0px 0px;}
+        		  .chkbx2{border:1px solid #FFFFFF80;}        
+        		  .form2_btn{margin:39px 0px 0px 195px;width:213px;height:51px;}        		  
+        	.pig{margin:38px 0px 0px 32px;width:441px;}
+        		.pig_ico{width:72px;height:72px;background-image:url('img/svg/pig.svg');
+        		        background-size: 109px 109px; background-repeat: no-repeat;background-position: center -10px;}
+        		.pig_descr{margin-left:25px; text-shadow: 0px 3px 10px rgba(227, 184, 115, 0.15);line-height: 143.22%;}
+   .fantas{position:relative;height:864px;margin-top:242px;
+   	   background-image:url('img/png/fantasy_0.png');   border:2px solid cornflowerblue;}
+   .fantas::after{background: linear-gradient(110deg, rgba(0, 0, 0, 0.75) 0%, rgba(0, 0, 0, 0.90) 100%);bottom:0px;right:0px;z-index:0;}
+   							
+   .fantas_blk_wrap{top:137px;left:99px;width:411px;}					.fantas_blk_wrap,.fantas_pic{z-index:1;}
+   	.fantas_hdr{height:66px; line-height: 138.6%;}
+   	.fantas_lst{margin-top:47px;gap:25px;}
+   		.fantas_lst a:hover{text-decoration:underline;color:#E3B873;}
+   			
+        	.fantas_lst a{font-size:20px;margin:0px; }	
+        	.fantas_pic{width:354px;object-fit:cover;background:rgba(245,245,245,0.5);}        
+           .f_pic1{height:558px;top:-41px;}	.f_pic2{height:275px;top:-112px;}	.f_pic1,.f_pic3{left:587px;}    			
+           .f_pic3{height:349px;top:556px;}	.f_pic4{height:625px;top:199px;}	.f_pic2,.f_pic4{left:985px;}
+           
+  .clients{width:476px;height:147px; margin-top:110px;}
+  .cli_card_wrap{width:1236px;height:455px;margin-top:39px; gap:54px;}
+  	.cli_card,.box_sh{width:376px;height:455px;}
+  	.cli_card button:focus + div{border:3px solid blue;z-index:1;}  	
+  	.box_sh{position:relative;height:428px;background: #FFF;box-shadow: 0px 10px 50px 0px rgba(0, 0, 0, 0.04);}
+  	.gorod{width:1127px;height:776px;top:60px;left:-501px; z-index:-1; 
+  	       background-image:url('img/svg/gorod.svg');background-position:left -360px bottom 0px;}
+  	       .gorod1{left:608px;background-position:left 150px bottom 0px;}
+  	  .foto_wrap{width:146px;height:97px;margin:14px 0px 0px -15px;}
+  	  	.cli_z{width:76px;height:76px;border-radius:50%;background:rgba(245,245,245,0.5);
+  	  	       background-repeat:no-repeat;background-size:cover;background-position:center; }   
+  	  .cli_name{top:41px;left:119px;width:178px; line-height: 127.05%;} 	         
+  	  	.client1{background-image:url('img/png/cl1_fedosova.png');}
+  	  	.client2{background-image:url('img/png/cl2_afanasyef.png');}
+  	  	.client3{background-image:url('img/png/cl3_kiriev.png');}
+  	  .cli_comment{width:324px; margin:11px 0px 0px 20px; color: #959595;line-height: 180%;}
+  	  .dim_wrap{width:293px;height:54px;top:401px;box-shadow: 5px 5px 20px 0px rgba(227, 184, 115, 0.50);}		
+  	  .dim_bdr{left:-3px;top:398px;border:3px solid transparent;
+  	  	   width:299px;height:60px;              z-index:-1;}   
+  	  	.dim{width:32px;margin-left:17px;} 	.dim_val{width:56px;margin-left:16px; }
+  	  	.dim,.trm{height:31px;}			.vert_line{width:1px;height:52px;object-fit:cover;margin-left:14px;}
+  	  	.trm{width:33px;margin-left:17px; }	.trm_val{margin-left:15px;}
+  	  	
+  	  .map_wrap{position:relative;margin-top:381px;height:954px;background-image:url('img/png/map_fon.png');}  	  
+  	  .map_wrap::after{bottom:0px;right:0px;
+  	  		   background:linear-gradient(to right, rgba(24, 24, 24, 0.90) 3.47%, rgba(24, 24, 24, 0.80) 100%);} 
+  	  .ques_wrap_box,.ques_wrap_box_C4{width:883px;height:445px;top:-222px;left:288px;z-index:1;} 
+  	  		 .ques_wrap_box_C4{background: #C4C4C4;z-index:0;}
+  	  	.ques_wrap{position:relative;width:100%;margin-bottom:64px;}
+  	  	  .ques_wrap_header{margin-top:34px;height:26px;}
+  	  	    .form3_lbl1,.form3_lbl2   {left:181px;}	.form3_lbl1{top:106px;gap:243px;}
+  	  	  						.form3_lbl2{top:200px;}    	
+  	        .frm3_fld1,.frm3_fld3{margin-left:181px;}		
+  	        .frm3_fld1,.frm3_fld2,.frm3_fld3{width:231px;height:20px; 
+  	        			         padding-left:5px; margin-top:0px;border-bottom:1px solid rgba(255, 255, 255, 0.15);; }
+  	        	.frm3_fld2{margin-left:58px;}			    .frm3_fld3{margin-top:75px;}
+  	        	.form3_btn,.form3_btn_wrap{width:200px;margin:0px;}
+  	        	.form3_btn_wrap{margin:50px auto 0px;}
+      .map_blk{width:1440px;top:274px;;z-index:1;}     
+  	  .adr{width:589px;height:51px;line-height: 138.6%;}
+  	  	.icons_wrap,.icons{width:71px;}
+  	  	.icons_wrap{position:relative;margin-top:26px;}
+  	  			.links_wrap{width:71px;} 		.link1,.link2{width:28px;height:28px;}
+  	  .map_wrap1,.map{width:925px;height:465px;}		
+  	  .map_wrap1{position:relative;margin-top:43px;}		.location,.loc_mrk{width:38px;height:38px;top:206px;left:448px;z-index:2;}
+  	  .loc_mrk{z-index:1;opacity:0;width:30px;height:50px;}
+  	  .map_wrap1 a:hover + .loc_mrk{opacity:1;}
+  	  			
+  	  .gasket_h24{height:24px;}	.gasket_h26{height:26px;}
+/*=======================================================================================================================*/
+/*=======================================================================================================================*/
+/*=======================================================================================================================*/
+/*=======================================================================================================================*/
+/*=======================================================================================================================*/
+</style> <body>	
+<header> 
+   <nav>	
+	<div class="spc47"></div> 
+		<a href="#" title="IC Repair Design Project">IC "Repair Design Project"</a> 
+	 <div class="spc47"></div>
+		<a href="#" title="Home">Home</a>
+	 <div class="spc47"></div>
+		<a href="#" title="PROJECTS">PROJECTS</a>
+	 <div class="spc47"></div>
+		<a href="#" title="MEASUREMENT">MEASUREMENT</a>
+	 <div class="spc47"></div>
+		<a href="#" title="TEAM">TEAM</a>
+	 <div class="spc47"></div>
+		<a href="#" title="REVIEWS">REVIEWS</a>
+	 <div class="spc47"></div>
+		<a href="#" title="CONTACTS">CONTACTS</a>
+	 <div class="spc47"></div>				
+	<!--16--><a href="tel:+79287683239" title="Call us">+7 (928) 768-32-39</a>
+	 <div class="spc47"></div>
+		 <a href="#" title="Request a call button" class="rq_cal_a"><button class="rq_cal_btn F_itl">Request a call</button></a>
+   </nav>		 	
+</header><main>
+<div class="head_pic">
+	<div class="head_pic_txt">
+		<div class="head_pic_txt1 F_yes N40 txt_BP">
+					Turnkey Repair in the city of <span class="F_yes N40 colrE3">Rostov-on-Don</span>
+		</div>
+		<div class="head_pic_txt2">
+					Get ready-made turnkey repairs on time with work time saving up to 45 days 
+					and 20% from cost of materials due to the organization of work
+		</div>
+		<div class="head_pic_btns">
+		   <a href="#" title="CALCULATE THE COST"><button class="F_itl">CALCULATE THE COST</button></a>
+		   <a href="#" title="SUBMIT YOUR APPLICATION"><button class="F_itl trp_clr" type="Submit">SUBMIT YOUR APPLICATION</button></a>
+		</div>
+	</div>
+</div>
+<div class="wrap2"> 
+	<div class="comp_prj_wrap">
+		<div class="comp_prj_h F_yes N27 txt_BP colrE3">Completed projects</div>
+		<div class="descr N14">Only a small part of the work performed by our company is presented 
+					on the site. For 14 years on in the construction
+					market we have made happy more than 1000 families</div>							
+		<div class="sld_data_wrap">		
+	   		<div class="sld_data_wrap1">
+				<div>		<div class="F_yes txt_BP colrE3">City:</div>
+						<div class="value1">Rostov-on-Don<br>LCD admiral</div>
+				</div>
+				<div>		<div class="F_yes txt_BP colrE3">Repair time:</div>
+						<div>3.5 months</div>
+				</div>
+	   		</div>	   		
+	   		<div class="sld_data_wrap2">	
+				<div>		<div class="F_yes txt_BP colrE3">apartment area:</div>
+						<div class="value1">81 m<sup>2</sup></div>
+				</div>
+				<div>		<div class="F_yes txt_BP colrE3">Repair Cost:</div>
+	   					<div>Upon request</div>
+				</div>
+	   		</div>	
+		</div>						
+	</div>
+	<div class="sld_lnks_wrap"> 
+		<div class="sld_lnks txt_BP"> 
+				<a href="#Y11" id="Y11" title="Rostov-on-Don, Admiral" class="F_yes N14">Rostov-on-Don, Admiral
+					<div></div></a>	 				
+				<a href="#Y12" id="Y12" title="Sochi Thieves" class="F_yes N14">Sochi Thieves
+					<div></div></a>	 				
+				<a href="#Y13" id="Y13" title="Rostov-on-Don Patriotic" class="F_yes N14">Rostov-on-Don Patriotic
+					<div></div></a>
+		</div>			
+				<img src="img/png/radio_v1.png" class="sld_pic" alt="Bedroom with panorama window view">		
+	</div>
+	
+</div>
+<div class="on_ctrl_wrap"> 
+		<div class="on_ctrl F_yes N20 txt_BP">online control</div>
+		<div class="cam_blk">	<div class="cam_lin"></div>
+					<img src="img/svg/cam.svg" class="cam_ico">
+					<div class="cam_lin"></div> 
+		</div>		
+</div>
+<div class="St_player"> <img src="img/png/Video_ctrl.png" class="video_ctrl" alt="Live video from repair area">
+			<a href="#" target="_blank" title="Push to view livestream">
+		<div class="play_btn_blk"> 	
+			<img src="img/svg/Play_btn.svg" class="play_btn"></div></a>
+</div>
+<div class="separ"></div>
+<div class="txt_blk5 N18 colr36">At each facility, a camera is installed that broadcasts the progress of work on the<br> 
+			clock. At any time, you can go to our website and monitor the progress of work in<br>  
+			your apartment. You can watch the live broadcast from one of our facilities!<br> 
+ 			Leave a request below and you will receive a link to the broadcast.</div>
+		
+<form class="form1">
+	<div class="form_lbl1"><div>Name</div><div>Phone </div> </div>
+	<input class="frm_fld form1_fld1 colr36" type="text" required placeholder="What is your name:" 
+						title="Please fill out this field with you Name">
+  	<input class="frm_fld form1_fld2 colr36" type="tel"  required placeholder="Your phone number:" 
+  						title="Please fill out this field with your phone number">  	
+  	<button class="form1_btn" type="Submit" title="Push to submit your personal data">Submit</button>
+</form>
+  <div class="chk_bx1_wrap"> 
+  		<div class="chbx_brd"></div>
+	<input class="chk_bx1" type="checkbox">
+		<div class="fake_chkbx"></div>
+		<span class="colr18">I agree to the processing of personal data</span>
+</div>	  
+<div class="typ_rep">
+  		<div class="F_yes N20 txt_BP colr18">Types OF REPAIR</div>
+  		<img src="img/svg/ham_wrench.svg">
+</div>
+<div class="typ_smpl">
+  	      <div class="smpl_wrap">
+  			<div class="smpl_wrap_img">
+  					<div class="smpl_img1 wh100"></div>
+  			</div>
+  			<div class="smpl_list">
+  				    <div class="list_blk">
+  					<div class="smpl_list_header F_yes colr36">Redecorating</div> 
+  					<ul>
+  						<li>Dismantling of old coatings	</li>
+  						<li>Wallpapering		</li>
+  						<li>Painting walls and ceilings	</li>
+  						<li>Laying flooring		</li>
+  						<li>Replacing plumbing		</li>
+  						<li>Replacing sockets and switches	</li>
+  						<li>Replacing doors			</li>
+  					</ul> </div> 
+  					<button title="Repair request 900 rub / m2" class="from backE3">
+  						<div class="from txt_BP F_yes">from 900 rub / m2</div>
+  					</button>
+  					 					 
+  			</div>  			
+  	      </div>
+  	      <div class="smpl_wrap">
+  			<div class="smpl_wrap_img">
+  					<div class="smpl_img2 wh100"></div>
+  			</div>
+  			<div class="smpl_list">
+  				    <div class="list_blk">
+  					<div class="smpl_list_header F_yes colr36">Overhaul</div> 
+  					<ul>
+  						<li>Dismantling of old coatings	</li>
+  						<li>Wallpapering		</li>
+  						<li>Painting walls and ceilings	</li>
+  						<li>Laying flooring		</li>
+  						<li>Replacing plumbing		</li>
+  						<li>Replacing sockets and switches	</li>
+  						<li>Replacing doors			</li>
+  					</ul> </div> 
+  					<button title="Repair request 1800 rub / m2" class="from backE3">
+  						<div class="from txt_BP F_yes">from 1800 rub / m2</div> 
+  					</button>					 
+  			</div>  			
+  	      </div>
+  	      <div class="smpl_wrap">
+  			<div class="smpl_wrap_img">
+  					<div class="smpl_img3 wh100"></div>
+  			</div>
+  			<div class="smpl_list">
+  				    <div class="list_blk">
+  					<div class="smpl_list_header F_yes colr36">Designer Repair</div> 
+  					<ul>
+  						<li>Dismantling of old coatings	</li>
+  						<li>Wallpapering		</li>
+  						<li>Painting walls and ceilings	</li>
+  						<li>Laying flooring		</li>
+  						<li>Replacing plumbing		</li>
+  						<li>Replacing sockets and switches	</li>
+  						<li>Replacing doors			</li>
+  					</ul> </div>
+  					<button title="Repair request 4000 rub / m2" class="from backE3"> 
+  						<div class="from txt_BP F_yes">from 4000 rub / m2</div> 
+  					</button>					 
+  			</div>  			
+  	      </div> 			
+</div>
+<div class="stages_wrap"><div class="stages_pic wh100">
+  			  	<div class="stg_digts_wrap">  			  	
+  			  		<div class="round_digit_wrap">
+  			  			<div class="digit backE3"><div class="F_yes">01</div></div>  		  			
+  			  			<div class="stg_txt N14 colr36">Our specialist will arrive for measurements per day
+									 contact, or appoint a date convenient for you</div>
+					</div>
+					<div class="round_digit_wrap">
+  			  			<div class="digit backE3"><div class="F_yes">02</div></div>  		  			
+  			  			<div class="stg_txt N14 colr36">Free metering</div>
+					</div>
+					<div class="round_digit_wrap">
+  			  			<div class="digit backE3"><div class="F_yes">03</div></div>  		  			
+  			  			<div class="stg_txt N14 colr36">Free consultation</div>
+					</div>
+					<div class="round_digit_wrap">
+  			  			<div class="digit backE3"><div class="F_yes">04</div></div> 		  			
+  			  			<div class="stg_txt N14 colr36">Get a cost estimate and<br>the timing of your future repairs</div>
+					</div>				
+  			  	</div>
+  			  </div>
+  		<div class="black_box_wrap">
+  			   <div class="black_box">
+  			   			<div class="form_lbl2">	<div>Name	</div>
+					   				<div>Phone	</div>
+					   				<div>Email	</div>
+					   	</div>
+  			   		<div class="bb_hdr N18">Leave a request for free departure of the measurer</div>
+  			   		<form class="form2 colrFFF">					   
+						<input class="frm_fld frm2_fld" 
+						       type="text" required placeholder="What is your name:" 
+						       title="Please fill out this field with you Name">
+						       
+					            <div class="frm2_lin"></div>
+					            
+  						<input class="frm_fld frm2_fld" type="tel" required placeholder="Your phone number:" 
+  							title="Please fill out this field with your phone number">  
+  					   	    
+  					   	    <div class="frm2_lin"></div>
+  					   	    
+  					   	<input class="frm_fld frm2_fld" type="email" required placeholder="Your email:" 
+  							title="Please fill out this field with your e-mail"> 
+  							
+  						    <div class="frm2_lin"></div>	
+  						    
+  					   <div class="chk_bx1_wrap chk_bx2_wrap"> 
+  						<div class="chbx_brd chkbx2"></div>
+						<input class="chk_bx1" type="checkbox">
+						<div class="fake_chkbx"></div>
+						<span class="colrFFF">I agree to the processing of personal data</span>
+  					   </div>  							
+  					<button class="form2_btn" type="Submit" title="Push to call the measurer">Call the measurer</button>
+					</form>  			   		
+  			   </div>
+  			   <div class="pig">
+  			   		<div class="pig_ico"></div>
+  			   		<div class="pig_descr N18 colrE3">Help save 10 - 20% of the<br>cost of materials</div>
+  			   </div>
+  		</div>   
+</div>
+<div class="fantas">
+  	<div class="fantas_blk_wrap"><div id="fantasy" class="fantas_hdr F_yes N27 txt_BP colrE3">We realize your<br>wildest fantasies</div>
+  		<div class="fantas_lst">
+  			<a href="#fantasy" title="American classic">American classic </a>
+  			<a href="#fantasy" title="American classic">Empire</a>
+  			<a href="#fantasy" title="American classic">Classical</a>
+  			<a href="#fantasy" title="American classic">Loft</a>
+  			<a href="#fantasy" title="American classic">Minimalism</a>
+  			<a href="#fantasy" title="American classic">Provence</a>
+  			<a href="#fantasy" title="American classic">Romanticism</a>
+  			<a href="#fantasy" title="American classic">Scandinavian style</a>
+  			<a href="#fantasy" title="American classic">Mediterranean style</a>
+  			<a href="#fantasy" title="American classic">High tech</a>
+  			<a href="#fantasy" title="American classic">Eclecticism</a>  		
+  		</div> 		
+  	</div>
+  	<img src="img/png/fantasy_1.png" class="fantas_pic f_pic1" alt="Your Fantasy comes true">
+  	<img src="img/png/fantasy_2.png" class="fantas_pic f_pic2" alt="Your Fantasy comes true">
+  	<img src="img/png/fantasy_3.png" class="fantas_pic f_pic3" alt="Your Fantasy comes true">
+  	<img src="img/png/fantasy_4.png" class="fantas_pic f_pic4" alt="Your Fantasy comes true">  
+</div>
+<div class="typ_rep clients">
+  		<div class="F_yes N20 txt_BP colr18">our clients</div>
+  		<img src="img/svg/clients_handshake.svg">
+  		<div class="N18 colr36">80% of our customers recommend us to their<br>friends and family.</div>
+</div>
+<div class="cli_card_wrap">
+  	<div class="cli_card">
+  		<div class="box_sh">  
+  		<div class="gorod"></div><div class="gorod gorod1"></div>
+  			<div class="foto_wrap"><div class="cli_z client1"></div></div>
+  			<div class="cli_name F_yes colr18">Fedosova Maria Konstantinovna</div>
+  			<div class="cli_comment">I want to thank the guys for their work. We put our   			shower part in repair. I'am very grateful, that I referred to the repair as to my own.   			Great thanks I express the project to Georgia for his professionalism and approach.
+			The repair process was turned out in terms, faster than anticipated. Team was mobile and 
+			professional. Works performed qualitatively without comments. Quality satisfied. 
+			Prices are democratic. I recommend these craftsmen.</div>
+		<button title="View sample/result">	
+		        <div class="dim_wrap backE3">
+		        	 <img src="img/svg/rasmery.svg" class="dim"> <div class="dim_val F_yes N17 txt_BP">40 m2</div>
+		        	<img src="img/svg/V_btn_separ.svg" class="vert_line">
+		        	 <img src="img/svg/plan_notepad.svg" class="trm"> <div class="trm_val F_yes N17">48 DAYS</div>		        
+		        </div>
+		</button><div class="dim_bdr"> </div>
+  		</div>
+  	</div>
+  	<div class="cli_card">
+  		<div class="box_sh">  	
+  			<div class="foto_wrap"><div class="cli_z client2"></div></div>
+  			<div class="cli_name F_yes colr18">Afanasyev Sergey Alexandrovich</div>
+  			<div class="cli_comment">I want to thank the guys for their work. We put our 
+  			shower part in repair. I'am very grateful, that I referred to the repair as to my own. 
+  			Great thanks I express the project to Georgia for his professionalism and approach.
+			The repair process was turned out in terms, faster than anticipated. Team was mobile and 
+			professional. Works performed qualitatively without comments. Quality satisfied. 
+			Prices are democratic. I recommend these craftsmen.</div>
+		<button title="View sample/result">	
+		        <div class="dim_wrap backE3">
+		        	 <img src="img/svg/rasmery.svg" class="dim"> <div class="dim_val F_yes N17 txt_BP">90 м2</div>
+		        	<img src="img/svg/V_btn_separ.svg" class="vert_line">
+		        	 <img src="img/svg/plan_notepad.svg" class="trm"> <div class="trm_val F_yes N17">128 DAYS</div>		        
+		        </div>
+		</button><div class="dim_bdr"> </div>
+  		</div>
+  	</div>
+  	<div class="cli_card">
+  		<div class="box_sh">  	
+  			<div class="foto_wrap"><div class="cli_z client3"></div></div>
+  			<div class="cli_name F_yes colr18">Kiriev Egor Leonidovich</div>
+  			<div class="cli_comment">I want to thank the guys for their work. We put our 
+  			shower part in repair. I'am very grateful, that I referred to the repair as to my own. 
+  			Great thanks I express the project to Georgia for his professionalism and approach.
+			The repair process was turned out in terms, faster than anticipated. Team was mobile and 
+			professional. Works performed qualitatively without comments. Quality satisfied. 
+			Prices are democratic. I recommend these craftsmen.</div>
+		<button title="View sample/result">	
+		        <div class="dim_wrap backE3">
+		        	 <img src="img/svg/rasmery.svg" class="dim"> <div class="dim_val F_yes N17 txt_BP">56 м2</div>
+		        	<img src="img/svg/V_btn_separ.svg" class="vert_line">
+		        	 <img src="img/svg/plan_notepad.svg" class="trm"> <div class="trm_val F_yes N17">86 DAYS
+		        	 </div>		        
+		        </div>
+		</button><div class="dim_bdr"> </div>
+  		</div>
+  	</div>
+</div>
+<div class="map_wrap">		   <div class="ques_wrap_box_C4"> </div>			       			
+	<div class="ques_wrap_box">
+				   <div class="ques_wrap">
+					<div class="ques_wrap_header F_yes txt_BP N20">have any questions? </div>
+					<div class="form_lbl1 form3_lbl1"><div>Name</div><div>Phone</div></div>
+			       		<div class="form_lbl1 form3_lbl2">Question</div>       
+				   </div>	
+			  <form class="form3">
+			  <div> <input class="frm_fld frm3_fld1 frm3" type="text" required placeholder="Your name:">
+			  	<input class="frm_fld frm3_fld2 frm3" type="tel" required placeholder="Your Phone:"></div>
+			  <div> <input class="frm_fld frm3_fld3 frm3" type="text" required placeholder="I want to know:"></div>
+			  <div class="chk_bx1_wrap"> 
+  						<div class="chbx_brd chkbx2"></div>
+						<input class="chk_bx1" type="checkbox">
+						<div class="fake_chkbx"></div>
+						<span class="colrFFF">I agree to the processing of personal data</span>
+  					   </div> 
+  			<div class="form3_btn_wrap"> 		    
+  			<button class="form2_btn form3_btn" type="Submit" title="Submit">Submit</button></div>		   
+			  </form>	
+	</div>
+	    <div class="map_blk">
+		<div class="adr colrE3 F_yes N20">Rostov-on-Don, Nansen St., 239 Shopping Center Decorum Tel +7 (928) 768 32 29</div>
+		<div class="icons_wrap"><img src="img/svg/mail_ico.svg" class="icons" alt="e-mail and insta icons/links"> 
+			<div class="links_wrap">
+				<a href="mailto:radio@rus.ru" title="mail-to:Радио России" class="link1"></a>
+				<a href="tel:83912347161" title="Инстаграм запрещён. Лучше позвоните в РосКомНадзор" class="link2"></a>
+			</div>		
+		</div>
+	<div class="map_wrap1">
+		<a href="#" title="Проехать сюда"><div class="location"></div></a>
+			<img src="img/gif/loc_mark.gif" class="loc_mrk">
+		<img src="img/png/map.png" class="map" alt="Our location on city map"> 					
+	</div>
+</div>						</main> 
+<footer> <div class="gasket gasket_h24"></div>
+	 <nav> <div class="spc47"></div> 
+		<a href="#" title="IC Repair Design Project">IC "Repair Design Project"</a> 
+	 <div class="spc47"></div>
+		<a href="#" title="Home">Home</a>
+	 <div class="spc47"></div>
+		<a href="#" title="PROJECTS">PROJECTS</a>
+	 <div class="spc47"></div>
+		<a href="#" title="MEASUREMENT">MEASUREMENT</a>
+	 <div class="spc47"></div>
+		<a href="#" title="TEAM">TEAM</a>
+	 <div class="spc47"></div>
+		<a href="#" title="REVIEWS">REVIEWS</a>
+	 <div class="spc47"></div>
+		<a href="#" title="CONTACTS">CONTACTS</a>
+	 <div class="spc47"></div>				
+	<!--16--><a href="tel:+79287683239" title="Call us">+7 (928) 768-32-39</a>
+	 <div class="spc47"></div>
+		 <a href="#" title="Request a call button" class="rq_cal_a"><button class="rq_cal_btn F_itl">Request a call</button></a>	
+	</nav>
+	<div class="gasket gasket_h26"></div>
+<footer>
+</body>
+</html>
