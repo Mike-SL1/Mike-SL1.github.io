@@ -1,0 +1,150 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<meta charset="UTF-8"><link rel="icon" type="image/png" sizes="64x64" href="t_ico.png">
+  <title>Слугин - Визитка</title>
+	<style>
+		.cntr1   {display: flex;
+			  justify-content: center; }
+		.cntr2   { margin-left:auto; 
+		           margin-right:auto;
+			  width:300px;		  }			  
+		.ftr_frm { margin-left: 20px;
+		           margin-right:20px;       }	  	
+	 	.cntr1wb {display: flex;	 		  
+  			  justify-content: left;   }
+		.lnovr   { border: 4px solid blue;
+			   background-color:red;
+			  width:300px;
+			  margin-left:auto;
+		          margin-right:auto;	   }
+		.abcntn1 { border: 2px solid blue;
+			   background-color: rgb(251,235,217);
+			  margin-left: 20px;
+		          margin-right:20px;
+			  width:100px;		          
+			  text-align: center;      }
+		.abcntn2 {border: 2px solid gray; 
+			   background-color: rgb(217,239,251); }
+		.abcntn3 {border: 2px solid gray; 
+			   background-color: rgb(250,196,251); }
+		.abcntn4 {width:350px;		          
+			  text-align: right;  }				       
+		.abcntn5 {width:180px;		          
+			  text-align: left;  }        	   	   
+	<!-- Buttons for footer -->	 
+		.button  {padding: 5px 100px;
+		 	  color: white             }
+		.red     {background-color: rgb(247,179,179); }
+		.blue    {background-color: rgb(154,228,158); }
+		.round_img{border-radius:50%;}
+	</style>
+</head>
+	<body background="EGYPT1.bmp"><!-- I know, that using BACKGROUND in BODY is not a good practic, but it works properly --> 
+	
+<!-- -------------------- header  ---------------------------------------->
+<HEADER>
+<div class="cntr1"><h1>Михаил Слугин</h1></div>
+<div class="cntr1wb lnovr">
+<hr align="center" color="yellow"size=10 width=80%> </div>
+<div class="cntr1"><pre>инженер, г. Кемерово.</pre></div>
+</HEADER>
+<!-- -------------------- header end ------------------------------------->
+<MAIN> 
+<div class="cntr1"><i> являюсь миру в разных обличиях; теперь я - безработный кролик</i></div>
+<br>
+<div class="cntr1"><img src="I_am_a_rabbit.jpg" class="round_img" alt="безработный кролик" width="400" height="372"></div>
+<br><!-- MAIN -->
+<div class="cntr1wb">
+	<div class="abcntn1"><br><h2>Обо &nbsp;мне&nbsp;</h2> </div>
+        <div class="abcntn2">		       <ol><li>cначала я, как все, <b>родился;</b></li>
+					       <li>потом, как водится, учился; <br>
+					       <i>(но ничему путнему не научился, т.к. начальником не стал);&nbsp;&nbsp;&nbsp;</i>
+					       <li>в институт тогда пошёл, но жену там не нашёл;
+					       </li>
+					       <li>на телевидение пошёл - <strong>15 лет</strong> поработал и <strong>ушёл</strong>;</li>
+					       <li>теперь меняю лето на HTML - программирование.</li></ol>
+        </div>
+</div>
+<br>
+<div class="cntr1wb"><div class="abcntn1"><br><h2>Скиллы (skills)</h2> </div>
+	<div class="abcntn2">		       <ul><li>паяю <i>(но, к сожалению, не варю)</i>;</li>
+					       <li>использую широкий спектр радиоизмерительных приборов;&nbsp;&nbsp;&nbsp;</li>
+					       <li>пилю, сверлю, строгаю, гайки закручиваю;</li> 
+					       <li>компьютер слегка починяю;</li>
+					       <li>видеофильмы монтирую; </li>
+					       <li>ещё на велике катаю.</li></ul> 
+        </div>
+</div>
+<br>
+<div class="cntr1wb"><div class="abcntn1"><br><h2>Как я сюда попал</h2> </div>
+	<div class="abcntn3">		       <ol><li>пожаловался в прокуратуру на то, что мне 5 лет не индексируют зарплату;&nbsp;&nbsp;</li>
+					       <li>администрация ГТРК "КУЗБАСС" стала делать мне разные подлянки;</li>
+					       <li>но я терпел, и продолжал работать;</li> 
+					       <li>тогда они взяли и уволили меня;</li>
+					       <li>делать было нечего, пошёл в <del>CAMOKAT</del> интернет; </li>
+					       <li>так я и оказался здесь,<del> на горбатой горе</del> на курсах SkillFactory</li></ol> 
+        </div>
+</div>
+<hr align="center" width=80%>
+<div class="cntr1"><h2>Как я стал разработчиком</h2></div>
+<p> Долгое время мне не давала покоя мысль, что все уже используют микроконтроллеры (в т.ч. во встраиваемых применениях), а я ещё нет. 
+Схемы на жёсткой логике привлекали меня своей надёжностью, всегда уверен чего ожидать от того или иного логического узла. Микроконтроллер-же, 
+по моему мнению, был <em> вещью в себе </em>. Что в него запрограммировал разработчик - одному микропроцессорному богу ведомо. </p>
+<p>Разработчик мог заложить счётчик запусков, и когда количество включений или непрерывно отработанного времени превысит некоторый порог, то ...
+Микроконтроллер запрётся изнутри, в своём микро-домике и никого (в смысле входного сигнала) к себе не пустит. Никого и не выпустит...</p>
+<p> Раскрыть коварный замысел такого программиста нет никакой возможности; нельзя считать микропрограмму из памяти микроконтроллера - там всегда висит замок - неподкупный <strong>бит секретности</strong>.</p>
+<p>Но, можно переписать программу, <q>перешить</q> память микроконтроллера!</p>
+<p>И вот однажды, обложившись книжками, а именно:
+<ul><li> Учебником по языку C</li>
+    <li> Техническим описанием микроконтроллера ATMEGA-8L</li>
+    <li> Кое-какими пояснениями добрых людей из интернета</li>
+</ul>
+А также соорудив нечто, напоминающее программатор типа KANDA, и запустив на компьютере CodeVision AVR C Compiler, я написал свой первый работающий код:    
+</p>
+<div class="cntr1"><pre>Hello, World!</pre></div>
+<p>То есть, заставил единичный индикатор светодиодного типа зажигаться и гаснуть с периодом одна секунда. <br>У эмбеддеров эта программа является аналогом того самого <i>Hello, World!</i></p>
+<p> Потом были проекты посерьёзнее, но это уже совсем другая история.</p>
+<hr align="center" width=80%>
+<div class="cntr1"><h2>Основные вехи моего трудового пути</h2></div>
+<div class="cntr1"><i>(сказка о потерянном времени)</i></div>
+<ol><li>Учёба в КузГТУ - пять лет юности;</li>
+<li>Инженер кафедры ГАПС КузГТУ;</li>
+<li>Инженер в компьютерной фирме (сборка, наладка, тестирование);</li>
+<li>Инженер по наладке и испытаниям ООО "Инженерный центр АСИ";</li>
+<li>Инженер по наладке и испытаниям ОАО "ОРТОН"; </li>
+<li>Ведущий инженер производственно-технического отдела ВГТРК ГТРК "КУЗБАСС".</li>
+</ol>
+<p> Как говорит мой коллега (бывший): <blockquote><i>Ты ни дня не работал.<br>
+						  Я имею ввиду, физически не работал. С кайлом, с лопатой. <br>
+						  Всю жизнь или бумагу марал, или сидел и <b> чё-то</b> паял.<br>
+						  Деньги надо делать, Михалыч! &#169 </i>
+				      </blockquote>
+Тогда, по причине исчерпания словарного запаса приличных слов, я молчу...				      
+</p>	  	
+</MAIN> 			      
+<!-- MAIN end -->
+<!-- footer-->
+<FOOTER>
+<br>
+<div class="cntr1 cntr2">
+	<div class="ftr_frm"><a href="mailto:mslugin75@gmail.com" title="но, имейте ввиду, фигню всякую я сразу выкидываю">
+			     <button class="button red"> Напишите мне </button></a></div>
+	<div class="ftr_frm"><a href="https://vk.com/id739595199" title="сюда можно не ходить - там ничего нет"> 
+			     <button class="button blue">Я в Контакте</button></a></div>			     
+</div>
+<div class="cntr1"><p>Мой телефон: +7-913-129-xx-yy</p></div>
+<hr>
+<div class="cntr1wb">
+	<img src="logo_c.jpg" alt="логотип канала" width="58" height="48">
+	<div class="abcntn5"><h3>&nbsp;&nbsp;&#169 МишаSoft, 2023</h3></div>
+	<div class="abcntn4"><p>Страница корректно отображается в:&nbsp;&nbsp;</p></div>
+	<div class="abcntn5"><a href="https://www.downloadcrew.com/article/36263/microsoft_edge" title="скачать Microsoft Edge">
+			     <img src="MS_EDGE.jpg" alt="логотип Microsoft Edge" width="173" height="48"></a></div>
+	<div class="abcntn5"><a href="https://www.slimjet.com/en/dlpage_xp.php" title="скачать Flashpeak Slimjet">
+			     <img src="s_jet_lg.jpg" alt="логотип Flashpeak Slimjet" width="177" height="48"></div>
+</div>
+</FOOTER>
+<!-- footer end-->
+</body>
+</html>
