@@ -1,0 +1,212 @@
+﻿<!DOCTYPE HTML><html><head>  	<meta charset="UTF-8"><link rel="icon" type="image/png" sizes="64x64" href="img/circ.gif">  
+				<meta name="viewport" content="width=device-width">
+				<link rel="stylesheet" href="rst/reset-MS.css">
+				<title>KPYГ и др.</title></head>
+<style>*{margin:0px;padding:0px;}	.blk,.bkgnd{width:150px;height:150px;}
+h3{margin:5px 0px 10px 0px;text-transform:uppercase;}		.centr{text-align:center;}	.centr1{width:140px;margin:0 auto;}
+.row1{margin:10px;gap:10px;flex-flow:row wrap;} 
+
+.bkgnd{background:url('img/big_wave.jpg');}		.bkgnd2{background:url('img/Summerswell.jpg');}
+.bkgnd1{background:url('img/sky_of_diamonds.jpg');} 	.bkgnd4{background:url('img/ba1.jpg');} .bkgnd5{background:url('img/ba2.jpg');}
+.bkgnd{background-size:120px;background-repeat:no-repeat;background-position:center 30px;}
+.bkgnd3{background:url('img/maui-monday.jpg');}		.bkgnd6{background:url('img/brothers_do_surf.jpg');}	
+.bkgnd3,.bkgnd4,.bkgnd5,.bkgnd6{background-size:100%;background-repeat:no-repeat;background-position:center 40px;}
+text{font-weight:800;}
+.oplay,.oplay1{height:96%;background:#FFFFFFb0;}	.oplay1{background:#FFFFFF80;}</style>
+<body>
+<div class="row1 flx">
+  <div class="blk brd_blue"><div class="centr"><H3 class="times bold">circle</H3> </div>
+     <div class="centr1">
+	<SVG width="100"; height="100";> 
+	<circle cx="50" cy="50" r="40" stroke="green" stroke-width="4" fill="yellow"/>
+	</SVG>  
+     </div>
+  </div>
+  <div class="blk brd_blue"><div class="centr"><H3 class="times bold">RECTANGLE1</H3> </div>
+     <div class="centr1">
+   	<svg width="100" height="100">
+   	<rect width="100" height="100" style="fill:rgb(120,80,155);stroke-width:3;stroke:rgb(255,0,0)" />
+	</svg>
+      </div>
+  </div>
+  <div class="bkgnd brd_blue"><div class="oplay"><div class="centr"><H3 class="times bold">RECTANGLE2 opacity</H3> </div>      			  
+     <div class="centr1">
+   	<svg width="100" height="90">
+   	<rect x="50" y="30" width="50" height="50" style="fill:blue;stroke:pink;stroke-width:5;fill-opacity:0.4;
+	stroke-opacity:0.9" />
+	</svg>
+      </div><!--centr1-->
+   </div><!--oplay-->
+  </div><!--bkgnd-->
+  
+<div class="bkgnd bkgnd5 brd_blue"><div class="oplay bkgnd5"><div class="centr"><H3 class="times bold">Round borders</H3> </div>  	    			  
+     <div class="centr1">
+   	<svg width="100" height="100">
+   	<rect x="10" y="10"width="60" height="60" rx="10" ry="10"   	
+   	style="fill:rgb(20,180,15);stroke-width:3;stroke:rgb(255,0,0)" />
+	</svg>
+      </div><!--centr1-->
+   </div><!--oplay-->
+  </div><!--bkgnd-->  
+  
+<div class="bkgnd bkgnd4 brd_blue"><div class="oplay"><div class="centr"><H3 class="times bold">ellipse</H3> </div> 		  
+     <div class="centr1">
+   	<svg width="150" height="150">
+   	<ellipse cx="65" cy="75" rx="60" ry="30"   	
+   	style="fill:yellow;stroke-width:3;stroke:purple;" />
+	</svg>
+      </div><!--centr1-->
+   </div><!--oplay-->
+  </div><!--bkgnd-->
+  <div class="bkgnd bkgnd3 brd_blue"><div class="oplay"><div class="centr"><H3 class="times bold">line</H3> </div>  			  
+     <div class="centr1">
+   	<svg width="100" height="100">
+   	<line x1="0" y1="0" x2="90" y2="50" style="stroke:lime;stroke-width:5" />
+   	<line x1="0" y1="10" x2="90" y2="60" style="stroke:red;stroke-width:5" />
+   	<line x1="0" y1="20" x2="90" y2="70" style="stroke:blue;stroke-width:5" />
+	</svg>
+      </div><!--centr1-->
+   </div><!--oplay-->
+  </div><!--bkgnd-->
+  <div class="bkgnd bkgnd2 brd_blue"><div class="oplay"><div class="centr"><H3 class="times bold">polygon</H3> </div>  			  
+     <div class="centr1">
+   	<svg width="120" height="120">
+   	<polygon points="75,5 10,90 100,95 120,40" style="fill:gold;stroke:deeppink;stroke-width:2" />
+	</svg>
+      </div><!--centr1-->
+   </div><!--oplay-->
+  </div><!--bkgnd-->
+  <div class="bkgnd bkgnd1 brd_blue"><div class="oplay"><div class="centr"><H3 class="times bold">polyline</H3> </div>  			  
+     <div class="centr1">
+   	<svg width="130" height="100">
+   	<polyline points="41,95 71,0 103,95 20,36 122,36 41,95"
+   		style="fill:greenyellow;stroke:red;stroke-width:3" />
+	</svg>
+      </div><!--centr1-->
+   </div><!--oplay-->
+  </div><!--bkgnd-->
+  <div class="bkgnd bkgnd6 brd_blue"><div class="oplay"><div class="centr"><H3 class="times bold">stroke - dasharray</H3> </div>  			  
+     <div class="centr1">
+   	<svg width="130" height="100">
+   	<polyline points="41,95 71,0 103,95 20,36 122,36 41,95"
+   		style="fill:lemonchiffon;stroke:red;stroke-dasharray:20,5;stroke-width:3" />
+	</svg>
+      </div><!--centr1-->
+   </div><!--oplay-->
+  </div><!--bkgnd-->
+  
+  
+<div class="blk brd_blue"><div class="centr"><H3 class="times bold">stroke - dasharray</H3> </div>
+     <div class="centr1">
+	<SVG width="130"; height="100";> 
+	<circle cx="60" cy="45" r="40" stroke="green" stroke-width="4" stroke-dasharray="20,10,5,5,5,10" fill="yellow"/>
+	</SVG>  
+     </div>
+  </div>
+  <div class="blk brd_blue"><div class="centr"><H3 class="times bold">RECTANGLE1</H3> </div>
+     <div class="centr1">
+   	<svg width="100" height="100">
+   	<rect width="100" height="100" style="fill:rgb(10,80,155);stroke-width:3;stroke:rgb(255,0,200)" />
+	</svg>
+      </div>
+  </div>
+<div class="blk brd_blue"><div class="centr"><H3 class="times bold">circle</H3> </div>
+     <div class="centr1">
+	<SVG width="100"; height="100";> 
+	<circle cx="50" cy="50" r="40" stroke="firebrick" stroke-width="4" fill="palegoldenrod"/>
+	</SVG>  
+     </div>
+  </div>
+  <div class="blk brd_blue"><div class="centr"><H3 class="times bold">RECTANGLE1</H3> </div>
+     <div class="centr1">
+   	<svg width="100" height="100">
+   	<rect width="100" height="100" style="fill:cornflowerblue;stroke-width:8;stroke:darkcyan" />
+	</svg>
+      </div>
+  </div>
+<div class="blk brd_blue"><div class="centr"><H3 class="times bold">circle</H3> </div>
+     <div class="centr1">
+	<SVG width="100"; height="100";> 
+	<circle cx="50" cy="50" r="40" stroke="darkmagenta" stroke-width="4" fill="darkorange"/>
+	</SVG>  
+     </div>
+  </div>
+  <div class="blk brd_blue"><div class="centr"><H3 class="times bold">RECTANGLE1</H3> </div>
+     <div class="centr1">
+   	<svg width="100" height="100">
+   	<rect width="100" height="100" style="fill:blueviolet;stroke-width:7;stroke:mediumturquoise" />
+	</svg>
+      </div>
+  </div>
+<div class="blk brd_blue"><div class="centr"><H3 class="times bold">circle</H3> </div>
+     <div class="centr1">
+	<SVG width="100"; height="100";> 
+	<circle cx="50" cy="50" r="40" stroke="sienna" stroke-width="4" fill="seashell"/>
+	</SVG>  
+     </div>
+  </div>
+  <div class="blk brd_blue"><div class="centr"><H3 class="times bold">RECTANGLE1</H3> </div>
+     <div class="centr1">
+   	<svg width="100" height="100">
+   	<rect width="100" height="100" style="fill:aqua;stroke-width:3;stroke:blue" />
+	</svg>
+      </div>
+  </div>
+<div class="blk brd_blue"><div class="centr"><H3 class="times bold">circle</H3> </div>
+     <div class="centr1">
+	<SVG width="100"; height="100";> 
+	<circle cx="50" cy="50" r="40" stroke="red" stroke-width="4" fill="green"/>
+	</SVG>  
+     </div>
+  </div>
+<div class="row1 flx"> 
+  <svg height="400" width="450">
+   <path id="lineAB" d="M 100 350 l 150 -300" stroke="red"
+   stroke-width="3" fill="none" />
+   <path id="lineBC" d="M 250 50 l 150 300" stroke="red"
+   stroke-width="3" fill="none" />
+   <path d="M 175 200 l 150 0" stroke="green" stroke-width="3"
+   fill="none" />
+   <path d="M 100 350 q 150 -300 300 0" stroke="blue"
+   stroke-width="5" fill="none" />
+   <!-- Пометим соответствующие точки -->
+   <g stroke="black" stroke-width="3" fill="black">
+     <circle id="pointA" cx="100" cy="350" r="3" />
+     <circle id="pointB" cx="250" cy="50" r="3" />
+     <circle id="pointC" cx="400" cy="350" r="3" />
+   </g>
+   <!-- Поставим метки точек -->
+   <g font-size="30" font-family="sans-serif" fill="black" stroke="none"
+   text-anchor="middle">
+     <text x="100" y="350" dx="-30">A</text>
+     <text x="250" y="50" dy="-10">B</text>
+     <text x="400" y="350" dx="30">C</text>
+   </g>
+</svg>
+  <svg height="400" width="450">
+   <path id="lineAB" d="M 100 350 l 150 -300" stroke="indianred" stroke-dasharray="10,5,10"
+   stroke-width="8" fill="none" />
+   <path id="lineBC" d="M 250 50 l 150 300" stroke="fuchsia"
+   stroke-width="3" fill="none" />
+   <path d="M 175 200 l 150 0" stroke="gold" stroke-width="3"
+   fill="none" />
+   <path d="M 100 350 q 150 -300 300 0" stroke="violet"
+   stroke-width="5" fill="none" />
+   <!-- Пометим соответствующие точки -->
+   <g stroke="indigo" stroke-width="3" fill="navy">
+     <circle id="pointA" cx="100" cy="350" r="3" />
+     <circle id="pointB" cx="250" cy="50" r="3" />
+     <circle id="pointC" cx="400" cy="350" r="3" />
+   </g>
+   <!-- Поставим метки точек -->
+   <g font-size="30" font-family="sans-serif" fill="darkgreen" stroke="none"
+   text-anchor="middle">
+     <text x="100" y="350" dx="-30">A</text>
+     <text x="250" y="50" dy="-10">B</text>
+     <text x="400" y="350" dx="30">C</text>
+   </g>
+</svg>
+  </div>
+            
+</body>
+</html>
