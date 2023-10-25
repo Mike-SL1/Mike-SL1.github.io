@@ -1,0 +1,111 @@
+﻿<!DOCTYPE HTML>
+<html>
+<head> <meta charset="UTF-8">
+	<link rel="icon" type="image/png" sizes="64x64" href="../img/png/sl_ico.png">
+       <title>Slider v.2.3</title>
+</head><style>
+.slider_wrap{position:relative; }
+.dec0 img,.imgz,.Description{position:absolute;}					 
+.dec0 img,.imgz,.Description,
+.dec0 div,      .dec3{opacity:0;z-index:-1;transition:transform,opacity,box-shadow;transition-duration:800ms;}	
+.imgz,.dec0 div:nth-child(2){opacity:1;}						.dec0 img,.imgz {top:0px; left:0px;}
+											.dec0 div{cursor: pointer;text-transform:capitalize;}
+.dec0 div,.dec3{display:flex;justify-content:center;align-items:center;}		
+.Description   {width:auto;}				  								
+
+.dec0 a:focus ~ img{opacity:1;}			   .vert_spc,.init_vert_spc{width:1px;}
+.dec0 a:focus{cursor: default;}					
+			    	    		   .dec0,.dec0 a:first-child,.dec0 div:nth-child(2){height:58px;border-radius:30px;}
+.init_vert_spc	{height:65px;}							.dec0 a:first-child{padding:40px 30px 3px 30px;opacity:0;}
+.vert_spc	{height:15px;}							.dec0 div:nth-child(2){margin-top:-62px;border:1px solid blue;}
+.slider_wrap,.dec0 img,.imgz {width:1151px;  height:692px;}			.dec0{width:60px;margin-left:-30px;}
+.slider_wrap    {margin:30px auto;}						.dec3{width:170px;
+										      height:30%;  	margin:-50px 0px 0px 80px; 
+													padding:10px 30px 10px 30px;
+										text-decoration:none;
+										border-radius:10px;	border:1px solid darkgray;}
+.dec0 div:nth-child(2),.dec3{background-color:#00FA00AF;font-family:arial;font-weight:900;font-size:24px;}					
+.Description {bottom:40px; right:30px;	 		 border-bottom-right-radius:30px;	border-right: 2px solid white;
+	      padding:5px 30px 5px 30px;		 border-top-left-radius:30px;		border-bottom:2px solid white;  	
+	      font-size:28px;}
+.Description,.dec3 {font-weight:700;letter-spacing:2px;text-transform:capitalize; /*uppercase*/}   .dec3{font-size:20px;}	      
+	     
+.clr1,.clr2,.clr3,.clr4,.clr5,.clr6,.clr9{background-color:#7F4F4FA0; color:white;}	.clr7,.clr8,.clr4{color:black;}
+.clr1{background-color:#6495EDA0;}		.clr5{background-color:#800000A0;}	.clr8{background-color:#AFEEEEA0;}
+.clr3{background-color:#B8860BA0;}		.clr6{background-color:#2E8B57A0;}	.clr9{background-color:#ADD8E6A0;}
+.clr4{background-color:#CD5C5CA0;}		.clr7{background-color:#4682B4A0;}
+	  
+.dec0>a:focus + div{cursor: default;background-color:#FF0060EF;color:white;transform: translateX(2em);
+		    							   box-shadow:0px 0px 15px 0px yellow;}
+.dec0>a:focus ~ .dec3{opacity:1;transform: translateX(2em);}
+		.dec3:hover{border:1px solid white;}
+.dec0>a:focus ~ .Description{opacity:1;}		
+</style><body>
+<div class="slider_wrap"> 
+	<img src="../img/jpg/fantasy_0.png" class="imgz">
+	<div class="init_vert_spc"></div>
+	    <div class="dec0"> 
+		<a href="#"></a>
+			<div>a</div><a href="../pages/href_debug.htm" class="dec3 clr1">empire</a>						
+ 		<img src="../img/jpg/fantasy_0_1(empire).jpg">
+		<div class="Description clr1">empire</div>				 
+	   </div> 
+	<div class="vert_spc"></div>
+	   <div class="dec0"> 
+		<a href="#"></a>
+			<div>B</div><a href="../pages/href_debug1.htm" class="dec3 clr2">classic</a>						
+ 		<img src="../img/jpg/fantasy_0_2(classic).jpg">
+		<div class="Description clr2">classic</div>		 
+	   </div>
+	<div class="vert_spc"></div>
+	   <div class="dec0"> 
+		<a href="#"></a>
+			<div>C</div><a href="../pages/href_debug2.htm" class="dec3 clr3">loft</a>						
+ 		<img src="../img/jpg/fantasy_0_3(loft).jpg">
+		<div class="Description clr3">loft</div>		 
+	   </div> 
+	<div class="vert_spc"></div>
+	   <div class="dec0"> 
+		<a href="#"></a>
+			<div>D</div><a href="../pages/href_debug3.htm" class="dec3 clr4">minimalism</a>					
+ 		<img src="../img/jpg/fantasy_0_4(minimalism).jpg">
+		<div class="Description clr4">minimalism</div>		 
+	   </div>
+	<div class="vert_spc"></div>
+	   <div class="dec0"> 
+		<a href="#"></a>
+			<div>E</div><a href="../pages/href_debug1.htm" class="dec3 clr5">provence</a>					
+ 		<img src="../img/jpg/fantasy_0_5(provence).jpg">
+		<div class="Description clr5">provence</div>		 
+	   </div>
+	<div class="vert_spc"></div>
+	   <div class="dec0"> 
+		<a href="#"></a>
+			<div>F</div><a href="../pages/href_debug2.htm" class="dec3 clr6">romanticism</a>				
+ 		<img src="../img/jpg/fantasy_0_6(romanticism).jpg">
+		<div class="Description clr6">romanticism</div>		 
+	   </div>
+	<div class="vert_spc"></div>
+	   <div class="dec0"> 
+		<a href="#"></a>
+			<div>G</div><a href="../pages/href_debug3.htm" class="dec3 clr7">scandinavian</a>					
+ 		<img src="../img/jpg/fantasy_0_7(scandinavian).jpg">
+		<div class="Description clr7">scandinavian</div>		 
+	   </div>   
+	<div class="vert_spc"></div>
+	   <div class="dec0"> 
+		<a href="#"></a>
+			<div>H</div><a href="../pages/href_debug.htm" class="dec3 clr8">Mediterranean</a>					
+ 		<img src="../img/jpg/fantasy_0_8(Mediterranean).jpg">
+		<div class="Description clr8">Mediterranean</div>		 
+	   </div>    
+	<div class="vert_spc"></div>
+	   <div class="dec0"> 
+		<a href="#"></a>
+			<div>I</div><a href="../pages/href_debug1.htm" class="dec3 clr9">hightech</a>					
+ 		<img src="../img/jpg/fantasy_0_9(hightech).jpg">
+		<div class="Description clr9">hightech</div>		 
+	   </div>   
+</div>
+</body>
+</html>
