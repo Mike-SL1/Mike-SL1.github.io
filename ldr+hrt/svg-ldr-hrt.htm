@@ -1,0 +1,76 @@
+﻿<!DOCTYPE HTML><html><head>	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+				<meta charset="UTF-8">		
+				<link rel="icon" type="image/png" sizes="32x32" href="cubes.gif">  
+		<link rel="stylesheet" href="reset-MS.css">			
+<title>Heart+Loaders</title>	<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+				<meta http-equiv="Pragma" content="no-cache" />
+				<meta http-equiv="Expires" content="0" /></head>
+<style>
+body{margin:20px;} .centr{width:500px;justify-content:space-between;} 				
+			body {display: flex; justify-content: center; align-items: center;height: 100vh;}
+
+.loader  {border:1px solid lime; 
+width: 200px; height: 200px; position: relative;}	.circle-1,.circle-2,.circle-3{fill: none;stroke-width: 7px;
+								stroke-linecap: round;}
+.circle-1{width:50%; height:50%;top: calc(50% - 50px);
+  			       left: calc(50% - 50px);stroke-dasharray: 290;}						
+    .c1a1{animation:circle1;  stroke: #7b1fa2;}    
+    .c1a2{animation:circle1_1;stroke:turquoise;}	.c1a1,.c1a2{animation-duration:3s;}
+    
+.circle-2 {width:70%; height:70%;top: calc(50% - 70px);
+  				left: calc(50% - 70px);stroke-dasharray: 410;}						 
+    .c2a1{animation:circle2;  stroke: #f50057;}
+    .c2a2{animation:circle2_1;stroke:green;}		.c2a1,.c2a2{animation-duration:2.3s;}
+    
+.circle-3 {width:90%; height:90%;top: calc(50% - 90px);
+  				left: calc(50% - 90px);stroke-dasharray: 535;}						 
+    .c3a1{animation:circle3;  stroke: #304ffe;}
+    .c3a2{animation:circle3_1;stroke:darkgoldenrod;}	.c3a1,.c3a2{animation-duration:3.6s;}	
+
+.acp{animation-timing-function:ease-in-out;animation-iteration-count: infinite;}
+
+@keyframes circle1 {0% {stroke-dashoffset:  -290;}50%{stroke-dashoffset: 0;}100% {stroke-dashoffset: 290;}}
+@keyframes circle2 {0% {stroke-dashoffset:  -410;}50%{stroke-dashoffset: 0;}100% {stroke-dashoffset: 410;}}
+@keyframes circle3 {0% {stroke-dashoffset:  -535;}50%{stroke-dashoffset: 0;}100% {stroke-dashoffset: 535;}}
+
+@keyframes circle1_1 {0% {stroke-dashoffset:  290;}50%{stroke-dashoffset: 0;}100% {stroke-dashoffset: -290;}}
+@keyframes circle2_1 {0% {stroke-dashoffset:  410;}50%{stroke-dashoffset: 0;}100% {stroke-dashoffset: -410;}}
+@keyframes circle3_1 {0% {stroke-dashoffset:  535;}50%{stroke-dashoffset: 0;}100% {stroke-dashoffset: -535;}}
+
+/*heart*/				
+.heart {width: 50px;object-fit: cover; animation: pulse 1s ease infinite;} 
+.heart_svg{fill: red; width: 100%; height: 100%;}
+
+@keyframes pulse {0% {transform: scale(1); }
+		  50% {transform: scale(1.3); }
+		  100% {transform: scale(1);  }}/*heart*/
+		  
+</style><body><div class="centr flx brd_red"> 
+<div class="loader">
+  <svg class="circle-1 c1a1 acp abs">
+    <circle r="45" cx="50" cy="50" />
+  </svg>
+  <svg class="circle-2 c2a1 acp abs">
+    <circle r="65" cx="70" cy="70" />
+  </svg>
+  <svg class="circle-3 c3a1 acp abs">
+    <circle r="85" cx="90" cy="90" />
+  </svg>
+</div>
+<div class="heart">
+  <svg class="heart_svg" viewBox="0 0 32 29.6">
+    <path d="M23.6,0c-3.4,0-6.3,2.7-7.6,5.6C14.7,2.7,11.8,0,8.4,0C3.8,0,0,3.8,0,8.4c0,9.4,9.5,11.9,16,21.2
+c6.1-9.3,16-12.1,16-21.2C32,3.8,28.2,0,23.6,0z" />
+  </svg></div>
+<div class="loader">
+  <svg class="circle-1 c1a2 acp abs">
+    <circle r="45" cx="50" cy="50" />
+  </svg>
+  <svg class="circle-2 c2a2 acp abs">
+    <circle r="65" cx="70" cy="70" />
+  </svg>
+  <svg class="circle-3 c3a2 acp abs">
+    <circle r="85" cx="90" cy="90" />
+  </svg>
+</div>
+</div></body></html>
