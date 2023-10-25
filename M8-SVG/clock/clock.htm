@@ -1,0 +1,70 @@
+﻿<!DOCTYPE HTML><html><head>	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+				<meta charset="UTF-8">		
+				<link rel="icon" type="image/png" sizes="64x64" href="img/clock.png">  
+		<link rel="stylesheet" href="rst/reset-MS.css">			
+<title>CLOCK</title>	<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+				<meta http-equiv="Pragma" content="no-cache" />
+				<meta http-equiv="Expires" content="0" /></head>
+<style>
+body{text-align:right;animation:day;} @keyframes day{	0%{ background:black;}
+ 							40%{background:white;}
+ 							50%{background:white;}
+ 							60%{background:darkslateblue;}
+ 							72%{background:darkblue;}
+ 							82%{background:navy;}
+ 							100%{ background:black;}}  
+svg{width: 500px; height: 500px;  margin: 15vh;  display:inline-block;}
+.sun_img{width:300px;animation:su_roy;animation-timing-function:linear;} @keyframes su_roy{0%{transform:rotate(0deg);}
+		  									20%{transform:rotate(3600deg);}
+		  									50%{transform:rotate(3600deg);}
+		  									70%{transform:rotate(0deg); }
+	       										100% {transform:rotate(0deg); }}
+.sun,.land,.diamond{opacity:0;}	      .land,.diamond{z-index:-1;border-radius:5%;}							
+.sun{left:3vw;animation:sunrise;}
+.land{width:98vw;top:400px;left:2px;animation:land;}  .diamond{height:95vh;margin-top:3vh;animation:diamond;
+animation-timing-function:ease-in;}
+body,.sun_img,.sun,.land,.diamond{animation-duration:30s;animation-iteration-count:infinite;}
+@keyframes diamond{0%{opacity:0;} 
+		65%{opacity:0;Left:-200px;}
+ 		82%{opacity:1;} 
+ 		97%{opacity:0;}		
+ 		100%{ left:800px;}}  
+@keyframes land{0%{opacity:0; }
+               40%{opacity:1;}
+	       50%{opacity:1;top:-300px;}
+	       70%{opacity:0; }
+	       100% {opacity:0; }}
+@keyframes sunrise{0%{top:55vh;}
+               30%{opacity:1;top:0vh;left:3vw;}
+               45%{left:40vw;}
+	       50%{opacity:1;top:0vh;}
+	       60%{top:55vh;opacity:0;left:5vw;}
+	       100% {opacity:0; }}
+</style><body>
+<div class="sun abs"> 
+       <img src="img/sun.gif" class="sun_img">
+</div>
+<img src="img/land.jpg" class="land abs"><img src="img/sky_of_diamonds1.jpg" class="diamond abs">
+ </div><svg version="1.1" id="L2" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+  viewBox="0 0 100 100" enable-background="new 0 0 100 100" xml:space="preserve">
+<circle fill="yellow" stroke="#00f" stroke-width="4" stroke-miterlimit="10" cx="50" cy="50" r="48"/>
+<line fill="none" stroke-linecap="round" stroke="#f1b" stroke-width="4" stroke-miterlimit="10" x1="50" y1="50" x2="85" y2="50.5">
+  <animateTransform 
+       attributeName="transform" 
+       dur="2s"
+       type="rotate"
+       from="0 50 50"
+       to="360 50 50"
+       repeatCount="indefinite" />
+</line>
+<line fill="none" stroke-linecap="round" stroke="#000" stroke-width="4" stroke-miterlimit="10" x1="50" y1="50" x2="49.5" y2="74">
+  <animateTransform 
+       attributeName="transform" 
+       dur="15s"
+       type="rotate"
+       from="0 50 50"
+       to="360 50 50"
+       repeatCount="indefinite" />
+</line>
+</svg>
+</body></html>
