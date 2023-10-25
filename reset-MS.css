@@ -1,0 +1,25 @@
+﻿/*reset-MS v.3 14:22 20-Oct-23 */
+html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,
+del,dfn,em,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,
+table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,embed,figure,figcaption,footer,header,hgroup,menu,nav,
+output,ruby,section,summary,time,mark,audio,video{margin:0px;padding:0px;vertical-align:baseline;}
+
+body{line-height:1;}				table{border-collapse:collapse;border-spacing:0px;}
+ol,ul{list-style:none;}				a{text-decoration:none;}
+	li{position:relative;padding-left:2.8ch;}				
+	li::before{content:'\2022';font-size:36px;color:red;}
+blockquote,q{quotes:none;} blockquote::before,blockquote::after,q::before,q::after{content:'';content:none;}
+
+*{padding:0px;margin:0px;box-sizing:border-box;font-size:20px;font-family:Arial;font-style:normal;font-weight:400;
+  color:#000000;} 	       .times{font-family:"Times New Roman";}
+.bold{font-weight:800;} .itl{font-style:italic;}
+.n14{font-size:14px;}	.n16{font-size:16px;}.n18{font-size:18px;}.n22{font-size:22px;}.n24{font-size:24px;}.n28{font-size:28px;}
+.n30{font-size:30px;}   .n32{font-size:32px;}.n34{font-size:34px;}.n36{font-size:36px;}.n38{font-size:38px;}	
+
+.brd_red{border:1px solid red;}.brd_lime{border:1px solid lime;}.brd_blue{border:1px solid blue;}.brd_gold{border:1px solid gold;}
+
+.abs,li::before{position:absolute;top:-3px;left:-13px;}	  		.centr{width:100%;margin:0px auto 0px;}
+.imgcvr{object-fit:cover;}			.flx{display:flex;}	.flxcntr{align-items:center;}
+a,button:hover{cursor:pointer;} 		button,.txt_cntr{text-align:center;} .BP{text-transform:UPPERCASE;}
+						button{padding:0px .3vw 0px .3vw; box-shadow:.1vw .1vw .2vw .1vw gray;}
+p::first-letter{padding-left:2ch;}		button:active{background-color:deeppink;color:white;}	
