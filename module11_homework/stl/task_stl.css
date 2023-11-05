@@ -1,0 +1,6 @@
+﻿.txt{width:40vw;margin-bottom:70px;font-size:18px;}
+p:first-letter{padding-left:1vw;}
+a{margin:0px 0px 0px 5vw;
+  text-decoration:none;font-weight:600;font-size:20px;border-radius:50%;
+	color:darkblue;background:powderblue;width:27ch;padding:2ch;  } 
+a:hover{color:red;}
