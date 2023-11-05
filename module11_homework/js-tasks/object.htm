@@ -1,0 +1,29 @@
+﻿<!DOCTYPE HTML>
+<html><head><title>Слугин-Задание 8</title>
+<meta charset="UTF-8">		
+<link rel="icon" type="image/png" sizes="64x64" href="../img/server.png">
+<link rel="stylesheet" href="../stl/task_stl.css"></head>
+<body>
+<script>
+const knop=new Object();		//object empty with name knop
+let f='form';	let x=9;
+ knop[f]='round';	knop.f=(x)=>{return x*x;}
+ knop.querra='kino';
+ knop.a=4;		knop[x]=knop.f(7);
+
+for (let key in knop){console.log(key,knop[key]);}
+
+console.log(knop.f(8));
+delete knop.a;console.log('after "a" deleted');
+for (let key in knop){console.log(key,knop[key]);}
+</script>
+
+<h2>Задание 8</h2>
+<div class="txt">
+<p>Создайте пустой объект.<br>
+Добавьте несколько свойств со значениями разных типов.<br>
+Добавьте метод.<br>
+Удалите одно из созданных свойств.</p>
+</div>
+<a href="../index.htm">Возврат к выбору задания</a>
+</body></html>
