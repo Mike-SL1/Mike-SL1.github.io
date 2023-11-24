@@ -1,0 +1,75 @@
+﻿<!DOCTYPE HTML><html><head>	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+				<meta charset="UTF-8">	
+				<link rel="icon" type="image/png" sizes="64x64" href="knop.png">  								
+<title>JS-Zad-11-3. Неуловимая кнопа</title></head>	<style>body{background:lavender;}
+							         h1{width:10vw;font-size:2vw;margin:0px auto 20px; } 
+.container{margin:10px auto;display:flex;gap:2vw;
+	   width:calc(38vw + 110px + 24vw);align-items:center;} .pPad,.filet{padding-left:1em;}
+.desc{width:20vw; padding:10px 0px 0px 30px;font-size:1.4vw;} 	.filet{ color:darkred; font-weight:600;}
+  .knop_w,.knop_w1{position:relative;}		
+.knop_w{width:calc(38vw + 110px);height:calc(38vw + 110px);border:2px solid green;background:antiquewhite;}  
+.knop_w1{width:38vw;height:38vw;}
+		.victory,button{position:absolute;transition-property:top,left,opacity;transition-duration:500ms;} 
+.victory{font-size:4vw;letter-spacing:1vw;font-weight:700;border:3px solid magenta; 
+	text-shadow:2px 2px 5px red;color:darkviolet;background:mistyrose;
+	box-shadow:2px 2px 3px 1px plum;				padding:10px 0px 10px 10px;
+	border-radius:5px;text-align:center;width:30vw;top:30%;left:17%;opacity:0; animation:blink;
+	animation-duration:2s;animation-iteration-count:infinite; animation-delay: 3s;animation-play-state:paused;}
+button{width:100px; height:100px;background:lime;border:10px solid blue;  top:50%;left:50%;       
+       animation:appear; animation-duration:4s; animation-iteration-count:1;
+						animation-timing-function:linear;}
+button:hover{background:yellow;}				
+				button,.cir{border-radius:50%;}
+button:active{background:hotpink;}	.cir{margin:0 auto 0px;width:50%;height:45%; background:red; border:5px solid yellow;}	
+.knop_w{animation:fon; animation-duration:3s;		animation-iteration-count:1;
+							animation-timing-function:linear;}
+@keyframes blink  {0% {color:red;background:turquoise;}	10%{color:fuchsia;background:yellow;}	20%{color:hotpink;background:skyblue;}	
+		   30%{color:violet;background:navy;}	40%{color:yellow;background:black;}	50%{color:lime;background:blue;}	
+		   60%{color:aqua;background:teal;}	70%{color:navy;background:coral;}	
+		   80%{color:cornflowerblue;background:darkcyan;}	90%{color:hotpink;background:darkgoldenrod;}	
+		   100%{color:red;background:turquoise;}}
+@keyframes appear {0% {opacity:0;}
+		  100%{opacity:1;}}
+@keyframes fon    {0% {background:gray;}	10%{background:gray;}
+		   11%{background:fuchsia;}	15%{background:fuchsia;}
+		   16%{background:white;}	20%{background:white;}
+		   21%{background:fuchsia;}	25%{background:fuchsia;}
+		   26%{background:white;}	100%{background:antiquewhite;}}</style>
+		   			<body><div class="container">							
+<div  class="desc"><h1>Задание 3.</h1>
+		   <span class="filet">Напишите игру</span>: в центре экрана появляется кнопка «Нажми меня». 
+		   Когда юзер наводит на неё курсор, она сразу же перемещается на случайные координаты. <br>
+		   <span class="pPad">Если </span>игроку всё-же удаётся нажать кнопку, то наступает следующая 
+		   фаза игры: кнопка начинает перемещаться самопроизвольно. <br>
+		   <span class="pPad">Задачей</span> игрока теперь будет поймать и нажать кнопку - тогда она 
+		   перестаёт перемещаться - игра окончена - победа!</div>
+<div  class="knop_w"> <div class="victory">ПОБЕДА!</div>
+	<div  class="knop_w1"> 
+		<button id="knop1" onmouseover="run()" onclick="runStop()"><div  class="cir"> </div></button>
+	</div>
+</div></div>
+<script src="RndClrs.js"></script>
+<script>	   
+let k=document.getElementById("knop1");	 let po=document.querySelector(".victory");
+let k1=k.firstChild;  	 
+function run(){let x=random(100);let y=random(100);	
+	       k.style.left=`${x}%`;
+	       k.style.top=`${y}%`;	
+	       }
+const runStop= function (){let IvId6;let flag=false;					
+		           function runStop(){flag=!(flag);
+		           		      if (flag) {IvId6=setInterval(run,500);
+		           		      		 po.style.opacity="0";	k.style.border="";
+		           		      		 po.style.animationPlayState="";
+		           		      		 k.style.background='';
+		           		      		 k1.style.background='';} else {clearInterval(IvId6); 
+		           		      		 				  po.style.opacity="1";
+		           		      		 				  po.style.animationPlayState="running";
+		           		      						  k.style.background="deepskyblue";
+		           		      						  k1.style.background="fuchsia";
+		           		      						  k.style.border="10px solid darkcyan";}				
+			   		     }
+		           return runStop;}();		        		   
+</script>
+</body></html>
+
