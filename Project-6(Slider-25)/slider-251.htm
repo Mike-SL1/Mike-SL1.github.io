@@ -1,0 +1,93 @@
+﻿<!DOCTYPE HTML>
+<html lang='en'>
+<head>	<meta charset="UTF-8">	
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">	
+	<link rel="icon" type="image/png" sizes="64x64" href="img/sl_ico.png">  
+	<link rel="stylesheet" href="styles/style-25.css"><title>Slider-25 v.9 (Слугин)</title></head>
+<style>	
+	.picture{margin-left:50px; width:679px;}
+				.link{color:rgba(255, 255, 255, 0.30);height:23px; }
+				.link:hover{color: #E3B873;border-bottom:2px solid #E3B873;}			
+	.picFrame{width:679px;height:482px;margin-top:45px; }	
+	.pic{width:100%; height:100%;object-fit:contain; }
+.sw .arrow:hover{border:1px solid gold;}	.sw div:hover,.link{cursor:pointer;}
+			.arrow{width:45px;height:13px; }				
+				.circ:nth-of-type(1){margin-left:25px;   }
+				.circ:nth-of-type(2){margin:0px 15px 0px 15px; }
+				.circ:nth-of-type(3){margin-right:23px; }				 
+.circ{width:12px;height:12px;border-radius:50%;background:darkgray;}						
+</style><body><div class="container21 centr"> 
+<div class="flx"> <!--block-->
+     <div> <!--block1-->
+	<div class="headr n27">Completed projects</div>
+	<div class="txt1 FFF">Only a small part of the work performed by our company is presented 
+	on the site. For 14 years on in the construction market we have made happy more than 1000 families</div>
+	<div class="col flx"> 
+		<div class="col1"> 
+		<div class="hed1 n18">city</div><div class="Desc FFF"></div>
+		<div class="hed1 n18">Repair time: </div><div class="Desc FFF"></div>	
+     	</div>
+		<div class="col2"> 
+		<div class="hed1 n18">apartment area:</div><div class="Desc FFF"></div>
+		<div class="hed1 n18">Repair Cost: </div><div class="Desc FFF">Upon request</div>
+     	</div>
+   </div>	<div class="sw flx"> 
+			<div class="arrow" id="BtnBckwrd"> </div>
+			   <div class="crcBlk flx"> <!--script-1 built-->			   	
+			   </div>			  	
+			<div class="arrow" id="BtnFwd"> </div>
+		</div>
+</div><!--block1-->
+<div class="picture"> 
+	<div class="links flx"> <!--script-1 built-->	
+	</div>
+	<div class="picFrame"> 	</div>
+</div><!--picture-->
+</div><!--block-->
+<script>
+let frame=document.querySelector('.picFrame');	let images25=['1_admiral','2_sochi','3_patriotic'];
+						let imgQuant=images25.length;
+       // building begin (script-1)
+let crkBlk=document.querySelector('.crcBlk');	let lnkBlk=document.querySelector('.links');
+	let opnDiv='<div class=';	let circ='"circ"'; 	onClk=' onclick="showpic(';  	
+					let links='"link"';				   let clsDiv=')"></div>';
+	for (let i=0;i<imgQuant;i++) {//<div class="circ" onclick="showpic(i)"> </div>
+			       		crkBlk.insertAdjacentHTML('beforeend',`${opnDiv}${circ}${onClk}${i}${clsDiv}`);
+			      	      //<div class="link" onclick="showpic(i)"></div>
+			       		lnkBlk.insertAdjacentHTML('beforeend',`${opnDiv}${links}${onClk}${i}${clsDiv}`);}
+       // building   end (script-1)
+       				   imgQuant--;
+let prefx25='<img src="img/';			let pstfx25='.png" alt="Interior design view" class="pic">';		
+					let ActClr='white';		
+let i25=0;				let LnkActClr='#E3B873';	
+						let FWD=document.getElementById("BtnFwd");	
+						let BWD=document.getElementById("BtnBckwrd");
+let crk=document.querySelectorAll('.circ');
+let lnk=document.querySelectorAll('.link');	let descript=document.querySelectorAll('.Desc');
+
+let names=['Rostov-on-Don, Admiral','Sochi Thieves','Rostov-on-Don Patriotic']; 
+let meter=['81','82','83']; 		
+let terms=['3.5','4.5','5.5'];  	names.forEach(function (item,idx,arr){lnk[idx].innerHTML=item;});
+					
+//crk.forEach(crk => crk.addEventListener("click", function() {crk.style.background=`${ActClr}`;}));
+//is alt for <div class="circ" onclick="showpic(i)"> </div> in script-1
+
+function showpic(n){frame.innerHTML=`${prefx25}${images25[n]}${pstfx25}`;           i25=n;
+			crk.forEach(function(item,idx){if (idx!==n) {item.style.background='';}});
+			lnk.forEach(function(item,idx){if (idx!==n) {item.style.color='';}});
+		    				descript[0].innerHTML=`${names[n]}`;
+		   				descript[1].innerHTML=`${terms[n]} months`;
+		   				descript[2].innerHTML=`${meter[n]} m<sup>2</sup>`;
+		    lnk[n].style.color=`${LnkActClr}`;
+		    crk[n].style.background=`${ActClr}`;	}
+
+function plus(){i25++; 		       
+			if (i25>imgQuant) {i25=0;}					       
+		showpic(i25);}					FWD.onclick=plus; 
+
+function minus(){i25--;			  
+			if (i25<0) {i25=imgQuant;}	 			       
+		 showpic(i25);}					BWD.onclick=minus;
+showpic(i25);			
+</script>
+</div></body></html>
