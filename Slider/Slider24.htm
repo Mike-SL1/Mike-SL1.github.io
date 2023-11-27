@@ -1,0 +1,82 @@
+﻿<!DOCTYPE HTML><html><head>	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+				<meta charset="UTF-8">		
+				<link rel="icon" type="image/png" sizes="64x64" href="sl_ico.png">			
+<title>Slider-24 (Слугин)</title></head><style>body{margin:0px;padding:0px;background:whitesmoke;}	
+.honey{width:70vh;margin:0px auto 5px;background:honeydew;}  	  
+ header,footer{width:calc(100% - 3px);margin:10px 0px 5px;}
+	.qube{height:100%;width:7vh;}
+		.right{margin:0px 0px 0px auto;background: linear-gradient(to left,lightblue 30%, lightgray 100%);}
+	 	.left{margin:0px auto 0px 0px;background: linear-gradient(to right,lightblue 30%, lightgray 100%);}
+header,footer{letter-spacing:.8vh;justify-content:center;font-size:4vh;font-weight:500;height:7vh;background:lightgray; }		
+.picbx{position:relative;height:70vh;}  .picbx,.numbx,header,footer{border:2px solid skyblue;}
+				   .pic,.pic1,.pic2{width: 100%; height: 100%;object-fit:contain;}				  
+					.pic1,.pic2{position:absolute;transition-duration:1000ms;}  
+			.numbx,.pic1,.pic2{background:oldlace;}
+.numbx{width:7vh; margin:0px 1vw 0px auto;justify-content:center;font-size:3vh; }
+.control,.numbx,header,footer{display:flex;align-items:center;height:5vh;}	footer{font-size:2vh; margin-top:10px;}
+.grad{background: linear-gradient(-37deg,lavender 0%, lavender 50%, oldlace 51%, oldlace 100%);}
+.control{margin:.9vh 0px 0px 30%;}
+.cBtn{width:12vh;height:3.5vh;border-radius:4px;font-size:1.8vh;margin-left:1.7vh; border:3px solid gray;outline:none;} 
+      .cBtn:hover{border:3px solid deepskyblue;box-shadow:0px 0px 5px 1px aqua;cursor:pointer;}
+#btn1:active,#btn2:active{background:orange;}	#btn3:active,#btn4:active{background:hotpink;}
+#btn1,#btn3{background:pink;}#btn2,#btn4{background:palegreen;}
+      #btn3{background:orange;}</style><body><div class="honey"> 
+					<header><div class="qube left"></div>SLIDER С ФОТО<div class="qube right"></div></header>	
+<main>	<div class="picbx">	<div class="pic2"> </div>	<div class="pic1"></div>	  </div>
+<div class="control"> 	<button class="cBtn" id='btn1'>Backward</button>
+			<button class="cBtn" id='btn2'>Forward</button> <div class="numbx">1</div></div>
+<div class="control">   <button class="cBtn" id='btn3'>SlideShow</button>
+			<button class="cBtn" id='btn4'>StopShow</button><div class="numbx grad">1</div></div></main>
+<footer><div class="qube left"></div>Copytight MishaSOFT 2023<div class="qube right"></div></footer></div><!--honey-->
+<script>
+let images=['233_MMX.JPG','1263524959_15.jpg','aiwa-1.jpg','amer_10agers.jpg','AQUARIUS.JPG',
+'bk-in-future.jpg','kosmos.jpg'];
+
+let box1=document.querySelector('.pic1');		let numAll=document.querySelectorAll('.numbx');					
+let box2=document.querySelector('.pic2');		num=numAll[0];			let start=document.getElementById("btn3");
+let flag=true;		let n=images.length-1;		let prefx='<img src="asset/';	let stop=document.getElementById("btn4");
+let cnt=0; 		let pstfx='" class="pic">';	let last=cnt;  numAll[1].innerHTML=`${n+1}`;
+//accessibility block begin ----------------------------------------------------------------------------------------------+
+let acsCtrl=document.querySelectorAll('.cBtn');									//	  |
+	acsCtrl.forEach(cBtn => cBtn.addEventListener("focus", function() {cBtn.style.boxShadow="0px 0px 3px 2px lime";// |
+									   cBtn.style.border="3px solid yellow";//	  |
+									   cBtn.style.fontWeight="700"; //		  |
+						   /*setTimeout((function(){cBtn.style.boxShadow="";//			  |
+									   cBtn.style.border="";//			  |
+									   cBtn.style.fontWeight=""; }),3000);*/ //	  |
+									   }));					//	  |
+	acsCtrl.forEach(cBtn => cBtn.addEventListener("click", function() {cBtn.style.boxShadow="";//			  |
+									   cBtn.style.border="";//			  |
+									   cBtn.style.fontWeight="";}));//		  |	
+	acsCtrl.forEach(cBtn => cBtn.addEventListener("blur", function() {cBtn.style.boxShadow="";//			  |
+									   cBtn.style.border="";//			  |
+									   cBtn.style.fontWeight="";}));//	 	  |
+//accessibility block end ------------------------------------------------------------------------------------------------+
+					
+
+function showimg(i){ box1.style.transitionProperty="none";
+		     box1.style.opacity="0";
+			box2.innerHTML=`${prefx}${images[last]}${pstfx}`;	
+		     last=i;		    		     	   	    
+		    	box1.innerHTML=`${prefx}${images[i]}${pstfx}`;
+		    setTimeout((function(){box1.style.transitionProperty="opacity";    
+		    			   box1.style.opacity="1";}),100);		    		    	    		      	
+		    num.innerHTML=`${i+1}`;}
+showimg(cnt);	    
+	
+function btn1Click(){cnt--;if (cnt<0) {cnt=n;}		    
+		     showimg(cnt);}			 btn1.onclick=btn1Click;	
+function btn2Click(){cnt++;if (cnt>n) {cnt=0;}		     		     		    
+		     showimg(cnt);}			 btn2.onclick=btn2Click;	
+
+function btn3Click(){if (flag) {flag=false;			 start.style.boxShadow="0px 0px 5px 4px coral";
+				timerId = setInterval(function(){start.style.boxShadow="0px 0px 5px 2px fuchsia";
+								 cnt++;if (cnt>n) {cnt=0;} showimg(cnt);},5000);}
+				  start.style.background="red";
+				  start.style.color="White";	start.style.fontWeight="700";}		btn3.onclick=btn3Click;  	 
+function btn4Click(){clearInterval(timerId);
+				flag=true;
+				  start.style.background="";
+				  start.style.color="";		start.style.fontWeight="";
+				  start.style.boxShadow="";}						btn4.onclick=btn4Click; 	
+</script></body></html>
