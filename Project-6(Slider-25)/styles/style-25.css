@@ -1,0 +1,22 @@
+﻿/*Style-1.css file for slider-25 v.1 common adjustments */ 	
+	@font-face {font-family: "Yeseva";src: url("../fonts/Yeseva1-Reg.ttf") format("truetype");}
+	@font-face {font-family: "Nunito";src: url("../fonts/NunitoSans_Reg.ttf") format("truetype");}
+*{padding:0px;margin:0px;box-sizing:border-box; font-size:14px;
+  color: #E3B873;font-family:Yeseva;font-style: normal;text-transform: uppercase;   font-weight:400;}
+	.n18{font-size:18px;}	.n27{font-size:27px;}	.centr{width:100%;margin:0px auto 0px;}
+									.flx{display:flex;}
+.FFF,sup{color:#FFF;text-transform:none;font-family:Nunito;} 
+     sup{font-size:13px;}
+.container21 {width:1440px; height:783px;background:#131313;padding-left:134px;padding-top:107px;}
+
+.links{gap:60px;} 
+
+.headr{width:253px; height:66px;margin-top:69px;line-height: 138.6%;letter-spacing: -1.89px;}
+  .txt1{width:442px; height:86px;margin-top:34px;line-height: 190.96%;}
+	.col{width:403px; height:162px;margin-top:42px;}
+	.col1,.col2{height:100%;}			
+.col1{width:161px; }.col2{margin-left:27px;width:213px; }	.hed1{height:31px; } 
+.Desc{font-family:Nunito;height:76px;line-height: 163.68%;}
+							
+
+.sw{width:206px;margin-top:80px;background-image:url('../img/switch.svg');}
