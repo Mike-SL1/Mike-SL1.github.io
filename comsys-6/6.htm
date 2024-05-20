@@ -1,0 +1,126 @@
+﻿<!DOCTYPE HTML><html lang="ru">
+<head>	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta charset="UTF-8">
+	<title>Comment system-625</title>
+	<link rel="icon" type="image/png" sizes="32x32" href="img/icon24.png">	</head>
+<style>	*::selection{background:transparent;padding:0px;}
+.contentHeader,.headerF1,.contentBottom,.replyBlock,.innerReplyBlock,.inputForm,
+.inputFormHeader,.warningFWrap,.inputFormMain,.rateCtrl,.listItem,.itemMark,.sortMenuOrdPic,
+.commntsHeaderLine,.favCntrlWrap,.heartWrap,.bottomCommentF0,.bottomCommentF1,.bottomReplyF0,.rateCtrlWrap{display:flex;}
+/* justify-content:center;	align-items:center; */
+.itemMark,.sortMenuOrdPic,.rateCtrl,.heartWrap
+						{justify-content:center;}
+.inputFormMain,.itemMark,.sortMenuOrdPic,.rateCtrl,.heartWrap
+						{align-items:center;}
+.bin1{margin:20px auto; width:1263px;display:none; }	
+.horGrayLine{ height:4px; }
+
+.commntsHeaderLine{margin-top:23px; font-size:20px;}
+.commntsAmount,.sortMenu,.favCntrl{padding:7px 0px 12px 0px;}
+
+    .sortMenuWrap{margin-left:69px; display:inline-flex;  }		
+	.sortMenu{width:220px;}		
+	    .listContainer{padding:6px 5px 16px 5px;width:285px;top:0px; border-radius:5px;background:white; }
+		.markSign{border-color:rgb(153,153,153);border-width:0 4px 4px 0;}
+		.listItem{margin:8px 0px 0px 10px;}	
+			.itemDesc{padding:0px 0px 0px 12px;}
+	
+	.ordPic{width:20px; background-color:rgb(153,153,153);}
+.favCntrlWrap{margin-left:53px; }	.favCntrl{width:107px;}
+.heartWrap,.heartPic{width:29px; height:29px;border-radius:50%;}
+	   .heartPic{width:20px; height:20px;}
+.heartWrap{margin-left:13px; border:2px solid rgb(153,153,153);}
+	
+   .commentContainer{margin-top:12px; }									
+	.commentBlock/*,.innerReplyBlock*/{display:inline-flex;}
+	.commentBlockSeparator{height:20px;	border-top:2px solid whitesmoke;margin-top:20px;width:70%;}
+     .userAvatarWrap{text-align:center;}
+	.userAvatar,.userAvatarWrap{ width:75px;}
+	.userAvatar{  height:75px; border-radius:50%; object-fit: cover;}
+	.userContentLMargin{ width:37px;}
+	.commentsQuantity,.warningFWrap,.formSendBtn,.headerF1,.headerF3,.headerF,.bottomF,.listItem,.rateCtrl{color:rgb(153,153,153);}
+.textInput,.listContainer{box-shadow:0px 0px 4px 5px rgb(233,233,233);}
+.horGrayLine,.formSendBtn{background-color:rgb(217,217,217);}
+.commntsHeaderLine,.headerF,.bottomF,.commentText,.userNameField,.warningFWrap,.textInput,.formSendBtn{font-family:Arial; }
+.contentHeader{flex-flow:row wrap;}
+.contentHeader,.headerF1,.bottomCommentF0,.bottomCommentF1,.bottomReplyF0{align-items:flex-end;}	
+		.headerF,.bottomF{font-size:16px;}
+			 .bottomF{font-size:18px;}
+			.headerF0,.userNameField{color:blue;font-weight:600;}
+			.headerF0,.userNameField,.replyToName{font-size:20px;}
+		.replyToName{margin-right:20px;}	.dateTimeField{padding-bottom:2px;}
+			.headerF1{margin-left:22px;}
+			.headerF2,.headerF3{min-width:9px;}
+			
+	.bottomF,.rateCtrl{margin-right:15px;}
+		.commentText{font-size:18px;margin:24px 0px 22px 0px; min-height:20px;max-width:1122px;overflow-wrap:break-word;}			
+			.talkBackArrow,.cmntFavFild{margin-right:15px; height:24px;}	
+			.bottomReplyF0,.bottomCommentF0,.bottomCommentF1,
+				.rateCtrl,.listItem,.sortMenu,.commntsAmount,.favCntrl,.formSendBtn{cursor:pointer;}
+		.rateCtrl{font-family:Sans-Serif;font-weight:700;padding: 0px;
+			  align-self:center;height:22px;}		
+.inputForm{margin-top:40px; }
+   .vertMargin{height:6px;}
+	.replyBlock{width:100%;}
+		     
+.inputFormContainer{margin-left:38px;}
+	.inputFormHeader{margin-top:5px;height:24px;justify-content:space-between;}
+	.warningFWrap{font-style:oblique;font-size:18px;}
+	.inputFormMain{margin-top:24px;}
+		.textInput{width:calc(845px - 30px - 40px);outline:none;
+			   font-size:22px; padding:30px 30px 0px 40px;
+			   border-color:transparent;background:white;}
+		.textInput::selection{background:blue; color:white;}
+	.textInput,.formSendBtn{border-radius:10px;}
+	.formSendBtn{margin-left:38px;width:264px;height:75px;border:none;
+			font-size:20px; }
+/* mobile version */
+@media (max-width:600px) {
+	.bin1{width:376px; }
+	.commntsHeaderLine{margin-top:16px;flex-flow:row wrap;font-size:14px;}
+	.sortMenuWrap{margin:0px;  }
+	.sortMenuWrap,.favCntrlWrap{padding-top:20px;}
+	.commntsAmount{margin-right:100px;font-size:20px;}
+	.sortMenu{width:164px;}	
+	.favCntrlWrap{margin-left:24px; }	.favCntrl{width:75px;}
+	.inputForm{margin-top:10px;}
+	.userAvatar,.userAvatarWrap{ width:63px;}
+	.userAvatar{  height:63px;}
+	.inputFormContainer{margin-left:27px;}
+	.inputFormHeader,.userContent{margin-top:20px; }
+	.inputFormHeader{display:block;width:284px;}
+	.warningFWrap{justify-content:flex-end;font-size:12px; margin-right:5px;}
+									.textInput,.commentText,.contentBottom{margin-left:-90px;}
+	.contentBottom{gap:20px;}
+	.textInput{width:320px;font-size:16px;padding:20px 25px 0px 25px;margin-left:-89px;}
+	.inputFormMain{display:block;margin-top:35px;}
+	.formSendBtn{margin:20px 0px 30px -90px;width:374px;}
+	.commentContainer{margin-top:0px;}
+	.commentBlockSeparator{height:20px;}	
+	.commentText{max-width:374px;margin-top:26px;margin-bottom:5px;}	.userContentLMargin{width:27px;}
+	.contentHeader{width:284px;}
+	.headerF0{width:180px;padding-bottom:17px;}	.headerF1,.headerF3{margin:0px;align-self:flex-start;padding-top:4px;}
+	.headerF5{padding-bottom:3px;} 
+	.replyToName{margin:0px;}
+	.bottomF{align-items:center;}	 
+	.talkBackArrow{margin-right:10px;}
+	.bottomCommentF0{margin-right:5px;}			.rateCtrlWrap{flex-flow:column wrap;  }
+	.spHoop{display:none;}	
+}										
+</style> 
+<body>	<script src="userbase.js"></script>
+	<div class='bin1'>
+		<div class='horGrayLine'></div>
+			<div class='commntsHeaderLine'>
+				<div class='commntsAmount'></div>
+				<div class='sortMenuWrap'></div>
+			     <div class='favCntrlWrap'>
+				<div class='favCntrl'>Избранное</div>
+				<div class='heartWrap'>
+					<img class='heartPic' alt='Heart pictograph'> 
+				</div>
+			     </div>
+			</div>
+			<div class='commentContainer'></div>
+	</div>
+</body></html>
