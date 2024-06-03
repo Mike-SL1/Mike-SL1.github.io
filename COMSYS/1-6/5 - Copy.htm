@@ -1,0 +1,64 @@
+﻿<!DOCTYPE HTML><html lang="ru">
+<head>	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta charset="UTF-8">
+	<title>Comment system-54</title>
+	<link rel="icon" type="image/png" sizes="32x32" href="img/icon24.png">	</head>
+<style>	*::selection{background:transparent;}
+
+.contentHeader,.contentBottom,.replyBlock,.inputForm,
+.inputFormHeader,.inputFormMain,.rateCtrl,.listItem,.itemMark,.sortMenuOrdPic,.commntsHeaderLine{display:flex;}
+
+.bin1{margin:10px auto;width:700px;border:1px solid blue;display:none; }	
+
+   .commntsHeaderLine{border:1px solid green;align-items:center;}	
+	.commntsAmount{background:lightcyan;padding:5px;}
+	.commntsAmount:hover{text-decoration:underline;text-underline-position:under;}
+    .sortMenuWrap{margin-left:10px; display:inline-flex;}		
+	.sortMenu{padding:5px;background:yellow;width:170px;}		
+	    .listContainer{padding:20px 5px 0px 5px;width:200px;top:0px; background:orange; }
+		.listItem{margin:5px 0px 5px 0px;background:aqua;color:green;}	
+			.itemMark,.sortMenuOrdPic{justify-content:center;
+						      align-items:center;}
+			.itemDesc{padding:0px 5px 0px 5px;}
+	.sortMenuOrdPic{background:lavenderblush;}
+	.ordPic{width:20px; background-color:blue;}
+.favCntrl{padding:5px;margin-left:10px;background:yellow;}
+	
+   .commentContainer{margin-top:1%;border:1px solid red; }									
+	.commentBlock,.innerReplyBlock{display:inline-flex;}
+	.commentBlockSeparator{border-bottom:1px solid lightgray;margin:5px auto;width:50%;}
+     .userAvatarWrap{ margin:0px 5px 0px 5px;background:yellow;text-align:center;}
+	.userAvatar,.userAvatarWrap,.spHoop{ width:40px;}
+	.userAvatar{ width:40px; height:40px; border-radius:50%; object-fit: cover;}
+	.userContent{padding: 3px;background:yellow;border:1px solid blue; }
+		.contentHeader,.contentBottom,.rateCtrl{background:orange; height:20px;}
+			.headerF0{background:red;}.headerF1{background:cyan;}.headerF2{background:lime;}.headerF3{background:pink;}
+			.headerF4{background:yellow;}
+			.headerF,.bottomF{border:1px solid black;margin:0px 5px 0px 5px;padding: 0px 3px 0px 3px;  }
+		.commentText{background:yellowgreen;min-height:50px;width:550px;overflow-wrap:break-word;padding:0px 10px 0px 10px;}
+		.contentBottom{background:palegreen;}
+			.bottomReplyF0,.bottomCommentF0{background:red;}
+			.bottomReplyF0,.bottomCommentF0,.bottomCommentF1,
+				.rateCtrl,.listItem,.sortMenu,.commntsAmount,.favCntrl{cursor:pointer;}
+		.rateCtrl{background:lightgray;font-family:Sans-Serif;font-size:16px;font-weight:700;padding: 0px;
+			justify-content:center;align-items:center;align-self:center; border-radius:50%;}		
+.inputForm{margin-top:10px;border:1px solid green;}
+	.replyBlock{width:100%;}
+	.formSendBtn,.replyFormCnclBtn{background:palegreen;height:20px;align-self:center;}
+		     .replyFormCnclBtn{background:pink;}
+.inputFormContainer{padding: 3px;}
+	.inputFormHeader{width:100%;justify-content:space-between;}
+	.inputFormMain{width:100%;background:green;}
+		.textInput{width:50ch;outline:none;border:5px solid lime;background:white;margin:5px 5px 10px 5px;}
+		.textInput::selection{background:blue; color:white;}
+</style>
+<body>	<script src="userbase.js"></script>
+	<div class='bin1'>
+			<div class='commntsHeaderLine'>
+				<div class='commntsAmount'></div>
+				<div class='sortMenuWrap'> </div>
+				<div class='favCntrl'> Избранное </div>
+			</div>
+			<div class='commentContainer'></div>
+	</div>
+</body></html>
