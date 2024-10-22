@@ -1,0 +1,82 @@
+﻿<!DOCTYPE HTML><html lang="ru"><head>	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+				<meta charset="UTF-8">
+<link rel="icon" type="image/gif" sizes="32x32" href="../ico/cart.gif">	
+<link rel="stylesheet" href="../styl/rst-0.css">			
+	<title>Client cart</title>	</head>	
+<style>
+.cartPicWrap{width:40%;justify-content:space-around;}
+.cartPicture{width:20%;}
+.cartHeader,.headerGoods,.ordNum{font-size:2vw;font-weight:800;letter-spacing:.2vw;}
+.cartHeader,.authorCart,.captionCart,.emptyCardBtn{padding:1ch;box-sizing:border-box;}
+.emptyCardBtn:hover{background:radial-gradient(at center, pink, #FF00FF80);color:black;}
+.emptyCardBtn{font-size:1vw;font-weight:600;margin-left:0px;background-color:#FF00FF80;color:white;
+	      border-radius:1vw;display:none;box-shadow:0.5vw 0.5vw 5px 0px lightgray;
+	      transition:box-shadow,color,background;transition-duration:500ms;}
+
+.cartBlock{margin:2vw 2vw 0px 2vw;}
+  .headerGoods{border:1px solid gray;padding:0px;}
+	.itemWrap,.authorCart,.captionCart{min-height:3vw;}
+	.itemWrap{gap:1.5vw;margin-bottom:1vw;background:mistyrose;}	
+		.ordNum{margin-left:.5vw;width:2.5vw;height:2.5vw; font-weight:400;border:1px solid red;background:#FFFFFF80; }
+		.authorCart,.captionCart{font-size:1.8vw;background:palegreen; }
+		.authorCart{width:40%;}
+		.captionCart{width:60%;}.noBackNoBorder{background:transparent;border:1px solid transparent;}
+</style>
+<body>
+<div class='cartPicWrap'><img src='../img/cartGrad.gif'  class='cartPicture'><div class='cartHeader'>Client cart</div>
+			 <button  class='emptyCardBtn'>Empty cart</button><br>
+</div>
+<hr>
+
+<div class='cartBlock'></div>
+<script src="../bshp_modules/Init00.js">  </script>
+<script>
+'use strict';
+msgSrv({'':'client_cart_page loaded'});
+const showCart = function (){
+	msgSrv({'':'client_cart_page showCart func loaded'});
+	const cartBlock = cnst.d7.querySelector('.cartBlock'), emptCardBtn= cnst.d7.querySelector('.emptyCardBtn'),
+	      itemWrapKlas = 'itemWrap', authorCartKlas='authorCart', captionCartKlas='captionCart',
+showContent = () => {
+ const innerCart = processCart(), flexCentr = ' flex_centr';
+   if (innerCart.length) { 
+	let itemWrap = putEl(itemWrapKlas+' noBackNoBorder'), authEl, capEl;	
+			cartBlock.appendChild(itemWrap);
+		itemWrap.appendChild(putEl('ordNum'+flexCentr+' noBackNoBorder'));  
+			itemWrap.appendChild(putEl(authorCartKlas+flexCentr+' headerGoods','Author'));
+			itemWrap.appendChild(putEl(captionCartKlas+flexCentr+' headerGoods','Caption'));
+	  innerCart.forEach((i,n)=>{
+		itemWrap = putEl(itemWrapKlas);	
+			cartBlock.appendChild(itemWrap);
+		itemWrap.appendChild(putEl('ordNum'+flexCentr,n+1)); 
+			 authEl=putEl(authorCartKlas,i.author);		itemWrap.appendChild(authEl);
+			 capEl =putEl(captionCartKlas,i.caption);	itemWrap.appendChild(capEl);	     
+	  });
+        const setHei = () => {
+		const itemWrapArr = cnst.d7.querySelectorAll('.'+itemWrapKlas); 
+		let hei;
+		itemWrapArr.forEach((i)=>{
+			authEl=i.querySelector('.'+authorCartKlas);	authEl.style.height='';
+			capEl =i.querySelector('.'+captionCartKlas);	capEl.style.height='';			
+			hei=plusPX(getProp2(i,'height'));		authEl.style.height=hei;
+									capEl.style.height=hei;
+		});
+	};setHei();
+	window.addEventListener('resize',setHei);
+	   emptCardBtn.style.display='block';
+   } else {emptCardBtn.style.display='';
+	    cartBlock.innerHTML='Nothing in your cart. Empty :-((';
+	    setProp(cartBlock,{'display':'inline-block', 'background':'linear-gradient(to right, pink 35%, lime)',
+		'padding':'1ch','border-radius':'2vw', 'border':'1px solid gray', 'box-shadow':'1vw 1vw 5px 0px lightgray',
+		'font-size':'3vw'});}
+};
+ showContent();
+ emptCardBtn.addEventListener('click',()=>{let ans = confirm ("Are you shure you want to delete all cart items?");
+					   if (ans) {
+					   	processCart(null,false,true); // clean client's cart	     
+					   	setProp(emptCardBtn,{'backgroundColor':'red','boxShadow':'0px 0px 0px 0px white'});	
+					   	setTimeout(()=>{showContent();},500);}
+ });   
+}();
+</script>
+</body></html>
