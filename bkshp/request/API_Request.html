@@ -1,0 +1,78 @@
+﻿<!DOCTYPE HTML><html lang="ru"><head>	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+				<meta charset="UTF-8">					
+	<title>request-GOOGLE-API</title>	
+<body>
+<button> Send Request </button>
+<script src='locbase_respns.js'></script>
+<script>
+'use strict';
+/* acquired data primary filter and console output */
+const dl = (data) => {						
+	const volumes = data.items;
+	//	data.items.volumeInfo.categories finding and cropping in to the string variable	
+	volumes.forEach((i,n)=>{
+		let categories = i.volumeInfo.categories, catString = '', spcD  = ', ';
+		if (categories) {
+			catString = categories[0];
+			categories.forEach((i,n)=>{
+				if (n) {catString = catString+spcD+i;}
+			});
+		} else {
+			catString = ' --- no categories ---'
+		};
+		console.log('categories:',catString);});
+},
+/* data acquisition by category name */
+fetchData = (category,cbFuncName) =>{
+// func console header forming
+let underLIne = '', funcHeader = 'fetching '+category;
+console.log(''); 	console.log(funcHeader);	for (let x=0;x<funcHeader.length;x++){underLIne=underLIne+'-';}	
+console.log(underLIne);
+//fetch essential constants define
+const requestString = `https://www.googleapis.com/books/v1/volumes?q="subject:${category}"&key=AIzaSyAOxRLvgkvNyb_NzWAoX2xvkwkVEa03wkU&printType=books&startIndex=0&maxResults=6&langRestrict=en`,
+storItemName = `books-Volumes-${category}`,
+f_options={method:"GET",
+	   mode:"cors",
+	   headers:{'content-type':'application/json'}		 
+};
+//fetch call
+fetch(requestString,f_options)
+	.then((result)=>{return result.json();})	
+	.then((data)=>{
+			// data net load success
+			localStorage.setItem(storItemName,JSON.stringify(data));
+			cbFuncName(data);
+	})
+	.catch(()=>{
+			let y = JSON.parse(localStorage.getItem(storItemName));
+			if (y) {
+				// data localStorage load success
+				console.log('fetch from storage -', storItemName);
+				cbFuncName(y);
+			} else {
+				// data localStorage load fail - loading from local file - locbase_respns.js
+				console.log('fetch from loc file -',category);
+				cbFuncName(JSON.parse(loc_response[category]));}
+	});
+};
+/* button handler - data to be fetched category selector */
+const sendReq=function(){let categoryNumber = 0;
+			 const siList=['Architecture','Art & Fashion','Biography','Business','Crafts & Hobbies','Drama','Fiction','Food & Drink','Health & Wellbeing','History & Politics','Humor','Poetry','Psychology','Science','Technology','Travel & Maps'],
+      			 categoryMaxNumber = siList.length-1;
+		  function sendReq(){
+				fetchData(siList[categoryNumber],dl);	
+				categoryNumber++; 	
+				if (categoryNumber>categoryMaxNumber) {categoryNumber=0;}
+		  };
+return sendReq;}();
+/* button */
+const sendBtn = document.querySelector("button"), sendBtnStl=sendBtn.style, plsVw = (x) =>{return x+'vw';};	
+sendBtnStl.width=plsVw(60);sendBtnStl.height=plsVw(20);sendBtnStl.fontSize=plsVw(6);
+
+      sendBtn.addEventListener('click',()=>{
+		setTimeout(()=>{sendBtnStl.color = '';sendBtnStl.backgroundColor = '';},700);
+		sendBtnStl.color = 'white'; sendBtnStl.backgroundColor = 'red'; 
+		sendReq();
+      });
+</script>
+</body></html>
