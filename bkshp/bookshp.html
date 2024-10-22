@@ -1,0 +1,125 @@
+﻿<!DOCTYPE HTML><html lang="ru"><head>	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+				<meta charset="UTF-8">		
+	<link rel="icon" type="image/gif" sizes="32x32" href="ico/book_r.gif">  
+		<link rel="stylesheet" href="styl/rst-0.css" type="text/css">	<link rel="stylesheet" href="styl/header.css" type="text/css">
+		<link rel="stylesheet" href="styl/fnt-0.css" type="text/css">	<link rel="stylesheet" href="styl/slider.css" type="text/css">
+		<link rel="stylesheet" href="styl/cardStyl.css" type="text/css">
+	<title>BookShop-MS v.0.19.3</title></head>		<style> 
+.container0{max-width:1440px;}				.container0,.sliderContainer,.cardContainer{background-color:inherit;}
+							.container0,.header{border:1px solid red; border-color:#FFFFFF00 #F2F2F2 #FFFFFF00 #F2F2F2;}
+   .sliderContainer,header,footer,main{width:95%;}
+	main   {margin:129px auto 0px;}
+		sidebar    {background-color:#EAEAF5;height:46vw;width:30%; }				  
+			.sidebarTextBlock{width:75%;height:80%;	  margin-top:10%;}
+			.sidebarItem,.sibarMark{align-items:center;}   		   
+			   .sibarMark{width:13%;height:50%;padding:0px 0px 3% 0px;font-size:250%;color:darkmagenta; }				
+			   .sidebarItem{font-size:1vw;height:7%; }
+		.goodsBlock {position:relative;flex-flow:row wrap;background:#FEFEFE;width:73%;margin:3% 0px 0px -4%;}
+    .genLoader{display:block;border-color: mediumturquoise red red red;}
+	
+		.cardContainer{width:49.6%;transition:transform,background;transition-duration:800ms;}
+			.cardContainer:hover{transform:scale(1.1);border:.4px solid #ADD8E6;
+					     box-shadow:.3vw .3vw 2px 0px #DDDDDD; background:#FFFFFF ;}
+	   .ldMoreBtnWrap{position:relative;width:20%;margin:-0.5vw auto 10%;}
+ 	   .ldMoreBtn{position:absolute;z-index:2;background:floralwhite;border-color:lightgray;
+		      color:dimgray;transition:background,border-radius,color;transition-duration:800ms;}
+	   .ldMoreBtn:hover{background:white;color:black;border-color:blue;border-radius:1vw;}
+	footer {background-image:url('img/books_ftr1.png');background-size:50%;background-repeat:repeat-x;height:9vw; }
+/* max-width: 1525px +*/
+@media (max-width: 1525px) { .logo{font-size:2vw;height:auto;width:12%;margin:0px;}
+			header{height:14vw;padding:0;min-width:360px;} 
+			   .header_wrap{height:15vw;margin-top:2vw;}
+			   .header_hoop,header{width:96vw;}	
+.menu{justify-content:space-between;margin:0px 5px 0px 5px;}
+.spc_39,.spc_74,.spc_109,.spc_30{width:auto;}
+			   .mnu_links{font-size:60%;} 
+			   .icon_link{width:2vw;height:2vw;} 
+			   .ico_link_container{width:7vw;}
+				.cart_bage{font-size:1.5vw;}
+	.slider_pic_link_box{font-weight:500;}
+			main{margin:10vw auto 1vw;}			
+}
+/* min-width: 1530px -*/
+@media (min-width: 1530px) {.container0{max-width:2160px;}
+			    .mnu_links{font-size:.6vw;} .logo{font-size:.8vw;} .menu{min-width:20vw;}
+			    .icon_link{width:.8vw;height:.8vw;} .ico_link_container{width:4vw;}			    
+			.slider_pic_link_pos1{top:41px;right:90px;}
+		  .slider_pic_link_pos2{top:350px}
+		     .slider_pic_link_box{
+				box-shadow:0px 15px 17px 0px lightgray;
+				font-size:20px;}
+			
+			.slider_pic_link_box1{width:150px; height:200px;
+					      padding:90px 10px 10px 20px;}	
+			.slider_pic_link_box2{width:130px; height:250px;
+					      padding:110px 40px 10px 20px;}
+	.sliderSwitch{width:56px;height:12px;margin:17px auto 0px;}
+	sidebar    {height:900px;width:25%; } .goodsBlock {width:77%;margin:3% 0px 0px -2%;}
+	.sidebarItem{font-size:20px;height:50px; }
+}
+</style><body>
+<div class="container0 blok_centr"> 
+<div class="header_wrap"> 
+<header>
+<!-- LOGO -->	
+	<div class="logo" title="Bookshop logotype">Bookshop</div>		
+<!-- Nav MENU -->
+	<div class="menu">									
+	  <a href='#sidebar1' class="mnu_links spc_39" title="Books">	 	Books				</a>	
+	  <a href='#loadMoreAncor' class="mnu_links spc_74" title="AUDIOBooks"> AUDIOBooks			</a>	
+	  <a href='#' class="mnu_links spc_109" title="STATIONERY and GIFTS">	STATIONERY&nbsp;&&nbsp;GIFTS	</a>	
+	  <a href='#' class="mnu_links spc_30" title="Blog page">		Blog				</a>		  	
+	</div>						
+<!-- Nav Links: profile, search, client cart icons block -->			
+		<div class="ico_link_container">		
+			<a href='#' class="icon_link" title="client profile page">
+						<img src="ico/user.svg"  type="image/svg+xml" alt='user profile' class="menu_ico"></a>	
+			<a href='#' class="icon_link" title="search page">
+						<img src="ico/search.svg"  type="image/svg+xml" alt='search' class="menu_ico">	  </a>	
+			<a href='pages/usr_cart.html' class="icon_link" title="client cart page" type="text/html">
+						<img src="ico/cart.svg"  type="image/svg+xml" alt='client cart' class="menu_ico">
+						<div class="cart_bage flex_centr"></div>					  </a>
+		</div>				
+</header>
+<div class="header_hoop blok_centr"> </div>
+</div><!-- header_wrap -->
+<slider>
+   	<a href="pages/href_debug.htm" class="slider_pic_link slider_pic_link_pos1" title="Change old book on new" type="text/html">
+		<div class="slider_pic_link_box slider_pic_link_box1">Change old book on new
+		<img src="img/arrow.svg"  type="image/svg+xml" alt='Change old book on new' class="slider_pic_link_arrow slider_pic_link_arrow1"></div>
+	</a>	
+	<a href="pages/startest.html" class="slider_pic_link slider_pic_link_pos2" title="top 100 books 2022" type="text/html">
+		<div class="slider_pic_link_box slider_pic_link_box2">top 100 books 2022
+		<img src="img/arrow.svg"  type="image/svg+xml" alt='top 100 books 2022' class="slider_pic_link_arrow slider_pic_link_arrow2"></div>
+	</a>  
+	<div class="sliderContainer blok_centr"></div>
+	<div class="sliderSwitch"> 		</div>
+</slider>
+<main>
+	<sidebar id='sidebar1'>		
+			<div class="sidebarTextBlock">
+			</div>
+	</sidebar>
+	<div class="goodsBlock">
+		<!-- content to be generated when user selection occur -->		
+	</div>	
+</main><div class="ldMoreBtnWrap"><button class='ldMoreBtn' id='loadMoreAncor'>Load More</button></div>
+
+<footer>
+		
+</footer>
+</div><!-- container0 blok_centr -->
+<script src="bshp_modules/Init00.js" type="text/javascript">  </script>
+
+<script src="bshp_modules/slider.js" type="text/javascript">  </script>
+<script src="bshp_modules/sidebar2.js" type="text/javascript"></script>
+
+<script src='bshp_modules/rateStars.js' type="text/javascript"> </script> 
+<script src='bshp_modules/buildCard.js' type="text/javascript"> </script>
+
+<script src='bshp_modules/locbase_respns.js' type="text/javascript"></script>
+<script src='bshp_modules/fetchReq.js' type="text/javascript"></script>
+
+<script src='bshp_modules/main0.js' type="text/javascript"></script>
+
+</body></html>
