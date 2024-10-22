@@ -1,0 +1,7 @@
+﻿@font-face {font-family: "Montserrat-Bold";	src: url("../font2/Montserrat-Bold.ttf") format("truetype");} 
+@font-face {font-family: "Montserrat-Regular";	src: url("../font2/Montserrat-Regular.ttf") format("truetype");} 
+
+
+.logo{font-family:Montserrat-Bold;}
+.sidebarItem,.mnu_links{font-family: Montserrat-Regular;}
+.slider_pic_link_box{font-family:Arial;}	

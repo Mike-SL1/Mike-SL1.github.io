@@ -1,0 +1,18 @@
+﻿*::selection{background-color:transparent;}
+*{background-color:transparent;padding:0px;margin:0px;
+  cursor:default;}
+body{background-color:aliceblue;}
+a,button,.sidebarItem,.menu_ico,.cart_bage,.emptyCardBtn,.slider_pic_link_box,.slider_pic_link_arrow{cursor:pointer;}
+a{text-decoration:none;text-underline-position:under;color:black;}
+
+.blok_centr,header,footer,.sidebarTextBlock{margin:0px auto 0px;}
+	    header,.menu,.ico_link_container,main,.sidebarItem,.sibarMark,.goodsBlock,.flex_centr,
+	    .itemWrap,.authorCart,.captionCart,.cartPicWrap,footer{display:flex;}
+
+.menu,.ico_link_container,.spcBlk,.spc1{flex-shrink:4;}
+.mnu_links,.icon_link,.goodImg,.goodDesc,.starWrap{flex-shrink:0;}
+
+header, .logo,.menu, .cartPicWrap, .cartHeader, .itemWrap, .authorCart, .captionCart, .flex_centr{align-items:center;}
+.flex_centr{justify-content:center;}
+
+.menu_ico,.annot,.ldMoreBtn{width:100%;}

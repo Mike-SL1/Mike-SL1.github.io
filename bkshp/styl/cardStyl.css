@@ -1,0 +1,39 @@
+﻿/* card style - file cardStyl.css */
+/* for buildCard module - file buildCard.js*/
+/* fonts families */
+.caption,.price,.buyNowBtn,.noBuyBtn{font-family: "Montserrat-Bold";}
+.goodImgWrap{
+	     color:white;font-weight:600;font-size:150%; 
+	     width:42.5%; height:76.5%;border-radius:3px;
+	     background:radial-gradient(circle at 20% 15%, aqua, darkblue,palegreen);
+}
+.coverPH,.loaderRing{display:none;}
+.coverPH{color:#F3E7CF; text-shadow: 3px 4px #56433D;}
+.loaderRing{animation:rotLdrRng; animation-duration:2s; animation-iteration-count:infinite;
+	    animation-timing-function:linear;
+	    margin-bottom:10%;
+	    border-style:solid; border-color:lightgray red red; border-radius:50%;}
+@keyframes rotLdrRng {0% {transform:rotate(0deg);}	100%{transform:rotate(360deg);}}
+
+.spc1{width:7.2%; height:20px;}
+
+.goodDesc{width:40%;height:65%;margin-top:8%;font-size:200%; font-family: "Montserrat-Regular";color:dimgray;}
+	.author{min-height:8%;margin-bottom:1%;font-size:50%;font-weight:600;}
+	.caption,.annot{-webkit-line-clamp: 3; 		/* Число отображаемых строк */
+    			display: -webkit-box; 		/* Включаем флексбоксы */
+    			-webkit-box-orient: vertical; 	/* Вертикальная ориентация */
+   	 		overflow: hidden; 		/* Обрезаем за пределами блока*/
+	}
+	.caption{min-height:10%;margin-bottom:2%;font-size:87%;color:black;-webkit-line-clamp: 4; }
+
+	.rating{font-size:60%; height:10%;} .noRateData {height:5%;}
+		.ratStar{height:50%;}	
+		.reviewCnt{margin-left:4%;}
+	.annot{margin-bottom:6%; font-size:51%;line-height:144%; } 	
+	
+	.price{height:15%;font-size:70%; color:black;}
+
+	.buyNowBtn,.noBuyBtn{width:90%;height:14%;margin:auto auto 0px auto;font-size:60%; 		   
+		   color:blueviolet;background-color:transparent; border-color:blueviolet;}
+	.noBuyBtn{color:gray;background-color:#D3D3D380;}
+	.buyNowBtnPressed{background:pink;color:black;}

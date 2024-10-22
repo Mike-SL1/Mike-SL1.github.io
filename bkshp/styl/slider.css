@@ -1,0 +1,17 @@
+﻿slider{position:relative;}		
+		.slider_pic_link{position:absolute;z-index:1;}
+		  .slider_pic_link_pos1{top:3vw;right:6vw;}
+		  .slider_pic_link_pos2{top:23vw;;right:0px;}
+		     .slider_pic_link_box{
+				box-shadow:0px 1vw 1.5vw 0px lightgray;	
+				font-size:1.3vw;				  
+				font-weight:700;box-sizing:border-box;}
+			
+			.slider_pic_link_box1{width:10vw; height:13vw;		
+					      padding:6vw 1vw 1vw 1.5vw;	background:rgb(158,152,220);}
+		.slider_pic_link_arrow1{width:50%; }	
+			.slider_pic_link_box2{width:9vw; height:17vw;		
+					      padding:7.3vw 4vw 1vw 1.5vw;	background:rgb(255,143,230);}
+		.slider_pic_link_arrow2{width:90%; }
+
+	.sliderSwitch{width:4vw; height:0.8vw; margin:1vw auto 0px;}

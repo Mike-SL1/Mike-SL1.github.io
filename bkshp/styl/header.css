@@ -1,0 +1,28 @@
+﻿.header_wrap{position:sticky;z-index:2;top:0px; height:127px;margin-top:19px;}
+	header{height:92%;padding:0% 1.5% 0%; }
+	.header_hoop{width:80%;}
+	.header_hoop{border-top:2px solid lightgray;height:8%;}	
+	.ico_link_container,header{justify-content:space-between;}
+   .mnu_links,.slider_pic_link_box{text-transform: uppercase;}
+						    
+		.logo{width:128px;font-size:24px;font-weight:700;margin-left:4px;}
+		.menu{width:332px;}
+		.mnu_links{font-size:10px;}  
+	        .mnu_links:focus{font-weight:900;text-decoration:underline;}
+							    .spc_39{width:18%; }   .spc_74{width:31%; }
+				       .spc_109{width:40%;} .spc_30{width:15%;}
+	.ico_link_container{width:121px;}		
+		       .icon_link{position:relative;width:17px;height:17px;}
+	.menu_ico {position:absolute;height:100%;}
+
+		/* icons selection circle when focused */
+		       .icon_link{border:1px solid transparent;}
+		       .icon_link:hover .menu_ico{transform:scale(0.67);}
+	    	       .icon_link:hover{transform:scale(1.5);border-radius:50%;border:1px solid pink;}
+		       .icon_link:hover .cart_bage{	  bottom:-50%;
+						   background-color:green;transform:scale(0.67);   right:-50%;	}
+	
+			.cart_bage{position:absolute;	display:none; 		bottom:-45%;	
+				   height:90%;width:90%;border-radius:50%;	right:-45%;				      						
+				   background-color:red;	font-weight:600;	color:white;	font-size:70%;
+				   transition:transform;transition-duration:1000ms;}
