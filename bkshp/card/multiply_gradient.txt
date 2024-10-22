@@ -1,0 +1,5 @@
+/*
+const maskLineH = '1%'; 
+starWraps[i].style.background=`linear-gradient(to top, ${fillColor} ${maskLineH}, transparent ${maskLineH}, transparent),
+			       linear-gradient(to right, ${aClr}, ${aClr} ${rate}%, ${bClr} ${rate}%, ${bClr})`;
+*/

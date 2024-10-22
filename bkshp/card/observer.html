@@ -1,0 +1,63 @@
+﻿<!DOCTYPE HTML><html lang="ru"><head>	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+				<meta charset="UTF-8">			
+	<title>star test</title>	</head>	
+<style>
+.starWrap{width:70px; height:70px; margin:3px;display:inline-block; border:1px solid lime;}
+.container {width:90vw; margin:0px auto 0px;}
+</style>
+<body>
+<div class="container"> </div>
+<script src='paintStar.js'> </script> 
+<script> 'use strict';
+const body = document.querySelector('.container'),
+
+starSet = function (){	
+	let cid, lastStar;
+	function yy () {
+	for (let i=0; i<200;i++){const starWrap = document.createElement('div');
+			       		starWrap.classList.add('starWrap');
+			switch (i) {case 39:starWrap.innerHTML=paintStar(i,'orange','green');break;
+				    case 65:starWrap.innerHTML=paintStar(i,'magenta','lime');break;
+				    case 100:starWrap.innerHTML=paintStar(i,'green','lime');break;
+			default:if (i>100) {starWrap.innerHTML=paintStar(i-100);} else {starWrap.innerHTML=paintStar(i);}
+			};
+			body.appendChild(starWrap);
+	};
+	lastStar = document.querySelectorAll('.starWrap');cid = lastStar.length-1;
+		
+	cid--;	lastStar[cid].innerHTML=paintStar(30,'magenta','lime');
+	cid--;	lastStar[cid].innerHTML=paintStar(70);
+	cid--;	lastStar[cid].innerHTML=paintStar('green');
+	cid--;	lastStar[cid].innerHTML=paintStar(101);
+	cid--;	lastStar[cid].innerHTML=paintStar(-1);
+	cid--;	lastStar[cid].innerHTML=paintStar('yellow');	
+	};
+	return yy;
+}(), 
+   findLastStar = function (){
+	let lastStar = document.querySelectorAll('.starWrap'), cid = lastStar.length-1;
+	lastStar[cid].style.background='red';
+	return lastStar[cid];
+   },
+watchObj = function () {
+	const optObj = {root:document.querySelector('#scroll'), threshold:1},
+	      cbFunc1 = (entriesArr,observer) =>
+	{
+		entriesArr.forEach((entry)=>{let trgt=entry.target;
+			if (entry.isIntersecting) {	observer.unobserve(trgt);
+
+	console.log('*',trgt);    starSet();	watchObj([findLastStar()]);
+
+			}
+		});
+	},    observer = new IntersectionObserver(cbFunc1,optObj);	
+	function obsyr (aimArr) {aimArr.forEach((aim)=>{observer.observe(aim);})}
+	return 	obsyr;	
+}();
+
+starSet();	paintStar(0,'blue','red');
+watchObj([findLastStar()]);
+
+</script>
+</body></html>
+

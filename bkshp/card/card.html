@@ -1,0 +1,167 @@
+﻿<!DOCTYPE HTML><html lang="ru"><head>	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+				<meta charset="UTF-8">	
+<link rel="stylesheet" href="../styl/rst-0.css">			
+	<title>card v.3.5</title>		<style> 
+@font-face {font-family: "Montserrat-Regular";	src: url("../font2/Montserrat-Regular.ttf") format("truetype");} 
+@font-face {font-family: "Montserrat-Bold";	src: url("../font2/Montserrat-Bold.ttf") format("truetype");} 
+*{margin:0px;padding:0px;}
+
+/* card style file styl/cardStyl.css */
+.cardContainer,.cardContainer1{width:54.6vw; margin:10px;  border:1px solid lime;
+} 
+.cardContainer,.goodDesc,.rating,.ratStar{background-color:inherit;}
+.goodImg,.goodDesc{flex-shrink:0;}
+.goodImgWrap{
+	     color:white;font-weight:600;font-size:150%; 
+	     width:42.5%; height:76.5%;border-radius:3px;
+	     background:radial-gradient(circle at 20% 15%, aqua, darkblue,palegreen);
+}
+.coverPH{color:#F3E7CF; text-shadow: 3px 4px #56433D;}
+
+.spc1{width:7.2%; height:1px;flex-shrink:4;}
+.goodDesc{width:35%;margin-top:10%;font-size:200%; font-family: "Montserrat-Regular";color:dimgray;}
+	.author{min-height:9%;font-size:50%;font-weight:600;}
+	.caption{min-height:12%;font-size:87%;font-family: "Montserrat-Bold";color:black;border:1px solid lime;  }
+	.rating{height:15%;font-size:60%; }
+		.ratStar{height:40%; }
+		.starImg{height:90%;}
+		.reviewCnt{margin-left:4%;}
+	.annot{height:21%;width:100%;margin-bottom:6%; font-size:51%;line-height:144%; 
+ 		-webkit-line-clamp: 3; /* Число отображаемых строк */
+    		display: -webkit-box; /* Включаем флексбоксы */
+    		-webkit-box-orient: vertical; /* Вертикальная ориентация */
+   	 	overflow: hidden; /* Обрезаем за пределами блока*/
+}
+	.price{height:15%;font-size:70%; font-family: "Montserrat-Bold";color:black;}
+	.buyNowBtn{width:100%;height:24%;font-size:50%; font-family: "Montserrat-Bold";color:blueviolet;background-color:transparent; border-color:blueviolet;}
+	.buyNowBtn:focus{background:red;color:white;}
+</style><body>
+
+<div class="cardContainer">
+	<!--div class="goodImgWrap">
+		<div class="coverPH">NO COVER IMAGE</div> 
+		<img src='goodImg0.png' alt = 'book cover image' class="goodImg">
+	</div>
+	<div class="spc1"> </div>
+	<div class="goodDesc">
+		<div class="author">	Kevin Kwan		</div>
+		<div class="caption">	Crazy rich asians	</div>
+		<div class="rating">
+			<div class="ratStar">
+				<img src='Star1.svg' class="starImg"><img src='Star1.svg' class="starImg">
+				<img src='Star1.svg' class="starImg"><img src='Star1.svg' class="starImg">
+				<img src='Star1.svg' class="starImg">  
+			</div><div class="reviewCnt">252 reviews </div>
+		</div>
+		<div class="annot">	The Outrageously Funny Debut Novel About Three Super-Rich, Pedigreed Chinese Families And The Gossip about third world war</div>
+		<div class="price">	$4.99 		</div>
+		<button class="buyNowBtn">	BUY NOW 		</button>
+	 </div-->	
+</div>
+<div class="cardContainer1"></div>
+<script src='../bshp_modules/Init00.js'> </script> 
+<script src='../bshp_modules/rateStars.js'> </script> 
+<script> 
+'use strict';
+//building card
+//dependencies: Init00.js, rst-0.css, cardStyl.css
+const buildCard = (container,   opt1={},
+     				klas={},
+     				opt2={}) => {
+let review=' review';
+const opt1Default = {
+	'imageSrc':'goodImg01.png',
+	'imageAlt':'book cover image',
+	'author':'Health Organization',
+	'caption':'Harry Potter: Crochet Wizardry | Crochet Patterns | Harry Potter Crafts',
+	'maxReviewCnt':400,
+	'reviewCnt':354, 
+	'annot':'The Outrageously Funny Debut Novel About Three Super-Rich, Pedigreed Chinese Families And The Gossip about third world war',
+	'price':4.99,
+	'buyNowBtnTxt':'BuY nOW'
+},
+klasDefault={
+	'goodImgWrap':'goodImgWrap',
+	'coverPH':'coverPH',
+	'goodImg':'goodImg',
+	'spc1':'spc1',
+	'goodDesc':'goodDesc',
+	'author':'author',
+	'caption':'caption',
+	'rating':'rating',
+	'ratStar':'ratStar',
+	'reviewCnt':'reviewCnt',
+	'annot':'annot',
+	'price':'price',
+//buyNowBtn key value should contain 'Btn' in the name
+	'buyNowBtn':'buyNowBtn'
+},
+opt2Default={
+	'noCvrImgText':'NO COVER IMAGE',
+	'coverShdClr':'lightgray'
+},
+putEl = (className,innerContent='',altTxt='') => {
+	let aux; 
+	if (altTxt) {
+		aux = doc0.createElement('img');	aux.src = innerContent;		aux.alt=altTxt;} 
+	else {
+		if (className.match(/Btn/)) {aux = doc0.createElement('button');}
+		else {aux = doc0.createElement('div');}	
+		aux.innerHTML=innerContent;} 
+	aux.className=(className); 	return aux;
+},
+//fill options with defaults meanings
+fillDef = (defaults, inputOptions) => {
+	for (let key in defaults){	
+		if (!(key in inputOptions)){inputOptions[key]=defaults[key];}
+	};
+};	fillDef(opt1Default,opt1);	fillDef(klasDefault,klas);	fillDef(opt2Default,opt2);
+
+const 	sto=100, flex = 'flex',
+	containerStl = container.style, 
+	goodImgWrap = putEl(klas.goodImgWrap), 	goodImg = putEl(klas.goodImg,opt1.imageSrc,opt1.imageAlt),
+						goodImgStl = goodImg.style,
+	goodDesc = putEl(klas.goodDesc), rating = putEl(klas.rating), rateDisplay = putEl(klas.ratStar),
+//set card container height 78% of width
+setProp =() => {
+	let rateBlk;
+	const cardContainerWidth = getProp2 (container,'width'),
+		shd1=plusPX(cardContainerWidth*.04),shd2=plusPX(cardContainerWidth*.036),
+		shd3=plusPX(cardContainerWidth*.024);	
+	containerStl.height=plusPX(cardContainerWidth/1.277);	containerStl.fontSize=plusPX(cardContainerWidth/54.6);
+	goodImgStl.boxShadow=plusPX()+shd1+shd2+'-'+shd3+opt2.coverShdClr;
+	goodDesc.style.height=plusPX(getProp2 (goodDesc,'width')*1.14);	//width:294 x height:336
+rateBlk = rateModule(5,rateDisplay);
+rateBlk(Math.round(Number(opt1.reviewCnt)*sto/Number(opt1.maxReviewCnt)));
+};
+//build card
+containerStl.display=flex;	containerStl.flexFlow='row nowrap';
+rating.style.display=flex;
+goodImgWrap.classList.add('flex_centr'); //../styl/rst-0.css
+goodImgWrap.style.position='relative';	goodImgStl.position='absolute';	goodImgStl.top=plusPX();	goodImgStl.width=sto+'%';
+									goodImgStl.left=plusPX();	goodImgStl.height=sto+'%';
+container.appendChild(goodImgWrap);
+	goodImgWrap.appendChild(putEl(klas.coverPH,opt2.noCvrImgText));	
+	goodImgWrap.appendChild(goodImg);
+container.appendChild(putEl(klas.spc1));
+container.appendChild(goodDesc);
+	goodDesc.appendChild(putEl(klas.author,opt1.author));
+	goodDesc.appendChild(putEl(klas.caption,opt1.caption));
+	goodDesc.appendChild(rating);
+		rating.appendChild(rateDisplay);			
+		if (Number(opt1.reviewCnt)>1) {review=review+'s';}
+		rating.appendChild(putEl(klas.reviewCnt,opt1.reviewCnt+review));
+	goodDesc.appendChild(putEl(klas.annot,opt1.annot));
+	goodDesc.appendChild(putEl(klas.price,'$'+opt1.price));
+	goodDesc.appendChild(putEl(klas.buyNowBtn,opt1.buyNowBtnTxt.toUpperCase()));
+//set card container height			
+setProp();
+//set card container height on resize event
+window.addEventListener('resize',setProp);
+};
+
+buildCard(doc0.querySelector('.cardContainer'));
+buildCard(doc0.querySelector('.cardContainer1'));
+	
+</script>
+</body></html>
